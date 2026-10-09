@@ -1,0 +1,412 @@
+[
+  {
+    "id": "bs-equality",
+    "name": "Équilibre du bilan",
+    "latex": "\\sum \\text{Actif} = \\sum \\text{Passif}",
+    "note": "L'actif liste les emplois (ce que l'entreprise possède), le passif les ressources (ce qu'elle doit).",
+    "pages": [15, 41]
+  },
+  {
+    "id": "bs-net-value",
+    "name": "Valeur nette d'une immobilisation",
+    "latex": "\\text{Valeur nette} = \\text{Valeur brute} - \\text{Amortissements cumulés}",
+    "pages": [49, 194]
+  },
+  {
+    "id": "bs-capital-employed",
+    "name": "Capitaux employés (Capital employed)",
+    "latex": "\\text{Capitaux employés} = \\text{Actif immobilisé} + \\text{BFR}",
+    "pages": [106, 116]
+  },
+  {
+    "id": "bs-net-debt",
+    "name": "Dette nette (Net debt)",
+    "latex": "\\text{Dette nette} = \\text{Dettes financières} - \\text{Trésorerie active}",
+    "note": "C'est la dette nette, et non les dettes financières seules, qui permet de juger le niveau d'endettement.",
+    "pages": [109, 113]
+  },
+  {
+    "id": "bs-net-debt-detail",
+    "name": "Dette nette, forme détaillée",
+    "latex": "\\text{Dette nette} = \\text{Dettes MT/LT} + \\text{Trésorerie passive} - \\text{Trésorerie active}",
+    "pages": [118, 126]
+  },
+  {
+    "id": "bs-invested-capital",
+    "name": "Bilan économique (Capital-employed analysis)",
+    "latex": "\\text{Capitaux employés} = \\text{Capitaux investis} = \\text{Capitaux propres} + \\text{Dette nette}",
+    "pages": [115, 116, 293]
+  },
+  {
+    "id": "bs-structure",
+    "name": "Ratios de structure financière",
+    "latex": "\\frac{\\text{Capitaux propres}}{\\text{Capitaux employés}} + \\frac{\\text{Dette nette}}{\\text{Capitaux employés}} = 100\\,\\%",
+    "note": "Deux conditions pour financer beaucoup par dette nette : des flux futurs prévisibles et des garanties de qualité.",
+    "pages": [119, 121]
+  },
+  {
+    "id": "bs-gearing",
+    "name": "Gearing (effet de levier financier)",
+    "latex": "\\text{Gearing} = \\frac{\\text{Dette nette}}{\\text{Capitaux propres}}",
+    "pages": [119]
+  },
+  {
+    "id": "solv-current-ratio",
+    "name": "Current ratio (liquidité générale)",
+    "latex": "\\text{Current ratio} = \\frac{\\text{Actifs courants}}{\\text{Passifs courants}} = \\frac{\\text{Actif circ. d'exploitation} + \\text{Trésorerie active}}{\\text{Passif circ. d'exploitation} + \\text{Trésorerie passive}}",
+    "note": "Ratio de liquidité à court terme : à connaître pour s'en méfier. Horizon de 3 mois alors que le bilan est publié 3 à 6 mois après la clôture, postes volatils, et une hausse du BFR (mauvaise gestion) peut l'améliorer.",
+    "pages": [259, 260]
+  },
+  {
+    "id": "solv-quick-ratio",
+    "name": "Quick ratio (liquidité réduite)",
+    "latex": "\\text{Quick ratio} = \\frac{\\text{Créances} + \\text{Trésorerie active}}{\\text{Passifs courants}} = \\frac{\\text{Actifs courants} - \\text{Stocks}}{\\text{Passifs courants}}",
+    "note": "Même critique que le current ratio : à éviter si possible.",
+    "pages": [259, 261]
+  },
+  {
+    "id": "solv-cash-ratio",
+    "name": "Cash ratio (liquidité immédiate)",
+    "latex": "\\text{Cash ratio} = \\frac{\\text{Trésorerie active}}{\\text{Passifs courants}}",
+    "note": "Même critique que le current ratio : à éviter si possible.",
+    "pages": [259, 261]
+  },
+  {
+    "id": "solv-stable-ratio",
+    "name": "Ratio de solvabilité à moyen terme",
+    "latex": "\\frac{\\text{Ressources stables}}{\\text{Capitaux employés}} = \\frac{\\text{Capitaux propres} + \\text{Dettes MT/LT}}{\\text{Actif immobilisé} + \\text{BFR}}",
+    "note": "Point critique à 70 %. 100 % : idéal · 90–100 % : très bon · 70–90 % : moyen mais acceptable · 50–70 % : risque élevé de faillite · < 50 % : R.I.P. Seuil moins strict si la dette nette est négative.",
+    "pages": [267, 268]
+  },
+  {
+    "id": "solv-netdebt-cfo",
+    "name": "Capacité de désendettement (flux)",
+    "latex": "\\frac{\\text{Dette nette}}{\\text{CFO}}",
+    "symbols": [{ "symbol": "CFO", "meaning": "Flux de trésorerie d'exploitation (Cash Flows from Operations)" }],
+    "note": "Nombre d'années pour rembourser la dette nette avec tout le CFO ; doit rester sous la maturité moyenne de la dette (≈ 3 ans). 0–1 an : excellent · 1–2 : bon · 2–3 : moyen mais acceptable · 3–5 : risque élevé de faillite · > 5 : R.I.P.",
+    "pages": [269]
+  },
+  {
+    "id": "solv-netdebt-ebitda",
+    "name": "Levier dette nette / EBITDA",
+    "latex": "\\frac{\\text{Dette nette}}{\\text{EBITDA}}",
+    "note": "Moins bon que dette nette / CFO (ignore la variation du BFR) mais rapide. < 3 : aucun problème · jusqu'à 4 : OK · > 5 : risque élevé de faillite.",
+    "pages": [270]
+  },
+  {
+    "id": "is-result",
+    "name": "Résultat",
+    "latex": "\\text{Résultat} = \\text{Produits} - \\text{Charges}",
+    "note": "Bénéfice si les produits dépassent les charges, perte sinon.",
+    "pages": [16, 134]
+  },
+  {
+    "id": "is-expenses",
+    "name": "Nature des charges et des produits",
+    "latex": "\\begin{aligned}\\text{Charges} &= \\text{Charges décaissables} + \\text{Charges calculées} \\\\ \\text{Produits} &= \\text{Produits encaissables} + \\text{Produits calculés}\\end{aligned}",
+    "note": "Charges calculées : dotations aux amortissements et aux provisions. Elles réduisent le résultat sans sortie de trésorerie.",
+    "pages": [16, 132, 133]
+  },
+  {
+    "id": "is-ebitda",
+    "name": "EBITDA",
+    "latex": "\\text{EBITDA} = \\text{CA} - \\text{Charges d'exploitation décaissables}",
+    "symbols": [{ "symbol": "EBITDA", "meaning": "Earnings Before Interest, Taxes, Depreciation and Amortization" }],
+    "pages": [162, 180]
+  },
+  {
+    "id": "is-ebit",
+    "name": "Résultat d'exploitation (EBIT)",
+    "latex": "\\text{EBIT} = \\text{Produits d'exploitation} - \\text{Charges d'exploitation} = \\text{EBITDA} - \\text{D\\&A}",
+    "symbols": [{ "symbol": "D&A", "meaning": "Dotations aux amortissements (Depreciation and Amortization)" }],
+    "pages": [139, 159, 180]
+  },
+  {
+    "id": "is-financial",
+    "name": "Résultat financier",
+    "latex": "\\text{Résultat financier} = \\text{Produits financiers} - \\text{Charges financières}",
+    "note": "Il reflète le coût de la dette nette de l'entreprise.",
+    "pages": [145]
+  },
+  {
+    "id": "is-nonrecurring",
+    "name": "Résultat exceptionnel (Non-recurring result)",
+    "latex": "\\text{Résultat exceptionnel} = \\text{Produits exceptionnels} - \\text{Charges exceptionnelles}",
+    "note": "Non reconnu par les IFRS depuis les années 1990 ni par les US GAAP depuis 2015 : à reclasser en exploitation s'il revient chaque année.",
+    "pages": [147]
+  },
+  {
+    "id": "is-gross",
+    "name": "Résultat avant impôt (Gross result)",
+    "latex": "\\text{Résultat brut} = \\text{EBIT} + \\text{Résultat financier} + \\text{Résultat exceptionnel}",
+    "pages": [149, 180]
+  },
+  {
+    "id": "is-net",
+    "name": "Impôt sur les sociétés et résultat net",
+    "latex": "\\begin{aligned}\\text{IS} &= \\text{Résultat brut} \\times \\text{taux d'IS} \\\\ \\text{Résultat net} &= \\text{Résultat brut} - \\text{IS}\\end{aligned}",
+    "pages": [149, 251]
+  },
+  {
+    "id": "is-consumption",
+    "name": "Consommation de matières premières",
+    "latex": "\\text{Consommation} = \\text{Achats} + (S_i - S_f)",
+    "symbols": [
+      { "symbol": "S_i", "meaning": "Stock initial" },
+      { "symbol": "S_f", "meaning": "Stock final" }
+    ],
+    "pages": [155, 156]
+  },
+  {
+    "id": "is-production",
+    "name": "Production de la période",
+    "latex": "\\text{Production} = \\text{Ventes} + (S_f - S_i)_{\\text{produits finis}}",
+    "note": "Les produits finis en stock sont valorisés au coût de production, pas au prix de vente.",
+    "pages": [158, 159]
+  },
+  {
+    "id": "is-relative-margin",
+    "name": "Marge relative",
+    "latex": "\\text{Marge relative} = \\frac{\\text{Marge absolue}}{\\text{Chiffre d'affaires}}",
+    "pages": [165]
+  },
+  {
+    "id": "is-breakeven",
+    "name": "Point mort (Break-even point)",
+    "latex": "\\text{Point mort} = \\frac{\\text{Coûts fixes}}{\\text{Taux de marge sur coûts variables}} \\quad \\text{avec} \\quad \\text{Taux de MCV} = \\frac{\\text{CA} - \\text{Coûts variables}}{\\text{CA}}",
+    "note": "Plus les coûts fixes sont élevés, plus le point mort est haut et plus le résultat est sensible à une baisse du CA.",
+    "pages": [170, 176]
+  },
+  {
+    "id": "cf-variation",
+    "name": "Tableau des flux de trésorerie",
+    "latex": "\\Delta\\,\\text{Trésorerie} = \\text{CI} - \\text{CO} = \\text{CFO} + \\text{CFI} + \\text{CFF}",
+    "symbols": [
+      { "symbol": "CI / CO", "meaning": "Encaissements / décaissements (Cash-in / Cash-out)" },
+      { "symbol": "CFO", "meaning": "Flux d'exploitation" },
+      { "symbol": "CFI", "meaning": "Flux d'investissement" },
+      { "symbol": "CFF", "meaning": "Flux de financement" }
+    ],
+    "pages": [17, 210]
+  },
+  {
+    "id": "wcr-def",
+    "name": "Besoin en fonds de roulement (WCR)",
+    "latex": "\\text{BFR} = \\text{Actif circulant d'exploitation} - \\text{Passif circulant d'exploitation}",
+    "note": "Chaque poste a une durée de vie courte, mais leur agrégat est stable : c'est un besoin permanent, à financer par des ressources stables. BFR > 0 : un besoin ; BFR < 0 : une ressource.",
+    "pages": [83, 93]
+  },
+  {
+    "id": "wcr-detail",
+    "name": "BFR, forme détaillée",
+    "latex": "\\text{BFR} = \\text{Stocks} + \\text{Créances d'exploitation} - \\text{Dettes d'exploitation}",
+    "pages": [83, 105]
+  },
+  {
+    "id": "wcr-approx",
+    "name": "BFR, approximation usuelle",
+    "latex": "\\text{BFR} \\approx \\text{Stocks} + \\text{Créances clients} - \\text{Dettes fournisseurs}",
+    "note": "Approximation : créances clients et dettes fournisseurs représentent l'essentiel des créances et dettes d'exploitation.",
+    "pages": [83]
+  },
+  {
+    "id": "wcr-net-cash",
+    "name": "Trésorerie nette (Net cash)",
+    "latex": "\\text{Trésorerie nette} = \\text{Trésorerie active} - \\text{Trésorerie passive}",
+    "note": "Idéalement proche de zéro. Très positive : du cash qui « dort ». Négative : tolérée par la banque jusqu'à un certain point, puis risque de faillite.",
+    "pages": [263]
+  },
+  {
+    "id": "wcr-net-cash-property",
+    "name": "Propriété de la trésorerie nette",
+    "latex": "\\text{Trésorerie nette} = \\text{Ressources stables} - \\text{Capitaux employés}",
+    "symbols": [
+      { "symbol": "Ressources stables", "meaning": "Capitaux propres + dettes MT/LT" },
+      { "symbol": "Capitaux employés", "meaning": "Immobilisations nettes + BFR" }
+    ],
+    "pages": [264, 266, 267]
+  },
+  {
+    "id": "cf-cfo-indirect",
+    "name": "Flux d'exploitation, méthode indirecte",
+    "latex": "\\text{CFO} = \\text{EBITDA} - \\text{IS} - \\Delta\\,\\text{BFR}",
+    "note": "Une hausse du BFR (créances, stocks en hausse, dettes fournisseurs en baisse) consomme de la trésorerie.",
+    "pages": [212, 213]
+  },
+  {
+    "id": "prof-general",
+    "name": "Rentabilité (cas général)",
+    "latex": "\\text{Rentabilité} = \\frac{\\text{Création de richesse (profit)}}{\\text{Capitaux investis pour l'obtenir}}",
+    "pages": [276]
+  },
+  {
+    "id": "prof-nopat",
+    "name": "Résultat économique après impôt (NOPAT)",
+    "latex": "\\text{NOPAT} = \\text{EBIT} \\times (1 - T)",
+    "symbols": [{ "symbol": "T", "meaning": "Taux d'impôt sur les sociétés" }],
+    "note": "S'il y a un résultat exceptionnel, l'ajouter à l'EBIT.",
+    "pages": [281]
+  },
+  {
+    "id": "prof-roce",
+    "name": "Rentabilité économique (ROCE)",
+    "latex": "\\text{ROCE} = \\frac{\\text{NOPAT}}{\\text{Capitaux employés}}",
+    "note": "Indépendant de la structure financière. À comparer au WACC : ROCE > WACC, création de valeur ; ROCE < WACC, destruction.",
+    "pages": [279, 282]
+  },
+  {
+    "id": "prof-roce-split",
+    "name": "ROCE = marge × rotation",
+    "latex": "\\text{ROCE} = \\underbrace{\\frac{\\text{Résultat économique}}{\\text{CA}}}_{\\text{marge}} \\times \\underbrace{\\frac{\\text{CA}}{\\text{Capitaux employés}}}_{\\text{rotation}}",
+    "pages": [283]
+  },
+  {
+    "id": "prof-roe",
+    "name": "Rentabilité financière (ROE)",
+    "latex": "\\text{ROE} = \\frac{\\text{Résultat net}}{\\text{Capitaux propres}}",
+    "pages": [290]
+  },
+  {
+    "id": "prof-kd",
+    "name": "Coût de la dette nette après impôt",
+    "latex": "k_D = \\frac{\\text{Frais financiers nets} \\times (1 - T)}{\\text{Dette nette}}",
+    "note": "Frais financiers nets = intérêts des dettes financières − produits financiers de la trésorerie.",
+    "pages": [295]
+  },
+  {
+    "id": "prof-leverage",
+    "name": "Effet de levier financier",
+    "latex": "\\text{ROE} = \\text{ROCE} + (\\text{ROCE} - k_D) \\times \\frac{D}{E}",
+    "symbols": [
+      { "symbol": "k_D", "meaning": "Coût de la dette nette après impôt" },
+      { "symbol": "D", "meaning": "Dette nette" },
+      { "symbol": "E", "meaning": "Capitaux propres" },
+      { "symbol": "D/E", "meaning": "Gearing" }
+    ],
+    "note": "Si ROCE > kD, la dette dope le ROE. Si ROCE < kD, l'effet devient négatif et amplifie la baisse. Et quand D/E monte, le risque du prêteur monte, donc kD aussi.",
+    "pages": [291, 294]
+  },
+  {
+    "id": "prof-nopat-split",
+    "name": "Partage du résultat économique",
+    "latex": "\\text{NOPAT} = \\text{RN} + \\text{FFN} \\qquad \\text{CE} = E + D",
+    "symbols": [
+      { "symbol": "RN", "meaning": "Résultat net" },
+      { "symbol": "FFN", "meaning": "Frais financiers nets après effet d'impôt" }
+    ],
+    "pages": [292, 293]
+  },
+  {
+    "id": "wacc-def",
+    "name": "Coût moyen pondéré du capital (WACC / CMPC)",
+    "latex": "\\text{WACC} = k_E \\cdot \\frac{E}{D + E} + k_D \\cdot \\frac{D}{D + E}",
+    "symbols": [
+      { "symbol": "E", "meaning": "Capitaux propres" },
+      { "symbol": "D", "meaning": "Dette nette = dettes financières − trésorerie active" },
+      { "symbol": "k_E", "meaning": "Coût des capitaux propres (rentabilité minimale exigée par les actionnaires)" },
+      { "symbol": "k_D", "meaning": "Coût de la dette nette après impôt" }
+    ],
+    "note": "Rentabilité minimale des investissements qui satisfait à la fois actionnaires et prêteurs.",
+    "pages": [315, 316]
+  },
+  {
+    "id": "wacc-kd",
+    "name": "Effet d'impôt sur le coût de la dette",
+    "latex": "k_D = k_D' \\cdot (1 - T)",
+    "symbols": [{ "symbol": "k_D'", "meaning": "Taux d'intérêt moyen de la dette nette avant impôt" }],
+    "note": "Les intérêts sont déductibles de l'impôt sur les sociétés.",
+    "pages": [316]
+  },
+  {
+    "id": "wacc-hierarchy",
+    "name": "Hiérarchie des taux",
+    "latex": "R_F < k_D < \\text{WACC} < k_E",
+    "symbols": [{ "symbol": "R_F", "meaning": "Taux sans risque" }],
+    "pages": [318]
+  },
+  {
+    "id": "wacc-value",
+    "name": "Création ou destruction de valeur",
+    "latex": "\\begin{aligned}\\text{ROCE} > \\text{WACC} &\\Rightarrow \\text{création de valeur (goodwill)} \\\\ \\text{ROCE} < \\text{WACC} &\\Rightarrow \\text{destruction de valeur (badwill)}\\end{aligned}",
+    "note": "Un résultat net positif ne suffit pas : il doit couvrir la rentabilité exigée pour le risque porté par l'actionnaire.",
+    "pages": [282, 324, 326]
+  },
+  {
+    "id": "wacc-market-values",
+    "name": "Valeurs de marché (rente perpétuelle de l'exemple)",
+    "latex": "V_E = \\frac{\\text{Résultat net}}{k_E} \\qquad V_D = \\frac{\\text{Frais financiers nets}}{k_D} \\qquad \\text{Goodwill} = V_E - \\text{Capitaux propres comptables}",
+    "pages": [323, 324, 325]
+  },
+  {
+    "id": "wacc-capm",
+    "name": "Coût des capitaux propres : MEDAF (CAPM)",
+    "latex": "k_E = R_F + \\beta_E \\times \\text{Prime de risque du marché}",
+    "symbols": [
+      { "symbol": "β_E", "meaning": "Bêta des capitaux propres : pente de la régression de l'action sur le marché" },
+      { "symbol": "Prime de risque", "meaning": "Ordre de grandeur : 5 % à 6 %" }
+    ],
+    "bonus": true,
+    "pages": [339, 340]
+  },
+  {
+    "id": "wacc-market",
+    "name": "WACC en valeurs de marché",
+    "latex": "\\text{WACC} = k_E \\cdot \\frac{E}{D + E} + k_D \\cdot (1 - T) \\cdot \\frac{D}{D + E}",
+    "note": "E = capitalisation boursière, D = valeur de marché de la dette nette, kD avant impôt.",
+    "bonus": true,
+    "pages": [334]
+  },
+  {
+    "id": "npv-compounding",
+    "name": "Capitalisation",
+    "latex": "V_n = V_0 \\times (1 + i)^n",
+    "pages": [361]
+  },
+  {
+    "id": "npv-discounting",
+    "name": "Actualisation",
+    "latex": "V_0 = V_n \\times \\frac{1}{(1 + i)^n}",
+    "note": "Plus le flux est lointain, ou plus le taux exigé est élevé, plus sa valeur actuelle est faible.",
+    "pages": [363, 365]
+  },
+  {
+    "id": "npv-def",
+    "name": "Valeur actuelle nette (NPV / VAN)",
+    "latex": "\\text{NPV} = -V_0 + \\sum_{k=1}^{n} \\frac{F_k}{(1 + i)^k}",
+    "symbols": [
+      { "symbol": "V_0", "meaning": "Valeur absolue de l'investissement initial" },
+      { "symbol": "F_k", "meaning": "Flux de trésorerie de l'année k" },
+      { "symbol": "i", "meaning": "Taux d'actualisation = rentabilité exigée (WACC pour un projet typique)" }
+    ],
+    "note": "NPV > 0 : le projet crée de la valeur, on y va. NPV < 0 : STOP. Entre projets exclusifs, retenir la NPV la plus élevée.",
+    "pages": [373, 376]
+  },
+  {
+    "id": "irr-def",
+    "name": "Taux de rentabilité interne (IRR / TRI)",
+    "latex": "\\text{IRR} = i \\;\\text{tel que}\\; 0 = -F_0 + \\sum_{k=1}^{n} \\frac{F_k}{(1 + i)^k}",
+    "note": "IRR > taux exigé : création de valeur. Limites : parfois aucune solution ou plusieurs, et mauvais critère pour départager des projets exclusifs (privilégier la NPV).",
+    "pages": [380, 382, 384]
+  },
+  {
+    "id": "npv-fcff",
+    "name": "Flux de trésorerie disponible (FCFF)",
+    "latex": "\\begin{aligned}\\text{FCFF} &= \\text{CFO} + \\text{CFI} \\\\ \\text{CFO} &= \\text{EBITDA} - T \\times \\text{EBIT} - \\Delta\\,\\text{BFR} \\\\ \\text{CFI} &= -\\text{CAPEX}\\end{aligned}",
+    "note": "Les FCFF ne contiennent pas les flux de financement : le coût du financement est déjà dans le taux d'actualisation.",
+    "pages": [215, 393, 394]
+  },
+  {
+    "id": "npv-payback",
+    "name": "Délai de récupération (Payback period)",
+    "latex": "\\text{Payback} = t \\;\\text{tel que}\\; \\sum_{k=0}^{t} F_k = 0 \\quad \\text{(flux cumulés, investissement initial compris)}",
+    "note": "Ignore la valeur temps de l'argent et les flux après le payback : à comparer à une référence sectorielle, jamais à utiliser seul.",
+    "pages": [389, 390]
+  },
+  {
+    "id": "val-ev-dcf",
+    "name": "Valeur d'entreprise par DCF",
+    "latex": "\\text{VE} = \\sum_{k=1}^{\\infty} \\frac{\\text{FCFF}_k}{(1 + \\text{WACC})^k} \\qquad \\text{Valeur terminale} = \\frac{\\text{FCFF}_{n+1}}{\\text{WACC} - g}",
+    "note": "Gordon-Shapiro, valable si WACC > g. Valeur des capitaux propres = VE − dette nette.",
+    "pages": [407, 412, 416]
+  }
+]

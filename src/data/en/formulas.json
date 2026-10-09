@@ -1,0 +1,300 @@
+{
+  "bs-equality": {
+    "name": "Balance sheet equation",
+    "latex": "\\sum \\text{Assets} = \\sum \\text{Liabilities}",
+    "note": "Assets list the uses (what the company owns), liabilities the resources (what it owes)."
+  },
+  "bs-net-value": {
+    "name": "Net value of a fixed asset",
+    "latex": "\\text{Net value} = \\text{Gross value} - \\text{Accumulated depreciation}"
+  },
+  "bs-capital-employed": {
+    "name": "Capital employed",
+    "latex": "\\text{Capital employed} = \\text{Fixed assets} + \\text{WCR}"
+  },
+  "bs-net-debt": {
+    "name": "Net debt",
+    "latex": "\\text{Net debt} = \\text{Financial debts} - \\text{Cash assets}",
+    "note": "It is the net debt, not the financial debts alone, that tells you how indebted a company is."
+  },
+  "bs-net-debt-detail": {
+    "name": "Net debt, detailed form",
+    "latex": "\\text{Net debt} = \\text{MT/LT debt} + \\text{Cash liabilities} - \\text{Cash assets}"
+  },
+  "bs-invested-capital": {
+    "name": "Capital-employed analysis of the balance sheet",
+    "latex": "\\text{Capital employed} = \\text{Invested capital} = \\text{Equity} + \\text{Net debt}"
+  },
+  "bs-structure": {
+    "name": "Financial structure ratios",
+    "latex": "\\frac{\\text{Equity}}{\\text{Capital employed}} + \\frac{\\text{Net debt}}{\\text{Capital employed}} = 100\\%",
+    "note": "Two conditions to finance a large share with net debt: predictable future cash flows and good-quality collateral."
+  },
+  "bs-gearing": {
+    "name": "Gearing (financial leverage)",
+    "latex": "\\text{Gearing} = \\frac{\\text{Net debt}}{\\text{Equity}}"
+  },
+  "solv-current-ratio": {
+    "name": "Current ratio",
+    "latex": "\\text{Current ratio} = \\frac{\\text{Current assets}}{\\text{Current liabilities}} = \\frac{\\text{Operating current assets} + \\text{Cash assets}}{\\text{Operating current liabilities} + \\text{Cash liabilities}}",
+    "note": "Short-term liquidity ratio: know it so you can distrust it. 3-month horizon while the balance sheet is published 3 to 6 months after closing, volatile items, and a WCR increase (mismanagement) can improve it."
+  },
+  "solv-quick-ratio": {
+    "name": "Quick ratio",
+    "latex": "\\text{Quick ratio} = \\frac{\\text{Receivables} + \\text{Cash assets}}{\\text{Current liabilities}} = \\frac{\\text{Current assets} - \\text{Inventories}}{\\text{Current liabilities}}",
+    "note": "Same criticism as the current ratio: avoid it if possible."
+  },
+  "solv-cash-ratio": {
+    "name": "Cash ratio",
+    "latex": "\\text{Cash ratio} = \\frac{\\text{Cash assets}}{\\text{Current liabilities}}",
+    "note": "Same criticism as the current ratio: avoid it if possible."
+  },
+  "solv-stable-ratio": {
+    "name": "Medium-term solvency ratio",
+    "latex": "\\frac{\\text{Stable resources}}{\\text{Capital employed}} = \\frac{\\text{Equity} + \\text{MT/LT debts}}{\\text{Fixed assets} + \\text{WCR}}",
+    "note": "The critical point is 70%. 100%: ideal · 90–100%: very good · 70–90%: medium but acceptable · 50–70%: high risk of bankruptcy · < 50%: R.I.P. Less strict for companies with negative net debt."
+  },
+  "solv-netdebt-cfo": {
+    "name": "Debt repayment capacity (cash flows)",
+    "latex": "\\frac{\\text{Net debt}}{\\text{CFO}}",
+    "symbols": [{ "symbol": "CFO", "meaning": "Cash flows from operations" }],
+    "note": "Years needed to repay the net debt with all the CFO; must stay below the average maturity of the debt (≈ 3 years). 0–1 year: excellent · 1–2: good · 2–3: medium but acceptable · 3–5: high risk of bankruptcy · > 5: R.I.P."
+  },
+  "solv-netdebt-ebitda": {
+    "name": "Net debt / EBITDA leverage",
+    "latex": "\\frac{\\text{Net debt}}{\\text{EBITDA}}",
+    "note": "Not as good as net debt / CFO (ignores the WCR change) but quick to compute. Below 3: no problem · up to 4: OK · above 5: high risk of bankruptcy."
+  },
+  "is-result": {
+    "name": "Result",
+    "latex": "\\text{Result} = \\text{Income} - \\text{Expenses}",
+    "note": "A profit if income exceeds expenses, a loss otherwise."
+  },
+  "is-expenses": {
+    "name": "Cash and calculated items",
+    "latex": "\\begin{aligned}\\text{Expenses} &= \\text{Cash expenses} + \\text{Calculated expenses} \\\\ \\text{Income} &= \\text{Cash income} + \\text{Calculated income}\\end{aligned}",
+    "note": "Calculated expenses: depreciation and provision allowances. They reduce the result without any cash going out."
+  },
+  "is-ebitda": {
+    "name": "EBITDA",
+    "latex": "\\text{EBITDA} = \\text{Turnover} - \\text{Net operating cashable expenses}",
+    "symbols": [{ "symbol": "EBITDA", "meaning": "Earnings Before Interest, Taxes, Depreciation and Amortization" }]
+  },
+  "is-ebit": {
+    "name": "Operating result (EBIT)",
+    "latex": "\\text{EBIT} = \\text{Operating income} - \\text{Operating expenses} = \\text{EBITDA} - \\text{D\\&A}",
+    "symbols": [{ "symbol": "D&A", "meaning": "Depreciation and amortization allowances" }]
+  },
+  "is-financial": {
+    "name": "Financial result",
+    "latex": "\\text{Financial result} = \\text{Financial income} - \\text{Financial expenses}",
+    "note": "It reflects the cost of the company's net debt."
+  },
+  "is-nonrecurring": {
+    "name": "Non-recurring result",
+    "latex": "\\text{Non-recurring result} = \\text{Non-recurring income} - \\text{Non-recurring expenses}",
+    "note": "Not recognised by IFRS since the 1990s nor by US GAAP since 2015: move it to operating items if it comes back every year."
+  },
+  "is-gross": {
+    "name": "Result before tax (gross result)",
+    "latex": "\\text{Gross result} = \\text{EBIT} + \\text{Financial result} + \\text{Non-recurring result}"
+  },
+  "is-net": {
+    "name": "Corporate tax and net result",
+    "latex": "\\begin{aligned}\\text{CT} &= \\text{Gross result} \\times \\text{CT rate} \\\\ \\text{Net result} &= \\text{Gross result} - \\text{CT}\\end{aligned}"
+  },
+  "is-consumption": {
+    "name": "Consumption of raw materials",
+    "latex": "\\text{Consumption} = \\text{Purchases} + (S_i - S_f)",
+    "symbols": [
+      { "symbol": "S_i", "meaning": "Initial inventory" },
+      { "symbol": "S_f", "meaning": "Final inventory" }
+    ]
+  },
+  "is-production": {
+    "name": "Production of the period",
+    "latex": "\\text{Production} = \\text{Sales} + (S_f - S_i)_{\\text{finished goods}}",
+    "note": "Finished goods in inventory are valued at production cost, not at selling price."
+  },
+  "is-relative-margin": {
+    "name": "Relative margin",
+    "latex": "\\text{Relative margin} = \\frac{\\text{Absolute margin}}{\\text{Turnover}}"
+  },
+  "is-breakeven": {
+    "name": "Break-even point",
+    "latex": "\\text{Break-even point} = \\frac{\\text{Fixed costs}}{\\text{Margin on variable cost in \\%}} \\quad \\text{with} \\quad \\text{Margin on variable cost} = \\frac{\\text{Sales} - \\text{Variable costs}}{\\text{Sales}}",
+    "note": "The higher the fixed costs, the higher the break-even point and the more the result reacts to a drop in turnover."
+  },
+  "cf-variation": {
+    "name": "Cash flow statement",
+    "latex": "\\Delta\\,\\text{Cash} = \\text{CI} - \\text{CO} = \\text{CFO} + \\text{CFI} + \\text{CFF}",
+    "symbols": [
+      { "symbol": "CI / CO", "meaning": "Cash-in / Cash-out" },
+      { "symbol": "CFO", "meaning": "Cash flows from operations" },
+      { "symbol": "CFI", "meaning": "Cash flows from investments" },
+      { "symbol": "CFF", "meaning": "Cash flows from financing" }
+    ]
+  },
+  "wcr-def": {
+    "name": "Working Capital Requirement (WCR)",
+    "latex": "\\text{WCR} = \\text{Operating current assets} - \\text{Operating current liabilities}",
+    "note": "Each item has a short life, but their aggregate is stable: a permanent need, to be financed by stable resources. WCR > 0: a need; WCR < 0: a resource."
+  },
+  "wcr-detail": {
+    "name": "WCR, detailed form",
+    "latex": "\\text{WCR} = \\text{Inventories} + \\text{Operating receivables} - \\text{Operating payables}"
+  },
+  "wcr-approx": {
+    "name": "WCR, usual approximation",
+    "latex": "\\text{WCR} \\approx \\text{Inventories} + \\text{Trade receivables} - \\text{Trade payables}",
+    "note": "Approximation: trade receivables and trade payables make up most of operating receivables and payables."
+  },
+  "wcr-net-cash": {
+    "name": "Net cash",
+    "latex": "\\text{Net cash} = \\text{Cash assets} - \\text{Cash liabilities}",
+    "note": "Ideally close to zero. Very positive: cash that \"sleeps\". Negative: the bank tolerates it up to a point, then comes the risk of bankruptcy."
+  },
+  "wcr-net-cash-property": {
+    "name": "Net cash property",
+    "latex": "\\text{Net cash} = \\text{Stable resources} - \\text{Capital employed}",
+    "symbols": [
+      { "symbol": "Stable resources", "meaning": "Equity + MT/LT debts" },
+      { "symbol": "Capital employed", "meaning": "Net fixed assets + WCR" }
+    ]
+  },
+  "cf-cfo-indirect": {
+    "name": "Cash flows from operations, indirect method",
+    "latex": "\\text{CFO} = \\text{EBITDA} - \\text{Corporate tax} - \\Delta\\,\\text{WCR}",
+    "note": "A WCR increase (higher receivables or inventories, lower trade payables) consumes cash."
+  },
+  "prof-general": {
+    "name": "Profitability (general case)",
+    "latex": "\\text{Profitability} = \\frac{\\text{Wealth creation (profit)}}{\\text{Capital invested to get this gain}}"
+  },
+  "prof-nopat": {
+    "name": "Economic profit after tax (NOPAT)",
+    "latex": "\\text{NOPAT} = \\text{EBIT} \\times (1 - T)",
+    "symbols": [{ "symbol": "T", "meaning": "Corporate tax rate" }],
+    "note": "If there is a non-recurring result, add it to the EBIT."
+  },
+  "prof-roce": {
+    "name": "Economic profitability (ROCE)",
+    "latex": "\\text{ROCE} = \\frac{\\text{NOPAT}}{\\text{Capital employed}}",
+    "note": "Independent of the financial structure. Compare it to the WACC: ROCE > WACC, value creation; ROCE < WACC, value destruction."
+  },
+  "prof-roce-split": {
+    "name": "ROCE = margin × rotation",
+    "latex": "\\text{ROCE} = \\underbrace{\\frac{\\text{Economic result}}{\\text{Sales}}}_{\\text{margin}} \\times \\underbrace{\\frac{\\text{Sales}}{\\text{Capital employed}}}_{\\text{rotation}}"
+  },
+  "prof-roe": {
+    "name": "Financial profitability (ROE)",
+    "latex": "\\text{ROE} = \\frac{\\text{Net profit}}{\\text{Equity}}"
+  },
+  "prof-kd": {
+    "name": "Cost of net debt after tax",
+    "latex": "k_D = \\frac{\\text{Net financial expenses} \\times (1 - T)}{\\text{Net debt}}",
+    "note": "Net financial expenses = interest on financial debts − financial income from the cash assets."
+  },
+  "prof-leverage": {
+    "name": "Financial leverage effect",
+    "latex": "\\text{ROE} = \\text{ROCE} + (\\text{ROCE} - k_D) \\times \\frac{D}{E}",
+    "symbols": [
+      { "symbol": "k_D", "meaning": "Cost of net debt after tax" },
+      { "symbol": "D", "meaning": "Net debt" },
+      { "symbol": "E", "meaning": "Equity" },
+      { "symbol": "D/E", "meaning": "Gearing" }
+    ],
+    "note": "If ROCE > kD, debt boosts the ROE. If ROCE < kD, the effect turns negative and amplifies the fall. And when D/E rises, the lender's risk rises, so does kD."
+  },
+  "prof-nopat-split": {
+    "name": "Splitting the economic result",
+    "latex": "\\text{NOPAT} = \\text{NR} + \\text{NFE} \\qquad \\text{CE} = E + D",
+    "symbols": [
+      { "symbol": "NR", "meaning": "Net result" },
+      { "symbol": "NFE", "meaning": "Net financial expenses after tax effect" }
+    ]
+  },
+  "wacc-def": {
+    "name": "Weighted Average Cost of Capital (WACC)",
+    "latex": "\\text{WACC} = k_E \\cdot \\frac{E}{D + E} + k_D \\cdot \\frac{D}{D + E}",
+    "symbols": [
+      { "symbol": "E", "meaning": "Equity" },
+      { "symbol": "D", "meaning": "Net debt = financial debts − cash assets" },
+      { "symbol": "k_E", "meaning": "Cost of equity (shareholders' required minimum profitability)" },
+      { "symbol": "k_D", "meaning": "Cost of net debt after tax" }
+    ],
+    "note": "The minimum rate of return on investments that satisfies both shareholders and debtholders."
+  },
+  "wacc-kd": {
+    "name": "Tax effect on the cost of debt",
+    "latex": "k_D = k_D' \\cdot (1 - T)",
+    "symbols": [{ "symbol": "k_D'", "meaning": "Average interest rate on net debt before tax" }],
+    "note": "Interest on loans is deductible from corporate tax."
+  },
+  "wacc-hierarchy": {
+    "name": "Hierarchy of rates",
+    "latex": "R_F < k_D < \\text{WACC} < k_E",
+    "symbols": [{ "symbol": "R_F", "meaning": "Risk-free rate" }]
+  },
+  "wacc-value": {
+    "name": "Value creation or destruction",
+    "latex": "\\begin{aligned}\\text{ROCE} > \\text{WACC} &\\Rightarrow \\text{value creation (goodwill)} \\\\ \\text{ROCE} < \\text{WACC} &\\Rightarrow \\text{value destruction (badwill)}\\end{aligned}",
+    "note": "A positive net profit is not enough: it must cover the return required for the risk borne by the shareholder."
+  },
+  "wacc-market-values": {
+    "name": "Market values (perpetuity of the course example)",
+    "latex": "V_E = \\frac{\\text{Net profit}}{k_E} \\qquad V_D = \\frac{\\text{Net financial expenses}}{k_D} \\qquad \\text{Goodwill} = V_E - \\text{Book value of equity}"
+  },
+  "wacc-capm": {
+    "name": "Cost of equity: CAPM",
+    "latex": "k_E = R_F + \\beta_E \\times \\text{Market risk premium}",
+    "symbols": [
+      { "symbol": "β_E", "meaning": "Equity beta: slope of the regression of the stock on the market" },
+      { "symbol": "Risk premium", "meaning": "Order of magnitude: 5% to 6%" }
+    ]
+  },
+  "wacc-market": {
+    "name": "WACC at market values",
+    "latex": "\\text{WACC} = k_E \\cdot \\frac{E}{D + E} + k_D \\cdot (1 - T) \\cdot \\frac{D}{D + E}",
+    "note": "E = market capitalisation, D = market value of net debt, kD before tax."
+  },
+  "npv-compounding": {
+    "name": "Capitalisation (compounding)",
+    "latex": "V_n = V_0 \\times (1 + i)^n"
+  },
+  "npv-discounting": {
+    "name": "Discounting",
+    "latex": "V_0 = V_n \\times \\frac{1}{(1 + i)^n}",
+    "note": "The more distant the flow, or the higher the required rate, the lower its present value."
+  },
+  "npv-def": {
+    "name": "Net Present Value (NPV)",
+    "latex": "\\text{NPV} = -V_0 + \\sum_{k=1}^{n} \\frac{F_k}{(1 + i)^k}",
+    "symbols": [
+      { "symbol": "V_0", "meaning": "Absolute value of the initial investment" },
+      { "symbol": "F_k", "meaning": "Cash flow of year k" },
+      { "symbol": "i", "meaning": "Discount rate = required return (WACC for a typical project)" }
+    ],
+    "note": "NPV > 0: the project creates value, go. NPV < 0: STOP. Among mutually exclusive projects, pick the highest NPV."
+  },
+  "irr-def": {
+    "name": "Internal Rate of Return (IRR)",
+    "latex": "\\text{IRR} = i \\;\\text{such that}\\; 0 = -F_0 + \\sum_{k=1}^{n} \\frac{F_k}{(1 + i)^k}",
+    "note": "IRR > required rate: value creation. Drawbacks: sometimes no solution or several, and a bad criterion to rank mutually exclusive projects (use the NPV)."
+  },
+  "npv-fcff": {
+    "name": "Free Cash Flow to the Firm (FCFF)",
+    "latex": "\\begin{aligned}\\text{FCFF} &= \\text{CFO} + \\text{CFI} \\\\ \\text{CFO} &= \\text{EBITDA} - T \\times \\text{EBIT} - \\Delta\\,\\text{WCR} \\\\ \\text{CFI} &= -\\text{CAPEX}\\end{aligned}",
+    "note": "FCFF exclude financing flows: the cost of financing is already in the discount rate."
+  },
+  "npv-payback": {
+    "name": "Payback period",
+    "latex": "\\text{Payback} = t \\;\\text{such that}\\; \\sum_{k=0}^{t} F_k = 0 \\quad \\text{(cumulated flows, initial outlay included)}",
+    "note": "Ignores the time value of money and the flows after the payback: compare it to a sector reference, never use it alone."
+  },
+  "val-ev-dcf": {
+    "name": "Enterprise value by DCF",
+    "latex": "\\text{EV} = \\sum_{k=1}^{\\infty} \\frac{\\text{FCFF}_k}{(1 + \\text{WACC})^k} \\qquad \\text{Terminal value} = \\frac{\\text{FCFF}_{n+1}}{\\text{WACC} - g}",
+    "note": "Gordon-Shapiro, valid if WACC > g. Equity value = EV − net debt."
+  }
+}

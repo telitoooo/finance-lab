@@ -1,0 +1,94 @@
+{
+  "views": {
+    "financial-statements": { "title": "Financial statements" },
+    "wcr": { "title": "WCR & cash" },
+    "profitability": { "title": "Profitability" },
+    "wacc-npv": { "title": "WACC & investment decisions" }
+  },
+  "modules": {
+    "balance-sheet": {
+      "title": "Balance sheet",
+      "altTitle": "Bilan",
+      "concept": "The balance sheet is a snapshot of Adidas on 31 December. Assets show what the group owns: stores, warehouses, the brand, €5.8bn of sneakers in stock, invoices retailers have not paid yet, and cash. Liabilities show who financed it all: shareholders (equity), banks and bondholders (financial debts, which cost interest) and the Asian factories Adidas pays after 90 days (operating debt, free if paid on time). Both columns are always equal. To judge financial health, switch to the economic view: capital employed (fixed assets + WCR) financed by equity and net debt. Gross debt is not what matters; net debt is. For solvency, look at the stable resources / capital employed ratio, and distrust liquidity ratios.",
+      "toolbox": ["Reading the balance sheet", "Economic view", "Solvency"],
+      "lab": {
+        "title": "Adidas's 2025 balance sheet, two readings",
+        "goal": "Switch between the accounting and the economic balance sheet: watch the WCR and the net debt appear, compare the stable resources / capital employed ratio with the course thresholds, then test yourself with the liquidity and solvency MCQ."
+      },
+      "pdfExample": {
+        "original": "Exercise 1 \"Balance sheet\" (accounting then economic) and the Europcar solvency exercise.",
+        "adidas": "Adidas's consolidated balance sheet at 31/12/2025, reclassified line by line into the course template."
+      }
+    },
+    "income-statement": {
+      "title": "Income statement",
+      "altTitle": "Compte de résultat",
+      "concept": "The income statement tells the story of Adidas's year: wealth created (€24.8bn of footwear, apparel and accessories sold in 2025) minus wealth destroyed (products made in Asia, salaries, marketing, store rents, depreciation). It flows down like a waterfall: EBITDA, then EBIT (operating result, €2.06bn), the financial result (the cost of debt), tax, and finally the net result (€1.39bn). Classic trap: result ≠ cash. Depreciating a flagship store is a calculated expense, no cash leaves. A pair sold to a retailer who pays in 60 days is income, but not yet a single euro in the bank. The result is partly virtual; cash is real. Finally, the break-even point: with high fixed costs (stores, sponsorship), a small drop in sales can sink the result.",
+      "toolbox": ["Principle", "The waterfall of margins", "Inventories and production", "Margins, break-even and cash"],
+      "lab": {
+        "title": "From turnover to net result",
+        "goal": "Move sales, gross margin, operating expenses, depreciation, financial result and tax rate: the waterfall recalculates, the break-even point moves, and the result / cash gap of the pop-up store appears."
+      },
+      "pdfExample": {
+        "original": "Pizza Food Truck (result ≠ cash, pessimistic scenario with an overdraft) and the Fever Tech exercise (by-nature and by-function formats).",
+        "adidas": "Adidas Originals pop-up store (same mechanics, amounts ×10) and an Adidas running-shoe assembly workshop (volumes ×10, prices ÷10: same totals as the course answer)."
+      }
+    },
+    "wcr": {
+      "title": "Working Capital Requirement",
+      "altTitle": "Besoin en fonds de roulement (BFR)",
+      "concept": "Adidas pays its factories in Asia after about 90 days. But a pair of Ultraboost spends almost six months in stock (ship, warehouse, shelf), then the retailer pays some forty days after delivery. Between the cash paid to the factory and the cash collected on the sale, there is a gap to finance permanently: the Working Capital Requirement (WCR). Each invoice turns over quickly, but their total stays stable: a permanent need, to be financed by stable resources, like a warehouse. Three \"nice\" reflexes make it grow: building up stock, giving customers more time, paying suppliers faster. And strong growth inflates the WCR: without financing, net cash collapses. You can die in excellent health.",
+      "toolbox": ["Computing the WCR", "WCR and cash"],
+      "lab": {
+        "title": "WCR & net cash simulator",
+        "goal": "Set Adidas's customer and supplier payment terms and its storage time, then sales growth: WCR, capital employed and net cash (stable resources − capital employed) update in real time."
+      },
+      "pdfExample": {
+        "original": "The \"twin companies\" A (negative WCR) and B (unfinanced growth, overdraft), and American Airlines (WCR of −$13,457m).",
+        "adidas": "adidas.com (online sales paid upfront: negative WCR) versus a wholesale subsidiary (retailers paying on credit: positive WCR that doubles with sales)."
+      }
+    },
+    "profitability": {
+      "title": "ROCE & ROE",
+      "altTitle": "Rentabilité économique et financière",
+      "concept": "Adidas puts about €10.8bn of capital employed to work: stores, warehouses, brand, inventory. ROCE measures what this capital earns after tax, however it is financed: NOPAT / capital employed. It splits into margin × rotation: Adidas lives mainly on its margin (premium brand), Carrefour on how fast its shelves turn. ROE measures the return for shareholders: net profit / equity. The bridge between them is the leverage effect: as long as ROCE exceeds the after-tax cost of debt (kD), every euro borrowed boosts ROE. But if sales fall and ROCE drops below kD, leverage works in reverse and amplifies the fall. And the more Adidas borrows, the higher the rate lenders demand.",
+      "toolbox": ["Economic profitability", "Financial profitability"],
+      "lab": {
+        "title": "Leverage simulator",
+        "goal": "Change the net debt (D), the equity (E), the operating result and the cost of debt: ROCE and ROE recalculate instantly. Push ROCE below kD to see leverage turn against you."
+      },
+      "pdfExample": {
+        "original": "2019 ROCE of Apple (29%), LVMH (18%), Carrefour (7%) and Volkswagen (2%); proof of the leverage formula.",
+        "adidas": "Adidas's 2025 ROCE and ROE computed from its economic balance sheet and its EBIT."
+      }
+    },
+    "wacc": {
+      "title": "WACC",
+      "altTitle": "Coût moyen pondéré du capital (CMPC)",
+      "concept": "To finance its capital employed, Adidas relies on two kinds of investors. Shareholders require kE: they bear the most risk, with no planned repayment. Lenders require kD, which is cheaper, and further reduced by the tax saving on interest. The WACC is their weighted average: the minimum return each euro invested must deliver. It is the bar to clear. ROCE > WACC: Adidas creates value, and the market value of its equity exceeds its book value (goodwill). ROCE < WACC: value destruction, even with a positive net profit. The temptation: replace equity with \"cheaper\" debt. It does not work: risk rises, so do kD and kE. The WACC depends on the risk of the business, not on how you slice the pizza.",
+      "toolbox": ["Computation", "Creating or destroying value", "Going further (not for the exam)"],
+      "lab": {
+        "title": "WACC and value creation",
+        "goal": "Set kE, the pre-tax borrowing rate, the tax rate and the equity / net debt split: the WACC recalculates. Then vary the NOPAT to replay the course cases A, B and C (neutral, goodwill, badwill)."
+      },
+      "pdfExample": {
+        "original": "Simplified company: fixed assets 65 + WCR 35 = equity 60 + net debt 40, kE 14%, kD 4%, WACC 10%, cases A/B/C.",
+        "adidas": "Adidas simplified to €10bn of capital employed (6.5 + 3.5 = 6 + 4), with the same rates: NOPAT of €1.0bn, €1.7bn and €0.6bn."
+      }
+    },
+    "npv-irr": {
+      "title": "NPV & IRR",
+      "altTitle": "VAN et TRI",
+      "concept": "Adidas is considering €100m of R&D on a new sole, expected to bring in €25m of cash a year for 5 years. €125m collected for €100m spent: a good deal? Not so fast. A euro in 5 years is not worth a euro today (risk, inflation, opportunity cost). So each free cash flow is discounted at the return investors require, usually the WACC. The sum, minus the initial investment, is the NPV: positive, the project creates value; negative, stop. At 10%, the sole shows an NPV of −€5m; at 5%, +€8m. The IRR is the rate that brings the NPV to zero, here 8%: easy to read, but misleading when choosing between mutually exclusive projects. To decide, the NPV is what counts.",
+      "toolbox": ["The price of time", "Decision criteria", "Which flows to discount?"],
+      "lab": {
+        "title": "Investment lab",
+        "goal": "Pick an Adidas project (R&D sole, flagship store, mutually exclusive projects) or enter your own cash flows, then vary the discount rate: NPV, IRR and payback recalculate, and the NPV = f(rate) curve shows where it crosses zero."
+      },
+      "pdfExample": {
+        "original": "A €100k machine earning €25k a year for 5 years; exercise 3 (€20m plant extension); mutually exclusive projects of exercise 1.",
+        "adidas": "€100m R&D on a sole; €20m new flagship store; choosing between a Shanghai flagship and a padel apparel line."
+      }
+    }
+  }
+}

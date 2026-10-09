@@ -1,0 +1,182 @@
+{
+  "views": [
+    {
+      "id": "financial-statements",
+      "path": "/financial-statements",
+      "title": "États financiers",
+      "modules": ["balance-sheet", "income-statement"]
+    },
+    {
+      "id": "wcr",
+      "path": "/wcr",
+      "title": "BFR & trésorerie",
+      "modules": ["wcr"]
+    },
+    {
+      "id": "profitability",
+      "path": "/profitability",
+      "title": "Rentabilité",
+      "modules": ["profitability"]
+    },
+    {
+      "id": "wacc-npv",
+      "path": "/wacc-npv",
+      "title": "WACC & décision d'investissement",
+      "modules": ["wacc", "npv-irr"]
+    }
+  ],
+  "modules": [
+    {
+      "id": "balance-sheet",
+      "view": "financial-statements",
+      "path": "/financial-statements/balance-sheet",
+      "title": "Bilan",
+      "altTitle": "Balance sheet",
+      "icon": "Scale",
+      "concept": "Le bilan, c'est la photo d'Adidas au 31 décembre. À l'actif, ce que le groupe possède : magasins, entrepôts, marque, 5,8 Md€ de sneakers en stock, factures que les distributeurs n'ont pas encore réglées, trésorerie. Au passif, qui a financé tout cela : les actionnaires (capitaux propres), les banques et obligataires (dettes financières, payantes) et les usines asiatiques qu'Adidas paie à 90 jours (dette d'exploitation, gratuite si réglée à temps). Les deux colonnes sont toujours égales. Pour juger la santé financière, on passe en vision économique : des capitaux employés (immobilisations + BFR) financés par des capitaux propres et une dette nette. Ce n'est pas la dette brute qui compte, c'est la dette nette. Pour la solvabilité, on regarde le ratio ressources stables / capitaux employés, et on se méfie des ratios de liquidité.",
+      "toolbox": [
+        { "title": "Lire le bilan", "formulaIds": ["bs-equality", "bs-net-value"] },
+        {
+          "title": "Vision économique",
+          "formulaIds": ["bs-capital-employed", "bs-net-debt", "bs-net-debt-detail", "bs-invested-capital", "bs-structure", "bs-gearing"]
+        },
+        {
+          "title": "Solvabilité",
+          "formulaIds": ["solv-stable-ratio", "solv-netdebt-cfo", "solv-netdebt-ebitda", "solv-current-ratio", "solv-quick-ratio", "solv-cash-ratio"]
+        }
+      ],
+      "lab": {
+        "kind": "balance-sheet-explorer",
+        "title": "Le bilan Adidas 2025, deux lectures",
+        "goal": "Bascule entre bilan comptable et bilan économique : observe le BFR et la dette nette apparaître, compare le ratio ressources stables / capitaux employés aux seuils du cours, puis valide ta lecture au QCM liquidité et solvabilité."
+      },
+      "pdfExample": {
+        "original": "Exercice 1 « Balance sheet » (bilan comptable puis économique) et exercice Europcar sur la solvabilité.",
+        "adidas": "Bilan consolidé Adidas au 31/12/2025, reclassé poste par poste dans la grille du cours."
+      },
+      "pages": [39, 126, 253, 273]
+    },
+    {
+      "id": "income-statement",
+      "view": "financial-statements",
+      "path": "/financial-statements/income-statement",
+      "title": "Compte de résultat",
+      "altTitle": "Income statement (P&L)",
+      "icon": "Receipt",
+      "concept": "Le compte de résultat raconte l'année d'Adidas : la richesse créée (24,8 Md€ de chaussures, textile et accessoires vendus en 2025) moins la richesse détruite (produits fabriqués en Asie, salaires, marketing, loyers des magasins, amortissements). On descend en cascade : EBITDA, puis EBIT (résultat d'exploitation, 2,06 Md€), résultat financier (le coût de la dette), impôt, et enfin résultat net (1,39 Md€). Piège classique : résultat ≠ trésorerie. L'amortissement d'un flagship est une charge calculée, sans sortie de cash. Une paire vendue à un distributeur qui paiera dans 60 jours est un produit, mais pas encore un euro en banque. Le résultat est en partie virtuel ; la trésorerie, elle, est réelle. Enfin, le point mort : avec beaucoup de coûts fixes (magasins, sponsoring), une petite baisse des ventes peut faire plonger le résultat.",
+      "toolbox": [
+        { "title": "Principe", "formulaIds": ["is-result", "is-expenses"] },
+        {
+          "title": "La cascade des soldes",
+          "formulaIds": ["is-ebitda", "is-ebit", "is-financial", "is-nonrecurring", "is-gross", "is-net"]
+        },
+        { "title": "Stocks et production", "formulaIds": ["is-consumption", "is-production"] },
+        { "title": "Marges, point mort et trésorerie", "formulaIds": ["is-relative-margin", "is-breakeven", "cf-variation"] }
+      ],
+      "lab": {
+        "kind": "pnl-waterfall",
+        "title": "Du chiffre d'affaires au résultat net",
+        "goal": "Fais varier les ventes, la marge brute, les frais commerciaux, les amortissements, les frais financiers et le taux d'IS : la cascade se recalcule, le point mort se déplace, et l'écart résultat / trésorerie du pop-up store apparaît."
+      },
+      "pdfExample": {
+        "original": "Pizza Food Truck (résultat ≠ trésorerie, scénario pessimiste avec découvert) et exercice Fever Tech (présentation par nature et par fonction).",
+        "adidas": "Pop-up store Adidas Originals (mêmes mécanismes, montants ×10) et atelier Adidas d'assemblage de chaussures de running (volumes ×10, prix ÷10 : totaux identiques au corrigé)."
+      },
+      "pages": [14, 36, 127, 200, 201, 229]
+    },
+    {
+      "id": "wcr",
+      "view": "wcr",
+      "path": "/wcr",
+      "title": "Besoin en fonds de roulement",
+      "altTitle": "Working Capital Requirement (WCR)",
+      "icon": "Timer",
+      "concept": "Adidas paie ses usines en Asie à environ 90 jours. Mais une paire d'Ultraboost passe près de six mois en stock (bateau, entrepôt, rayon), puis le distributeur la paie une quarantaine de jours après livraison. Entre le cash versé à l'usine et le cash encaissé sur la vente, il y a un trou à financer en permanence : c'est le besoin en fonds de roulement (BFR). Chaque facture tourne vite, mais leur somme reste stable : c'est un besoin permanent, à financer par des ressources stables, comme un entrepôt. Trois réflexes « sympas » le font grossir : gonfler les stocks, laisser plus de délai aux clients, payer les fournisseurs plus vite. Et une forte croissance fait gonfler le BFR : sans financement, la trésorerie nette plonge. On peut mourir en excellente santé.",
+      "toolbox": [
+        { "title": "Calculer le BFR", "formulaIds": ["wcr-def", "wcr-detail", "wcr-approx"] },
+        { "title": "BFR et trésorerie", "formulaIds": ["bs-capital-employed", "wcr-net-cash", "wcr-net-cash-property", "cf-cfo-indirect"] }
+      ],
+      "lab": {
+        "kind": "wcr-simulator",
+        "title": "Simulateur BFR & trésorerie nette",
+        "goal": "Règle les délais clients, fournisseurs et la durée de stockage d'Adidas, puis la croissance des ventes : le BFR, les capitaux employés et la trésorerie nette (ressources stables − capitaux employés) se mettent à jour en temps réel."
+      },
+      "pdfExample": {
+        "original": "Les « sociétés jumelles » A (BFR négatif) et B (croissance non financée, découvert), et American Airlines (BFR de −13 457 M$).",
+        "adidas": "adidas.com (vente en ligne payée comptant : BFR négatif) face à une filiale wholesale (distributeurs payant à terme : BFR positif qui double avec les ventes)."
+      },
+      "pages": [77, 96, 211, 213, 262, 267]
+    },
+    {
+      "id": "profitability",
+      "view": "profitability",
+      "path": "/profitability",
+      "title": "ROCE & ROE",
+      "altTitle": "Profitability",
+      "icon": "TrendingUp",
+      "concept": "Adidas fait travailler environ 10,8 Md€ de capitaux employés : magasins, entrepôts, marque, stocks. Le ROCE mesure ce que ce capital rapporte après impôt, quel que soit son mode de financement : NOPAT / capitaux employés. Il se décompose en marge × rotation : Adidas vit surtout de sa marge (marque premium), Carrefour de la rotation de ses rayons. Le ROE mesure la rentabilité pour l'actionnaire : résultat net / capitaux propres. Le pont entre les deux, c'est l'effet de levier : tant que le ROCE dépasse le coût de la dette après impôt (kD), chaque euro emprunté gonfle le ROE. Mais si les ventes chutent et que le ROCE passe sous kD, le levier joue à l'envers et amplifie la baisse. Et plus Adidas s'endette, plus les prêteurs exigent un taux élevé.",
+      "toolbox": [
+        { "title": "Rentabilité économique", "formulaIds": ["prof-general", "prof-nopat", "prof-roce", "prof-roce-split"] },
+        { "title": "Rentabilité financière", "formulaIds": ["prof-roe", "prof-kd", "prof-leverage", "prof-nopat-split"] }
+      ],
+      "lab": {
+        "kind": "leverage-simulator",
+        "title": "Simulateur d'effet de levier",
+        "goal": "Modifie la dette nette (D), les capitaux propres (E), le résultat d'exploitation et le coût de la dette : ROCE et ROE se recalculent instantanément. Fais passer le ROCE sous kD pour voir le levier se retourner."
+      },
+      "pdfExample": {
+        "original": "ROCE 2019 d'Apple (29 %), LVMH (18 %), Carrefour (7 %) et Volkswagen (2 %) ; démonstration de la formule du levier.",
+        "adidas": "ROCE et ROE d'Adidas 2025 calculés à partir de son bilan économique et de son EBIT."
+      },
+      "pages": [274, 302]
+    },
+    {
+      "id": "wacc",
+      "view": "wacc-npv",
+      "path": "/wacc-npv/wacc",
+      "title": "WACC",
+      "altTitle": "Weighted Average Cost of Capital",
+      "icon": "Percent",
+      "concept": "Pour financer ses capitaux employés, Adidas fait appel à deux types d'investisseurs. Les actionnaires exigent kE : ils prennent le plus de risque, sans remboursement prévu. Les prêteurs exigent kD, moins cher, et encore allégé par l'économie d'impôt sur les intérêts. Le WACC est leur moyenne pondérée : la rentabilité minimale que doit dégager chaque euro investi. C'est la barre à franchir. ROCE > WACC : Adidas crée de la valeur, et la valeur de marché de ses capitaux propres dépasse leur valeur comptable (goodwill). ROCE < WACC : destruction de valeur, même avec un résultat net positif. La tentation : remplacer des capitaux propres par de la dette « moins chère ». Ça ne marche pas : le risque monte, kD et kE aussi. Le WACC dépend du risque du métier, pas de la façon dont on découpe la pizza.",
+      "toolbox": [
+        { "title": "Calcul", "formulaIds": ["wacc-def", "wacc-kd", "wacc-hierarchy"] },
+        { "title": "Créer ou détruire de la valeur", "formulaIds": ["wacc-value", "wacc-market-values"] },
+        { "title": "Pour aller plus loin (hors examen)", "formulaIds": ["wacc-capm", "wacc-market"] }
+      ],
+      "lab": {
+        "kind": "wacc-simulator",
+        "title": "WACC et création de valeur",
+        "goal": "Règle kE, le taux d'emprunt avant impôt, le taux d'IS et la répartition capitaux propres / dette nette : le WACC se recalcule. Fais ensuite varier le NOPAT pour rejouer les cas A, B et C du cours (neutre, goodwill, badwill)."
+      },
+      "pdfExample": {
+        "original": "Entreprise simplifiée : immobilisations 65 + BFR 35 = capitaux propres 60 + dette nette 40, kE 14 %, kD 4 %, WACC 10 %, cas A/B/C.",
+        "adidas": "Adidas simplifié à 10 Md€ de capitaux employés (6,5 + 3,5 = 6 + 4), avec les mêmes taux : NOPAT de 1,0, 1,7 et 0,6 Md€."
+      },
+      "pages": [313, 343]
+    },
+    {
+      "id": "npv-irr",
+      "view": "wacc-npv",
+      "path": "/wacc-npv/npv-irr",
+      "title": "NPV & IRR",
+      "altTitle": "Net Present Value & Internal Rate of Return",
+      "icon": "Rocket",
+      "concept": "Adidas hésite à investir 100 M€ dans la R&D d'une nouvelle semelle, censée rapporter 25 M€ de cash par an pendant 5 ans. 125 M€ encaissés pour 100 M€ dépensés : bonne affaire ? Pas si vite. Un euro dans 5 ans ne vaut pas un euro aujourd'hui (risque, inflation, coût d'opportunité). On actualise donc chaque flux de trésorerie disponible au taux exigé par les investisseurs, en général le WACC. La somme, moins l'investissement initial, donne la NPV : positive, le projet crée de la valeur ; négative, stop. À 10 %, la semelle affiche une NPV de −5 M€ ; à 5 %, de +8 M€. L'IRR est le taux qui annule la NPV, ici 8 % : parlant, mais trompeur pour départager des projets exclusifs. Pour trancher, c'est la NPV qui compte.",
+      "toolbox": [
+        { "title": "Le prix du temps", "formulaIds": ["npv-compounding", "npv-discounting"] },
+        { "title": "Critères de décision", "formulaIds": ["npv-def", "irr-def", "npv-payback"] },
+        { "title": "Quels flux actualiser ?", "formulaIds": ["npv-fcff", "val-ev-dcf"] }
+      ],
+      "lab": {
+        "kind": "npv-simulator",
+        "title": "Laboratoire d'investissement",
+        "goal": "Choisis un projet Adidas (semelle R&D, flagship store, projets exclusifs) ou saisis tes propres flux, puis fais varier le taux d'actualisation : NPV, IRR et payback se recalculent, et la courbe NPV = f(taux) montre où elle coupe zéro."
+      },
+      "pdfExample": {
+        "original": "Machine à 100 k€ rapportant 25 k€/an pendant 5 ans ; exercice 3 (extension d'usine à 20 M€) ; projets exclusifs de l'exercice 1.",
+        "adidas": "R&D d'une semelle à 100 M€ ; nouveau flagship store à 20 M€ ; choix entre un flagship à Shanghai et une ligne padel."
+      },
+      "pages": [358, 400, 412, 416]
+    }
+  ]
+}

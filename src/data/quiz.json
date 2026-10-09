@@ -1,0 +1,585 @@
+{
+  "scoring": { "correct": 1, "wrong": -1, "blank": 0 },
+  "questions": [
+    {
+      "id": "bs-01",
+      "module": "balance-sheet",
+      "topic": "structure du bilan",
+      "question": "Dans le bilan d'Adidas, où classe-t-on les factures livrées à JD Sports mais pas encore réglées ?",
+      "choices": ["Actif immobilisé", "Actif circulant d'exploitation (créances clients)", "Trésorerie active", "Passif circulant d'exploitation", "Capitaux propres"],
+      "answer": 1,
+      "explanation": "Ce sont des créances clients : de l'argent que des tiers doivent à Adidas dans le cadre de son cycle d'exploitation, transformé en cash en moins d'un an.",
+      "pages": [51, 53]
+    },
+    {
+      "id": "bs-02",
+      "module": "balance-sheet",
+      "topic": "structure du bilan",
+      "question": "Les dettes fournisseurs d'Adidas envers ses usines asiatiques sont…",
+      "choices": ["Une dette financière, donc payante", "Une dette « gratuite » (sans intérêts) si elle est réglée à l'échéance", "De la trésorerie passive", "Des capitaux propres"],
+      "answer": 1,
+      "explanation": "Les dettes d'exploitation ne portent pas d'intérêts tant que l'entreprise paie dans les délais, contrairement aux dettes financières.",
+      "pages": [66, 71, 72]
+    },
+    {
+      "id": "bs-03",
+      "module": "balance-sheet",
+      "topic": "dette nette",
+      "question": "Une filiale affiche capitaux propres 10 et dettes financières 90 (total 100). À l'actif : immobilisations + BFR = 15 et trésorerie = 85. Son niveau d'endettement est…",
+      "choices": ["Trop élevé", "Élevé", "Moyen", "Faible", "Très faible"],
+      "answer": 4,
+      "explanation": "Dette nette = 90 − 85 = 5 seulement. C'est la dette nette, et non les dettes financières seules, qui permet de juger l'endettement.",
+      "pages": [107, 108, 109]
+    },
+    {
+      "id": "bs-04",
+      "module": "balance-sheet",
+      "topic": "vision économique",
+      "question": "Capitaux employés = ?",
+      "choices": ["Capitaux propres + dettes financières", "Actif immobilisé + BFR", "Total de l'actif", "Actif immobilisé + trésorerie", "Stocks + créances clients"],
+      "answer": 1,
+      "explanation": "En vision économique, l'actif se résume aux immobilisations et au BFR ; il est financé par les capitaux investis (capitaux propres + dette nette).",
+      "pages": [106, 116]
+    },
+    {
+      "id": "bs-05",
+      "module": "balance-sheet",
+      "topic": "vision économique",
+      "question": "Immobilisations nettes 16 000 €, BFR 7 500 €, capitaux propres 15 500 €. Que vaut la dette nette ?",
+      "choices": ["6 500 €", "7 500 €", "8 000 €", "15 500 €", "23 500 €"],
+      "answer": 2,
+      "explanation": "Capitaux employés = 16 000 + 7 500 = 23 500 = capitaux investis. Dette nette = 23 500 − 15 500 = 8 000 € (dette MT 6 500 + découvert 6 000 − trésorerie 4 500).",
+      "pages": [126]
+    },
+    {
+      "id": "bs-06",
+      "module": "balance-sheet",
+      "topic": "vision économique",
+      "question": "Le gearing se calcule comme…",
+      "choices": ["Dette nette / capitaux propres", "Dettes financières / total du passif", "Capitaux propres / capitaux employés", "Dette nette / EBITDA"],
+      "answer": 0,
+      "explanation": "Gearing = dette nette / capitaux propres : la mesure de l'effet de levier financier.",
+      "pages": [119]
+    },
+    {
+      "id": "bs-07",
+      "module": "balance-sheet",
+      "topic": "vision économique",
+      "question": "Vous êtes banquier. Quel ratio dette nette / capitaux employés acceptez-vous pour une société foncière (immobilier) ?",
+      "choices": ["0 %", "0 à 5 %", "20 à 30 %", "70 à 80 %", "80 à 95 %"],
+      "answer": 4,
+      "explanation": "Foncière : 80 à 95 %, grâce à des flux prévisibles et à des garanties de qualité. Concessionnaire auto 70–80 %, labo pharmaceutique 20–30 %, start-up internet 0–5 %, recherche pétrolière 0 %.",
+      "pages": [120, 121]
+    },
+    {
+      "id": "solv-01",
+      "module": "balance-sheet",
+      "topic": "liquidité",
+      "question": "Actif : immo à 7 ans 200, immo à 3 ans 200, stocks (3 mois) 300, créances (2 mois) 100, trésorerie 200. Passif : capitaux propres 100, dette à 5 ans 200, dette à 1 an 300, dette à 1 mois 400. Sa liquidité à 1 mois est…",
+      "choices": ["Assurée, avec 100 d'avance", "Assurée tout juste", "Insuffisante : il manque 200", "Insuffisante : il manque 100", "Impossible à juger sans compte de résultat"],
+      "answer": 2,
+      "explanation": "À 1 mois, seule la trésorerie (200) couvre une dette de 400 : il manque 200. À 1 an il manque 100 (600 contre 700), à 5 ans encore 100 (800 contre 900). Il faut restructurer la dette d'urgence.",
+      "pages": [256, 257]
+    },
+    {
+      "id": "solv-02",
+      "module": "balance-sheet",
+      "topic": "liquidité",
+      "question": "Pourquoi le cours recommande-t-il de se méfier des ratios de liquidité (current ratio, quick ratio, cash ratio) ?",
+      "choices": ["Ils sont trop complexes à calculer", "Une dégradation du BFR (mauvaise gestion) peut les améliorer", "Ils ignorent la trésorerie", "Ils ne concernent que les banques"],
+      "answer": 1,
+      "explanation": "Autres défauts : horizon de 3 mois alors que le bilan est publié 3 à 6 mois après la clôture, postes volatils dépendant de la date de clôture, nombreux contre-exemples.",
+      "pages": [260]
+    },
+    {
+      "id": "solv-03",
+      "module": "balance-sheet",
+      "topic": "solvabilité",
+      "question": "Europcar, fin 2019 : ressources stables / capitaux employés = 59 %. Diagnostic selon le cours ?",
+      "choices": ["Idéal", "Très bon", "Moyen mais acceptable", "Risque élevé de faillite", "R.I.P."],
+      "answer": 3,
+      "explanation": "Entre 50 et 70 % : risque élevé de faillite (seuil critique à 70 %). Avec une dette nette / EBITDA de 13, la solvabilité est très mauvaise ; un plan de sauvetage a suivi en 2020.",
+      "pages": [268, 272, 273]
+    },
+    {
+      "id": "solv-04",
+      "module": "balance-sheet",
+      "topic": "solvabilité",
+      "question": "Dette nette / EBITDA = 6. Selon le cours…",
+      "choices": ["Aucun problème", "C'est OK", "Risque élevé de faillite", "Ce ratio n'a pas de sens"],
+      "answer": 2,
+      "explanation": "Moins de 3 : aucun problème ; jusqu'à 4 : OK ; au-delà de 5 : risque élevé de faillite.",
+      "pages": [270]
+    },
+    {
+      "id": "solv-05",
+      "module": "balance-sheet",
+      "topic": "solvabilité",
+      "question": "Dette nette / CFO = 2,5 ans, pour une maturité moyenne de la dette d'environ 3 ans. Diagnostic ?",
+      "choices": ["Excellent", "Bon", "Moyen mais acceptable", "Risque élevé de faillite", "R.I.P."],
+      "answer": 2,
+      "explanation": "0–1 an : excellent ; 1–2 : bon ; 2–3 : moyen mais acceptable ; 3–5 : risque élevé ; au-delà de 5 : R.I.P.",
+      "pages": [269]
+    },
+    {
+      "id": "solv-06",
+      "module": "balance-sheet",
+      "topic": "solvabilité",
+      "question": "Si Adidas n'avait aucune dette et se finançait uniquement par capitaux propres, pourrait-il faire faillite ? Détruire de la valeur ?",
+      "choices": ["Faillite oui, destruction de valeur non", "Faillite non, mais destruction de valeur possible si ROCE < WACC", "Ni l'un ni l'autre", "Les deux"],
+      "answer": 1,
+      "explanation": "Pas de dette, pas de cessation de paiements envers des créanciers, donc pas de faillite. Mais si le ROCE est inférieur au WACC, l'entreprise détruit de la valeur.",
+      "pages": [476]
+    },
+    {
+      "id": "solv-07",
+      "module": "balance-sheet",
+      "topic": "solvabilité",
+      "question": "Une entreprise est liquidée par le tribunal. En moyenne, quelle part de leur apport les actionnaires récupèrent-ils ?",
+      "choices": ["Presque 100 %", "Environ 50 %", "Environ 25 %", "Presque 0 %"],
+      "answer": 3,
+      "explanation": "Les actionnaires passent en dernier, après l'État, les créanciers postérieurs au jugement, les créanciers garantis puis chirographaires. C'est pourquoi ils portent le plus de risque.",
+      "pages": [469, 476]
+    },
+    {
+      "id": "is-01",
+      "module": "income-statement",
+      "topic": "stocks",
+      "question": "Un magasin Adidas a 200 k€ de chaussettes en stock au début du mois, en reçoit et en paie 300 k€ dans le mois, et termine avec 150 k€ en stock. Consommation du mois ?",
+      "choices": ["150 k€", "250 k€", "300 k€", "350 k€", "450 k€"],
+      "answer": 3,
+      "explanation": "Consommation = achats + (stock initial − stock final) = 300 + (200 − 150) = 350 k€.",
+      "pages": [155, 156]
+    },
+    {
+      "id": "is-02",
+      "module": "income-statement",
+      "topic": "charges calculées",
+      "question": "Laquelle de ces charges est une charge calculée, sans sortie de trésorerie ?",
+      "choices": ["Salaires des vendeurs", "Achat de semelles", "Dotation aux amortissements du flagship", "Intérêts de l'emprunt obligataire", "Loyer de l'entrepôt"],
+      "answer": 2,
+      "explanation": "Dotations aux amortissements et aux provisions : elles réduisent le résultat (et l'impôt) sans faire sortir de cash.",
+      "pages": [132, 133]
+    },
+    {
+      "id": "is-03",
+      "module": "income-statement",
+      "topic": "soldes intermédiaires",
+      "question": "EBITDA = 112 000 € et dotations aux amortissements = 70 000 €. EBIT ?",
+      "choices": ["182 000 €", "112 000 €", "54 000 €", "42 000 €"],
+      "answer": 3,
+      "explanation": "EBIT = EBITDA − charges calculées (ici les amortissements) = 112 000 − 70 000 = 42 000 €.",
+      "pages": [180]
+    },
+    {
+      "id": "is-04",
+      "module": "income-statement",
+      "topic": "résultat vs trésorerie",
+      "question": "Pop-up store Adidas, janvier : résultat net de 37 500 €, mais trésorerie en hausse de 55 000 €. D'où vient l'écart ?",
+      "choices": ["D'une erreur comptable", "De l'amortissement (charge calculée) et de l'IS pas encore payé, qui réduisent le résultat sans sortie de cash", "De ventes pas encore encaissées", "D'une hausse des stocks"],
+      "answer": 1,
+      "explanation": "Écart de 17 500 € = 5 000 € d'amortissement de l'aménagement + 12 500 € d'IS dû à l'État mais pas encore réglé.",
+      "pages": [24, 25, 28]
+    },
+    {
+      "id": "is-05",
+      "module": "income-statement",
+      "topic": "point mort",
+      "question": "Un flagship a 2 M€ de coûts fixes par an et un taux de marge sur coûts variables de 40 %. Point mort ?",
+      "choices": ["0,8 M€", "2 M€", "3,3 M€", "5 M€", "8 M€"],
+      "answer": 3,
+      "explanation": "Point mort = coûts fixes / taux de marge sur coûts variables = 2 / 0,4 = 5 M€ de chiffre d'affaires.",
+      "pages": [170]
+    },
+    {
+      "id": "is-06",
+      "module": "income-statement",
+      "topic": "point mort",
+      "question": "Iberia, 2008 : chiffre d'affaires −1 %, résultat net −82 %. Explication la plus probable ?",
+      "choices": ["Une fraude comptable", "Beaucoup de coûts fixes : un CA proche du point mort rend le résultat très sensible", "Une hausse de l'IS", "Un BFR négatif"],
+      "answer": 1,
+      "explanation": "Les secteurs à forts coûts fixes (aérien) ont un résultat très sensible à une baisse d'activité. Inversement, un bond du résultat ne signifie pas forcément une performance spectaculaire.",
+      "pages": [174, 176]
+    },
+    {
+      "id": "is-07",
+      "module": "income-statement",
+      "topic": "soldes intermédiaires",
+      "question": "Résultat brut (avant impôt) = ?",
+      "choices": ["EBITDA − IS", "EBIT + résultat financier + résultat exceptionnel", "CA − achats", "Résultat net + dividendes"],
+      "answer": 1,
+      "explanation": "On additionne les trois étages du compte de résultat avant de déduire l'impôt sur les sociétés.",
+      "pages": [149]
+    },
+    {
+      "id": "is-08",
+      "module": "income-statement",
+      "topic": "résultat vs trésorerie",
+      "question": "ENGIE, 2015 : résultat net négatif, mais plus de 10 Md€ de flux d'exploitation (CFO). Raison principale ?",
+      "choices": ["Une augmentation de capital", "13,9 Md€ d'amortissements : des charges calculées sans sortie de cash", "Des cessions d'actifs", "Un nouvel emprunt"],
+      "answer": 1,
+      "explanation": "Les amortissements ont réduit le résultat sans toucher la trésorerie ; dans une moindre mesure, la baisse du BFR (1,2 Md€) a aussi généré du cash.",
+      "pages": [226, 227]
+    },
+    {
+      "id": "is-09",
+      "module": "income-statement",
+      "topic": "présentation par fonction",
+      "question": "Atelier Adidas : 2 400 paires produites, stock de produits finis passé de 140 à 270 paires, prix de vente 150 €. Chiffre d'affaires ?",
+      "choices": ["360 000 €", "340 500 €", "264 000 €", "19 175 €"],
+      "answer": 1,
+      "explanation": "Paires vendues = 2 400 − (270 − 140) = 2 270, soit 2 270 × 150 = 340 500 €.",
+      "pages": [184, 186]
+    },
+    {
+      "id": "wcr-01",
+      "module": "wcr",
+      "topic": "signe du BFR",
+      "question": "Toutes les entreprises ont un BFR positif.",
+      "choices": ["Vrai", "Faux"],
+      "answer": 1,
+      "explanation": "Faux. Presque toutes les entreprises industrielles ont un BFR positif (un besoin), mais un BFR négatif est une ressource : American Airlines (−13 457 M$ en 2019), ou un site de vente en ligne payé comptant.",
+      "pages": [92, 93, 95]
+    },
+    {
+      "id": "wcr-02",
+      "module": "wcr",
+      "topic": "liquidité",
+      "question": "Les distributeurs paient Adidas à près de 75 jours de chiffre d'affaires, et Adidas paie ses fournisseurs à 90 jours d'achats. Qu'en penser ?",
+      "choices": ["C'est forcément un problème", "Ce n'est pas forcément un problème : c'est le BFR global qui compte, pas chaque composante", "Je ne sais pas"],
+      "answer": 1,
+      "explanation": "Le niveau absolu de chaque poste ne dit rien : c'est le BFR (stocks + créances − dettes d'exploitation) qu'il faut financer comme un investissement.",
+      "pages": [100, 101, 102]
+    },
+    {
+      "id": "wcr-03",
+      "module": "wcr",
+      "topic": "pilotage du BFR",
+      "question": "Laquelle de ces décisions réduit le BFR d'Adidas ?",
+      "choices": ["Gonfler les stocks avant la Coupe du monde", "Accorder 30 jours de plus aux distributeurs", "Payer les usines plus vite pour les fidéliser", "Négocier 15 jours de délai supplémentaires avec les usines"],
+      "answer": 3,
+      "explanation": "Les trois autres réflexes, tentants pour être « apprécié », dégradent le BFR et donc la trésorerie. Allonger le crédit fournisseur le réduit.",
+      "pages": [90]
+    },
+    {
+      "id": "wcr-04",
+      "module": "wcr",
+      "topic": "formule",
+      "question": "Quelle est la définition exacte du BFR ?",
+      "choices": ["Stocks + créances clients + trésorerie", "Actif circulant d'exploitation − passif circulant d'exploitation", "Actif immobilisé − capitaux propres", "Créances clients − dettes financières"],
+      "answer": 1,
+      "explanation": "Stocks + créances clients − dettes fournisseurs n'en est que l'approximation usuelle.",
+      "pages": [83]
+    },
+    {
+      "id": "wcr-05",
+      "module": "wcr",
+      "topic": "croissance",
+      "question": "La filiale wholesale double ses ventes : BFR de 160 à 320, et un découvert de 160 apparaît. La leçon ?",
+      "choices": ["La croissance améliore toujours la trésorerie", "Avec un BFR positif, une forte croissance doit être financée, sinon c'est la pénurie de cash", "Il faut augmenter les stocks", "Le BFR baisse quand l'activité augmente"],
+      "answer": 1,
+      "explanation": "C'est l'exemple des sociétés jumelles : on peut « mourir en excellente santé » si la hausse du BFR n'est pas financée par des ressources stables.",
+      "pages": [89, 91]
+    },
+    {
+      "id": "wcr-06",
+      "module": "wcr",
+      "topic": "trésorerie",
+      "question": "Flux de trésorerie d'exploitation (CFO), méthode indirecte = ?",
+      "choices": ["EBITDA − IS − hausse du BFR", "Résultat net + hausse du BFR", "EBIT + CAPEX", "EBITDA + hausse du BFR"],
+      "answer": 0,
+      "explanation": "La hausse du BFR (créances ou stocks en hausse, dettes fournisseurs en baisse) explique l'écart entre l'EBITDA après impôt et le cash réellement encaissé.",
+      "pages": [212, 213]
+    },
+    {
+      "id": "wcr-07",
+      "module": "wcr",
+      "topic": "signe du BFR",
+      "question": "Le BFR d'American Airlines était de −13 457 M$ fin 2019. Quel est le risque ?",
+      "choices": ["Aucun : c'est une ressource gratuite", "Si l'activité s'arrête brutalement, cette ressource disparaît très vite", "Les stocks vont exploser", "La dette financière augmente mécaniquement"],
+      "answer": 1,
+      "explanation": "Un BFR très négatif finance l'activité… tant qu'elle tourne. En 2020, avec l'arrêt des vols, la ressource s'est évaporée.",
+      "pages": [95, 96]
+    },
+    {
+      "id": "wcr-08",
+      "module": "wcr",
+      "topic": "formule",
+      "question": "Adidas fin 2025 (M€) : stocks 5 832, créances clients 2 634, dettes fournisseurs 2 910. BFR avec la formule approchée ?",
+      "choices": ["2 922 M€", "5 556 M€", "8 466 M€", "11 376 M€"],
+      "answer": 1,
+      "explanation": "5 832 + 2 634 − 2 910 = 5 556 M€. Avec tous les postes d'exploitation (charges à payer, provisions courantes…), le BFR complet tombe à 2 513 M€.",
+      "pages": [83]
+    },
+    {
+      "id": "wcr-09",
+      "module": "wcr",
+      "topic": "trésorerie",
+      "question": "Trésorerie nette = ?",
+      "choices": ["Ressources stables − capitaux employés", "Capitaux propres − dette nette", "BFR − actif immobilisé", "CFO − CFI"],
+      "answer": 0,
+      "explanation": "Propriété démontrée dans le cours : trésorerie active − trésorerie passive = (capitaux propres + dettes MT/LT) − (immobilisations + BFR).",
+      "pages": [264, 266]
+    },
+    {
+      "id": "wcr-10",
+      "module": "wcr",
+      "topic": "trésorerie",
+      "question": "Une trésorerie nette très positive en permanence signifie surtout…",
+      "choices": ["Un surendettement", "Du cash qui « dort », sauf projet en vue", "Un BFR négatif", "Une faillite imminente"],
+      "answer": 1,
+      "explanation": "Idéalement, la trésorerie nette est proche de zéro.",
+      "pages": [263]
+    },
+    {
+      "id": "prof-01",
+      "module": "profitability",
+      "topic": "ROCE",
+      "question": "ROCE = ?",
+      "choices": ["Résultat net / capitaux propres", "NOPAT / capitaux employés", "EBITDA / chiffre d'affaires", "EBIT / total de l'actif"],
+      "answer": 1,
+      "explanation": "Rentabilité économique : résultat d'exploitation après impôt rapporté aux capitaux employés, indépendamment du financement.",
+      "pages": [282]
+    },
+    {
+      "id": "prof-02",
+      "module": "profitability",
+      "topic": "ROCE",
+      "question": "Adidas 2025 : EBIT de 2 056 M€, taux d'impôt effectif de 24,3 %. NOPAT ?",
+      "choices": ["500 M€", "1 556 M€", "2 056 M€", "2 556 M€"],
+      "answer": 1,
+      "explanation": "NOPAT = EBIT × (1 − T) = 2 056 × 0,757 ≈ 1 556 M€. Rapporté aux 10 799 M€ de capitaux employés, le ROCE d'Adidas ressort à 14,4 %.",
+      "pages": [281]
+    },
+    {
+      "id": "prof-03",
+      "module": "profitability",
+      "topic": "effet de levier",
+      "question": "ROCE 12 %, kD 4 %, D/E = 0,5. ROE ?",
+      "choices": ["8 %", "12 %", "14 %", "16 %", "20 %"],
+      "answer": 3,
+      "explanation": "ROE = ROCE + (ROCE − kD) × D/E = 12 % + 8 % × 0,5 = 16 %.",
+      "pages": [291]
+    },
+    {
+      "id": "prof-04",
+      "module": "profitability",
+      "topic": "effet de levier",
+      "question": "En pleine crise, le ROCE d'Adidas tombe à 3 % alors que kD = 4 %. Que fait la dette ?",
+      "choices": ["Elle augmente le ROE", "Elle réduit le ROE : l'effet de levier devient négatif", "Elle n'a aucun effet", "Elle augmente le ROCE"],
+      "answer": 1,
+      "explanation": "Quand ROCE < kD, le terme (ROCE − kD) × D/E est négatif : plus de dette amplifie la chute de rentabilité pour l'actionnaire.",
+      "pages": [294]
+    },
+    {
+      "id": "prof-05",
+      "module": "profitability",
+      "topic": "ROCE",
+      "question": "ROCE = marge × rotation. Quelle entreprise vit plutôt d'une rotation élevée et d'une marge faible ?",
+      "choices": ["Apple", "LVMH", "Carrefour", "Adidas"],
+      "answer": 2,
+      "explanation": "La grande distribution tourne vite ses capitaux avec une marge faible ; le luxe ou la tech vivent d'une marge élevée.",
+      "pages": [283, 287]
+    },
+    {
+      "id": "prof-06",
+      "module": "profitability",
+      "topic": "effet de levier",
+      "question": "Adidas augmente fortement son gearing (D/E). À quoi faut-il s'attendre pour kD ?",
+      "choices": ["kD reste constant", "kD baisse", "kD augmente, car le risque des prêteurs augmente"],
+      "answer": 2,
+      "explanation": "L'effet de levier n'est pas une formule d'alchimiste : quand D/E monte, les prêteurs exigent davantage.",
+      "pages": [294]
+    },
+    {
+      "id": "prof-07",
+      "module": "profitability",
+      "topic": "effet de levier",
+      "question": "Coût de la dette nette après impôt (kD) = ?",
+      "choices": ["Frais financiers nets × (1 − T) / dette nette", "Intérêts / capitaux propres", "Taux sans risque + bêta × prime de risque", "Résultat net / dette nette"],
+      "answer": 0,
+      "explanation": "Frais financiers nets = intérêts payés − produits financiers de la trésorerie.",
+      "pages": [295]
+    },
+    {
+      "id": "wacc-01",
+      "module": "wacc",
+      "topic": "calcul",
+      "question": "Capitaux propres 60, dette nette 40, kE 14 %, kD après impôt 4 %. WACC ?",
+      "choices": ["9 %", "10 %", "12 %", "14 %", "18 %"],
+      "answer": 1,
+      "explanation": "WACC = 14 % × 60/100 + 4 % × 40/100 = 8,4 % + 1,6 % = 10 %.",
+      "pages": [321]
+    },
+    {
+      "id": "wacc-02",
+      "module": "wacc",
+      "topic": "calcul",
+      "question": "Quelle est la hiérarchie correcte des taux ?",
+      "choices": ["kE < WACC < kD < RF", "RF < kD < WACC < kE", "RF < WACC < kD < kE", "kD < RF < kE < WACC"],
+      "answer": 1,
+      "explanation": "Le prêteur prend moins de risque que l'actionnaire ; le WACC est une moyenne des deux, et tous dépassent le taux sans risque.",
+      "pages": [318]
+    },
+    {
+      "id": "wacc-03",
+      "module": "wacc",
+      "topic": "création de valeur",
+      "question": "NOPAT de 0,6 Md€ pour 10 Md€ de capitaux employés, WACC de 10 %, résultat net positif (0,44 Md€). Adidas…",
+      "choices": ["crée de la valeur, puisque le résultat net est positif", "détruit de la valeur : ROCE 6 % < WACC 10 % (badwill)", "est neutre", "va faire faillite"],
+      "answer": 1,
+      "explanation": "ROE = 0,44 / 6 ≈ 7 % < kE = 14 %. La valeur de marché des capitaux propres (0,44 / 14 % ≈ 3,1) tombe sous leur valeur comptable (6) : badwill d'environ 2,9 Md€.",
+      "pages": [325, 326]
+    },
+    {
+      "id": "wacc-04",
+      "module": "wacc",
+      "topic": "restructuration",
+      "question": "Pour baisser son WACC, Adidas remplace des capitaux propres par de la dette, moins chère. Ça marche ?",
+      "choices": ["Oui, mécaniquement", "Non : le risque augmente, kD et kE montent ; le WACC dépend du risque de l'activité", "Oui, si le taux d'IS est élevé"],
+      "answer": 1,
+      "explanation": "Le WACC préexiste à la structure financière (Modigliani-Miller : la taille de la pizza ne dépend pas de son découpage). Pour restaurer ROCE ≥ WACC, il faut améliorer le résultat économique.",
+      "pages": [329, 331, 332, 341]
+    },
+    {
+      "id": "wacc-05",
+      "module": "wacc",
+      "topic": "calcul",
+      "question": "Pourquoi kD = kD' × (1 − T) ?",
+      "choices": ["Parce que les intérêts sont déductibles de l'impôt sur les sociétés", "Parce que les dividendes sont déductibles", "Pour tenir compte de l'inflation", "Parce que la dette est remboursée"],
+      "answer": 0,
+      "explanation": "Chaque euro d'intérêt réduit la base imposable : le coût réel de la dette est donc diminué de l'économie d'impôt.",
+      "pages": [316]
+    },
+    {
+      "id": "wacc-06",
+      "module": "wacc",
+      "topic": "création de valeur",
+      "question": "Cas B : résultat net 15,4, kE 14 %, capitaux propres comptables 60. Goodwill ?",
+      "choices": ["17", "50", "60", "110"],
+      "answer": 1,
+      "explanation": "Valeur de marché des capitaux propres = 15,4 / 14 % = 110 ; goodwill = 110 − 60 = 50. ROCE (17 %) > WACC (10 %) : création de valeur.",
+      "pages": [324]
+    },
+    {
+      "id": "wacc-07",
+      "module": "wacc",
+      "topic": "MEDAF (hors examen)",
+      "question": "Taux sans risque 3 %, bêta 1,2, prime de risque du marché 5 %. kE selon le MEDAF ?",
+      "choices": ["6 %", "8 %", "9 %", "9,6 %"],
+      "answer": 2,
+      "explanation": "kE = 3 % + 1,2 × 5 % = 9 %. Partie bonus du cours, hors examen final.",
+      "pages": [339]
+    },
+    {
+      "id": "npv-01",
+      "module": "npv-irr",
+      "topic": "NPV",
+      "question": "R&D d'une semelle : −100 M€, puis +25 M€ par an pendant 5 ans. Taux d'actualisation de 10 %. NPV ?",
+      "choices": ["+25 M€", "+5 M€", "0", "−5 M€", "−25 M€"],
+      "answer": 3,
+      "explanation": "Valeurs actuelles des flux : 23 + 21 + 19 + 17 + 16 ≈ 95 M€ ; NPV ≈ −5 M€. Le projet détruit de la valeur.",
+      "pages": [370, 371]
+    },
+    {
+      "id": "npv-02",
+      "module": "npv-irr",
+      "topic": "IRR",
+      "question": "L'IRR de ce même projet vaut environ 8 %. Si la rentabilité exigée est de 5 %…",
+      "choices": ["On investit : IRR > taux exigé", "On n'investit pas", "Impossible de conclure"],
+      "answer": 0,
+      "explanation": "IRR > taux exigé : le projet crée de la valeur (NPV ≈ +8 M€ à 5 %). À 10 %, on n'investirait pas.",
+      "pages": [372, 383]
+    },
+    {
+      "id": "npv-03",
+      "module": "npv-irr",
+      "topic": "IRR",
+      "question": "Deux projets exclusifs à 5 % : A (NPV 1,17 ; IRR 28 %) et B (NPV 2,40 ; IRR 13 %). Lequel retenir ?",
+      "choices": ["A, son IRR est plus élevé", "B, sa NPV est plus élevée", "Aucun", "Les deux"],
+      "answer": 1,
+      "explanation": "Pour classer des projets exclusifs, la NPV mesure directement la création de valeur ; l'IRR peut induire en erreur.",
+      "pages": [386]
+    },
+    {
+      "id": "npv-04",
+      "module": "npv-irr",
+      "topic": "taux d'actualisation",
+      "question": "Quel ordre de grandeur de taux d'actualisation pour entrer au premier tour d'une start-up dont le concept reste à prouver ?",
+      "choices": ["5 %", "8 %", "17 %", "50 %"],
+      "answer": 3,
+      "explanation": "Repères du cours : ligne haute tension RTE 5–6 %, centrale électrique en France 8 %, projet industriel en Afrique de l'Ouest 17 %, start-up au premier tour 50 %.",
+      "pages": [377, 378]
+    },
+    {
+      "id": "npv-05",
+      "module": "npv-irr",
+      "topic": "Excel",
+      "question": "Quel est le piège de la fonction Excel =NPV(taux ; valeur1:valeurn) ?",
+      "choices": ["La première valeur est traitée comme l'année 1, pas l'année 0", "Le taux doit être saisi en points de base", "Elle renvoie l'IRR", "Elle refuse les flux négatifs"],
+      "answer": 0,
+      "explanation": "Il faut ajouter le flux de l'année 0 hors de la fonction. =IRR(valeur0:valeurn) ne renvoie qu'un seul IRR, même s'il en existe plusieurs.",
+      "pages": [387]
+    },
+    {
+      "id": "npv-06",
+      "module": "npv-irr",
+      "topic": "payback",
+      "question": "Flux : −100, 25, 25, 25, 25, 25. Délai de récupération ?",
+      "choices": ["2 ans", "3 ans", "4 ans", "5 ans"],
+      "answer": 2,
+      "explanation": "Flux cumulés : −100, −75, −50, −25, 0 → 4 ans. Mais ce critère ignore la valeur temps et les flux après le payback.",
+      "pages": [389, 390]
+    },
+    {
+      "id": "npv-07",
+      "module": "npv-irr",
+      "topic": "flux à actualiser",
+      "question": "Pour calculer la NPV d'un nouveau flagship, on retient…",
+      "choices": ["Les intérêts de l'emprunt qui le finance", "Les frais d'étude déjà engagés (coûts irrécupérables)", "Les FCFF incrémentaux après impôt, sans flux de financement", "Le résultat comptable du magasin"],
+      "answer": 2,
+      "explanation": "Le financement est déjà dans le taux d'actualisation ; les coûts irrécupérables sont dépensés que le projet se fasse ou non.",
+      "pages": [393]
+    },
+    {
+      "id": "npv-08",
+      "module": "npv-irr",
+      "topic": "NPV",
+      "question": "Flagship store : 20 M€ d'investissement, NPV de −5,4 M€, IRR de 2,4 %, rentabilité exigée de 10 %. Décision ?",
+      "choices": ["On lance le projet", "On ne lance pas le projet", "On le lance si l'IRR est positif"],
+      "answer": 1,
+      "explanation": "NPV < 0 et IRR < rentabilité exigée : le projet détruit de la valeur.",
+      "pages": [396]
+    },
+    {
+      "id": "npv-09",
+      "module": "npv-irr",
+      "topic": "marchés",
+      "question": "La BCE relève ses taux par surprise. Le prix d'une obligation Adidas à taux fixe…",
+      "choices": ["Monte", "Baisse", "Ne bouge pas"],
+      "answer": 1,
+      "explanation": "Les flux de l'obligation sont fixes mais le taux d'actualisation monte : sa valeur actuelle baisse. À taux variable, flux et taux évolueraient ensemble.",
+      "pages": [492, 494]
+    },
+    {
+      "id": "npv-10",
+      "module": "npv-irr",
+      "topic": "actualisation",
+      "question": "Adidas emprunte 100 000 € sur 5 ans à 5 %, remboursés par annuités constantes. Montant de l'annuité ?",
+      "choices": ["20 000 €", "21 000 €", "23 097 €", "25 000 €"],
+      "answer": 2,
+      "explanation": "100 000 = Σ annuité / (1,05)^k pour k = 1 à 5, d'où une annuité de 23 097 €.",
+      "pages": [64, 398]
+    },
+    {
+      "id": "npv-11",
+      "module": "npv-irr",
+      "topic": "IRR",
+      "question": "Un projet génère les flux 4, −7, 4 (M€). Que dire de son IRR ?",
+      "choices": ["Il en existe deux", "Il n'en existe aucun, alors que la NPV est positive", "Il vaut 0 %"],
+      "answer": 1,
+      "explanation": "C'est une des limites de l'IRR : l'équation NPV = 0 peut n'avoir aucune solution (ou plusieurs, comme pour −1 ; 7,2 ; −7,2).",
+      "pages": [385]
+    }
+  ]
+}

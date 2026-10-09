@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "source": "adidas, Annual Report 2025: consolidated income statement and balance sheet (31/12/2025)",
+    "disclaimer": "Items grouped into the course's simplified template (the report's €1m rounding gap is allocated to other operating payables). Depreciation (D&A) = reported EBITDA − operating profit. The scenarios are educational and do not describe actual Adidas projects."
+  },
+  "taxRateNote": "2025 effective rate: €443m of tax / €1,820m of income before tax.",
+  "balanceSheet": {
+    "fixed-assets": {
+      "label": "Fixed assets",
+      "lines": {
+        "tangible": { "label": "Tangible assets", "detail": "Property, plant and equipment 1,973 + right-of-use assets of leased stores and warehouses 2,605" },
+        "intangible": { "label": "Intangible assets", "detail": "Goodwill 1,203 + other intangible assets 443" },
+        "financial": {
+          "label": "Financial and other fixed assets",
+          "detail": "Long-term financial assets 353 + other non-current financial assets 217 + deferred tax assets 1,077 + other non-current assets 415"
+        }
+      }
+    },
+    "operating-current-assets": {
+      "label": "Operating current assets",
+      "lines": {
+        "inventories": { "label": "Inventories", "detail": "Including finished goods 4,168 and goods in transit 1,656" },
+        "receivables": { "label": "Trade receivables" },
+        "other-receivables": { "label": "Other receivables", "detail": "Other current financial assets 518 + income tax receivables 167 + other current assets 1,208" }
+      }
+    },
+    "cash-assets": {
+      "label": "Cash assets",
+      "lines": { "cash": { "label": "Cash and cash equivalents" } }
+    },
+    "equity": {
+      "label": "Equity",
+      "lines": {
+        "shareholders-equity": { "label": "Shareholders' equity", "detail": "Share capital 179 + reserves −161 + retained earnings 5,758" },
+        "minorities": { "label": "Non-controlling interests" }
+      }
+    },
+    "lt-debt": {
+      "label": "MT/LT financial debts",
+      "lines": {
+        "lt-borrowings": { "label": "Long-term borrowings" },
+        "lt-leases": { "label": "Non-current lease liabilities" }
+      }
+    },
+    "lt-provisions": {
+      "label": "Provisions and other non-current liabilities",
+      "lines": {
+        "provisions": { "label": "Provisions, pensions, deferred taxes", "detail": "Provisions 436 + pensions 106 + deferred taxes 45 + other 150" }
+      }
+    },
+    "operating-current-liabilities": {
+      "label": "Operating current liabilities",
+      "lines": {
+        "payables": { "label": "Trade payables" },
+        "other-payables": {
+          "label": "Other operating payables",
+          "detail": "Accrued liabilities 2,383 + current provisions 1,208 + other current liabilities 652 + income taxes 357 + other current financial liabilities 335 (+1 rounding)"
+        }
+      }
+    },
+    "cash-liabilities": {
+      "label": "Cash liabilities",
+      "lines": {
+        "st-borrowings": { "label": "Short-term borrowings" },
+        "st-leases": { "label": "Current lease liabilities" }
+      }
+    }
+  },
+  "wcrDaysNote": "2025 payment terms recomputed excluding VAT: trade receivables on sales, inventories and trade payables on cost of sales (Adidas does not publish its purchases).",
+  "scenarios": {
+    "popUpStore": {
+      "title": "Adidas Originals pop-up store",
+      "pdfOrigin": "Pizza Food Truck",
+      "story": "Adidas opens a pop-up store for a retro sneaker collection. Fit-out €300,000 depreciated over 5 years, cost €20 per pair, selling price €100, permanent stock of €3,000, salaries €20,000/month, miscellaneous €5,000/month, minimum cash €2,000, 1,000 pairs sold per month, corporate tax at 25%. Pessimistic scenario: 100 pairs per month."
+    },
+    "runningWorkshop": {
+      "title": "Adidas running-shoe assembly workshop",
+      "pdfOrigin": "Exercise 2 – Fever Tech",
+      "story": "An Adidas workshop assembles 2,400 pairs over the year; the finished-goods stock rises from 140 to 270 pairs; selling price €150. Components per pair: upper 20, midsole 30, outsole 10, heel counter and lining 15, assembly 20, laces 5, insole 5, box 5 (€110). Salaries €60,000 + social security contributions €30,000. At year end, the premises are sold for €230,000 (bought €200,000 three years ago, depreciated over 40 years). A €12,000 loan at 5% is fully repaid at year end. Corporate tax at 35%."
+    },
+    "twinSubsidiaries": {
+      "title": "adidas.com versus the wholesale subsidiary",
+      "pdfOrigin": "The twin companies A and B",
+      "story": "adidas.com collects from online customers immediately but pays its suppliers on credit: its WCR is negative and becomes a resource when activity doubles. The wholesale subsidiary holds a lot of stock and gives retailers payment terms: when its sales double, its WCR doubles too and, without financing, a bank overdraft appears. Balance sheets in €m, year Y then Y+1."
+    },
+    "waccCase": {
+      "title": "Adidas simplified: WACC and value creation",
+      "pdfOrigin": "WACC: example (cases A, B, C)",
+      "story": "Simplified economic balance sheet in €bn: fixed assets 6.5 + WCR 3.5 = equity 6 + net debt 4. Adidas borrows at 6% before tax (corporate tax 33.33%), i.e. 4% after tax; shareholders require 14%. Three typical years: NOPAT of €1.0bn, €1.7bn or €0.6bn."
+    },
+    "soleRnD": {
+      "title": "R&D on a new sole",
+      "pdfOrigin": "Discounting: a €100k machine",
+      "story": "Adidas invests €100m in the R&D and industrialisation of a new sole foam. Expected free cash flows: €25m a year for 5 years, zero residual value."
+    },
+    "flagshipStore": {
+      "title": "New flagship store",
+      "pdfOrigin": "Exercise 3 – plant extension",
+      "story": "Opening a flagship store: €20m of fit-out, 8-year useful life, zero residual value. Additional EBITDA of €3m a year for 8 years. Straight-line depreciation over 5 years. WCR increase of €2.5m in the first year, recovered at the end of the project. Corporate tax at 40%, required return 10%."
+    },
+    "exclusiveProjects": {
+      "title": "Shanghai flagship or padel line?",
+      "pdfOrigin": "NPV – Exercise 1 (mutually exclusive projects)",
+      "story": "Two mutually exclusive projects (€m). Shanghai flagship, low risk, required return 5%: −40, 10, 12, 14, 16. Padel apparel line, moderate risk, required return 7%: −30 then 10 a year for 5 years."
+    }
+  },
+  "guessCompany": {
+    "title": "Recognising a company from its balance sheet",
+    "pdfOrigin": "Exercise: Guess which company it is (p. 74-76)",
+    "rows": {
+      "intangible": "Intangible assets",
+      "tangible": "Tangible assets",
+      "financial": "Financial assets",
+      "inventories": "Inventories",
+      "receivables": "Trade receivables and other",
+      "cash": "Cash",
+      "equity": "Equity",
+      "provisions": "Provisions",
+      "financialDebts": "Financial debts",
+      "payables": "Trade payables",
+      "advances": "Advances to customers and other"
+    },
+    "hints": {
+      "A": "86% tangible assets (high-voltage lines) financed 50% by debt: regulated, predictable cash flows and solid collateral.",
+      "B": "47% trade payables: mass retail collects from customers in cash and pays its suppliers on credit (negative WCR).",
+      "C": "33% inventories (wines and spirits ageing for years) and 33% intangibles (the brands).",
+      "D": "No inventory, 58% receivables (the loans granted), 65% customer deposits and 8% equity: a bank.",
+      "E": "29% inventories (sneakers in transit and in warehouses) and right-of-use assets of leased stores in tangible assets: a brand distributor, between manufacturer and retailer."
+    }
+  }
+}

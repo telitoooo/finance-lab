@@ -1,0 +1,623 @@
+{
+  "meta": {
+    "unit": "M€",
+    "fiscalYear": 2025,
+    "source": "adidas, Annual Report 2025 : compte de résultat et bilan consolidés (31/12/2025)",
+    "sourceUrl": "https://report.adidas-group.com/2025/en/consolidated-financial-statements/consolidated-statement-of-financial-position.html",
+    "disclaimer": "Postes regroupés dans la grille simplifiée du cours (1 M€ d'écart d'arrondi du rapport affecté aux autres dettes d'exploitation). Amortissements (D&A) = EBITDA publié − résultat d'exploitation. Les scénarios sont pédagogiques et ne décrivent pas des projets réels d'Adidas."
+  },
+  "incomeStatement": {
+    "revenue": 24811,
+    "grossMarginRate": 0.516,
+    "cogs": 12006,
+    "otherOperatingIncome": 122,
+    "operatingExpensesExDA": 9803,
+    "ebitda": 3124,
+    "depreciation": 1068,
+    "ebit": 2056,
+    "financialResult": -236,
+    "incomeBeforeTax": 1820,
+    "incomeTax": 443,
+    "discontinuedOperations": 8,
+    "netIncome": 1385,
+    "taxRate": 0.243,
+    "taxRateNote": "Taux effectif 2025 : 443 M€ d'impôt / 1 820 M€ de résultat avant impôt."
+  },
+  "balanceSheet": {
+    "assets": [
+      {
+        "id": "fixed-assets",
+        "label": "Actif immobilisé",
+        "lines": [
+          {
+            "id": "tangible",
+            "label": "Immobilisations corporelles",
+            "value": 4578,
+            "detail": "Property, plant and equipment 1 973 + droits d'utilisation des magasins et entrepôts loués 2 605"
+          },
+          {
+            "id": "intangible",
+            "label": "Immobilisations incorporelles",
+            "value": 1646,
+            "detail": "Goodwill 1 203 + autres incorporels 443"
+          },
+          {
+            "id": "financial",
+            "label": "Immobilisations financières et autres",
+            "value": 2062,
+            "detail": "Actifs financiers LT 353 + autres actifs financiers non courants 217 + impôts différés actifs 1 077 + autres actifs non courants 415"
+          }
+        ]
+      },
+      {
+        "id": "operating-current-assets",
+        "label": "Actif circulant d'exploitation",
+        "lines": [
+          {
+            "id": "inventories",
+            "label": "Stocks",
+            "value": 5832,
+            "detail": "Dont produits finis 4 168 et marchandises en transit 1 656"
+          },
+          {
+            "id": "receivables",
+            "label": "Créances clients",
+            "value": 2634
+          },
+          {
+            "id": "other-receivables",
+            "label": "Autres créances",
+            "value": 1893,
+            "detail": "Autres actifs financiers courants 518 + créances d'impôt 167 + autres actifs courants 1 208"
+          }
+        ]
+      },
+      {
+        "id": "cash-assets",
+        "label": "Trésorerie active",
+        "lines": [
+          {
+            "id": "cash",
+            "label": "Disponibilités et équivalents",
+            "value": 1617
+          }
+        ]
+      }
+    ],
+    "liabilities": [
+      {
+        "id": "equity",
+        "label": "Capitaux propres",
+        "lines": [
+          {
+            "id": "shareholders-equity",
+            "label": "Capitaux propres part du groupe",
+            "value": 5776,
+            "detail": "Capital 179 + réserves −161 + résultats accumulés 5 758"
+          },
+          {
+            "id": "minorities",
+            "label": "Intérêts minoritaires",
+            "value": 349
+          }
+        ]
+      },
+      {
+        "id": "lt-debt",
+        "label": "Dettes financières MT/LT",
+        "lines": [
+          {
+            "id": "lt-borrowings",
+            "label": "Emprunts à long terme",
+            "value": 1996
+          },
+          {
+            "id": "lt-leases",
+            "label": "Dettes de loyers non courantes",
+            "value": 2310
+          }
+        ]
+      },
+      {
+        "id": "lt-provisions",
+        "label": "Provisions et autres passifs non courants",
+        "lines": [
+          {
+            "id": "provisions",
+            "label": "Provisions, retraites, impôts différés",
+            "value": 737,
+            "detail": "Provisions 436 + retraites 106 + impôts différés 45 + autres 150"
+          }
+        ]
+      },
+      {
+        "id": "operating-current-liabilities",
+        "label": "Passif circulant d'exploitation",
+        "lines": [
+          {
+            "id": "payables",
+            "label": "Dettes fournisseurs",
+            "value": 2910
+          },
+          {
+            "id": "other-payables",
+            "label": "Autres dettes d'exploitation",
+            "value": 4936,
+            "detail": "Charges à payer 2 383 + provisions courantes 1 208 + autres passifs courants 652 + impôts 357 + autres passifs financiers 335 (+1 d'arrondi)"
+          }
+        ]
+      },
+      {
+        "id": "cash-liabilities",
+        "label": "Trésorerie passive",
+        "lines": [
+          {
+            "id": "st-borrowings",
+            "label": "Emprunts à court terme",
+            "value": 645
+          },
+          {
+            "id": "st-leases",
+            "label": "Dettes de loyers courantes",
+            "value": 603
+          }
+        ]
+      }
+    ]
+  },
+  "derived": {
+    "wcrApprox": 5556,
+    "wcr": 2513,
+    "netDebt": 3937,
+    "capitalEmployed": 10799,
+    "stableResources": 11168,
+    "netCash": 369,
+    "debtWithProvisions": 4674
+  },
+  "wcrDays": {
+    "dso": 39,
+    "dio": 177,
+    "dpo": 88,
+    "note": "Délais 2025 recalculés hors TVA : créances clients sur le CA, stocks et dettes fournisseurs sur le coût des ventes (Adidas ne publie pas ses achats)."
+  },
+  "scenarios": {
+    "popUpStore": {
+      "title": "Pop-up store Adidas Originals",
+      "pdfOrigin": "Pizza Food Truck",
+      "story": "Adidas ouvre un pop-up store pour une collection de sneakers rétro. Aménagement 300 000 € amorti sur 5 ans, coût de revient 20 € la paire, vente à 100 €, stock permanent de 3 000 €, salaires 20 000 €/mois, frais divers 5 000 €/mois, trésorerie minimale 2 000 €, 1 000 paires vendues par mois, IS à 25 %. Scénario pessimiste : 100 paires par mois.",
+      "data": {
+        "fitOut": 300000,
+        "lifeYears": 5,
+        "unitCost": 20,
+        "unitPrice": 100,
+        "inventory": 3000,
+        "salariesPerMonth": 20000,
+        "miscPerMonth": 5000,
+        "minCash": 2000,
+        "pairsPerMonth": 1000,
+        "pairsPerMonthBad": 100,
+        "taxRate": 0.25
+      },
+      "expected": {
+        "janSales": 100000,
+        "janDepreciation": 5000,
+        "janGrossResult": 50000,
+        "janTax": 12500,
+        "janNetResult": 37500,
+        "janCashChange": 55000,
+        "yearNetResult": 450000,
+        "yearTaxDebt": 150000,
+        "yearCashEnd": 662000,
+        "badYearNetResult": -264000,
+        "badOverdraft": 202000
+      },
+      "pages": [
+        22,
+        34
+      ]
+    },
+    "runningWorkshop": {
+      "title": "Atelier Adidas d'assemblage de running",
+      "pdfOrigin": "Exercice 2 – Fever Tech",
+      "story": "Un atelier Adidas assemble 2 400 paires dans l'année ; le stock de produits finis passe de 140 à 270 paires ; prix de vente 150 €. Composants par paire : tige 20, semelle intermédiaire 30, semelle d'usure 10, contrefort et doublure 15, assemblage 20, lacets 5, semelle de propreté 5, boîte 5 (110 €). Salaires 60 000 € + charges sociales 30 000 €. En fin d'année, vente des locaux pour 230 000 € (achetés 200 000 € il y a 3 ans, amortis sur 40 ans). Emprunt de 12 000 € à 5 % soldé en fin d'année. IS à 35 %.",
+      "data": {
+        "produced": 2400,
+        "initialFinishedUnits": 140,
+        "finalFinishedUnits": 270,
+        "unitPrice": 150,
+        "componentCostPerPair": 110,
+        "salaries": 60000,
+        "socialContributions": 30000,
+        "premisesSalePrice": 230000,
+        "premisesCost": 200000,
+        "premisesLifeYears": 40,
+        "premisesAgeYears": 3,
+        "loan": 12000,
+        "loanRate": 0.05,
+        "taxRate": 0.35
+      },
+      "expected": {
+        "sales": 340500,
+        "cogs": 334825,
+        "depreciation": 5000,
+        "ebit": 675,
+        "financialResult": -600,
+        "nonRecurringResult": 45000,
+        "tax": 15776,
+        "netProfit": 29299,
+        "finishedGoodsChange": 19175,
+        "rawMaterialConsumption": 264000
+      },
+      "pages": [
+        181,
+        188
+      ]
+    },
+    "twinSubsidiaries": {
+      "title": "adidas.com face à la filiale wholesale",
+      "pdfOrigin": "Les sociétés jumelles A et B",
+      "story": "adidas.com encaisse ses clients en ligne immédiatement mais paie ses fournisseurs à terme : son BFR est négatif et devient une ressource quand l'activité double. La filiale wholesale stocke beaucoup et laisse des délais aux distributeurs : quand ses ventes doublent, son BFR double aussi et, faute de financement, un découvert bancaire apparaît. Bilans en M€, année Y puis Y+1.",
+      "data": {
+        "dtcFixedAssets": [
+          100,
+          170
+        ],
+        "dtcInventory": [
+          20,
+          40
+        ],
+        "dtcReceivables": [
+          10,
+          20
+        ],
+        "dtcCash": [
+          10,
+          30
+        ],
+        "dtcCapital": [
+          30,
+          40
+        ],
+        "dtcResult": [
+          10,
+          20
+        ],
+        "dtcPayables": [
+          100,
+          200
+        ],
+        "wholesaleFixedAssets": [
+          100,
+          170
+        ],
+        "wholesaleInventory": [
+          90,
+          180
+        ],
+        "wholesaleReceivables": [
+          80,
+          160
+        ],
+        "wholesaleCash": [
+          10,
+          0
+        ],
+        "wholesaleCapital": [
+          240,
+          270
+        ],
+        "wholesaleResult": [
+          30,
+          60
+        ],
+        "wholesalePayables": [
+          10,
+          20
+        ],
+        "wholesaleOverdraft": [
+          0,
+          160
+        ]
+      },
+      "expected": {
+        "dtcWcrY": -70,
+        "dtcWcrY1": -140,
+        "wholesaleWcrY": 160,
+        "wholesaleWcrY1": 320,
+        "wholesaleOverdraftY1": 160
+      },
+      "pages": [
+        85,
+        91
+      ]
+    },
+    "waccCase": {
+      "title": "Adidas simplifié : WACC et création de valeur",
+      "pdfOrigin": "WACC : example (cas A, B, C)",
+      "story": "Bilan économique simplifié en Md€ : immobilisations 6,5 + BFR 3,5 = capitaux propres 6 + dette nette 4. Adidas emprunte à 6 % avant impôt (IS 33,33 %), soit 4 % après impôt ; les actionnaires exigent 14 %. Trois années types : NOPAT de 1,0, 1,7 ou 0,6 Md€.",
+      "data": {
+        "fixedAssets": 6.5,
+        "wcr": 3.5,
+        "equity": 6,
+        "netDebt": 4,
+        "kdBeforeTax": 0.06,
+        "taxRate": 0.3333,
+        "ke": 0.14,
+        "nopatA": 1.0,
+        "nopatB": 1.7,
+        "nopatC": 0.6
+      },
+      "expected": {
+        "kd": 0.04,
+        "wacc": 0.1,
+        "netProfitA": 0.84,
+        "roeA": 0.14,
+        "equityValueA": 6,
+        "netProfitB": 1.54,
+        "roeB": 0.2567,
+        "equityValueB": 11,
+        "goodwillB": 5,
+        "netProfitC": 0.44,
+        "roeC": 0.0733,
+        "equityValueC": 3.14,
+        "goodwillC": -2.86
+      },
+      "pages": [
+        320,
+        326
+      ]
+    },
+    "soleRnD": {
+      "title": "R&D d'une nouvelle semelle",
+      "pdfOrigin": "Discounting : machine à 100 k€",
+      "story": "Adidas investit 100 M€ dans la R&D et l'industrialisation d'une nouvelle mousse de semelle. Flux de trésorerie disponibles attendus : 25 M€ par an pendant 5 ans, valeur résiduelle nulle.",
+      "data": {
+        "flows": [
+          -100,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "rateHigh": 0.1,
+        "rateLow": 0.05
+      },
+      "expected": {
+        "npvAt10": -5.23,
+        "npvAt5": 8.24,
+        "irr": 0.0793,
+        "payback": 4
+      },
+      "pages": [
+        366,
+        372,
+        383,
+        389
+      ]
+    },
+    "flagshipStore": {
+      "title": "Nouveau flagship store",
+      "pdfOrigin": "Exercice 3 – extension d'usine",
+      "story": "Ouverture d'un flagship : 20 M€ d'aménagements, durée d'utilisation 8 ans, valeur résiduelle nulle. EBITDA additionnel de 3 M€ par an pendant 8 ans. Amortissement linéaire sur 5 ans. Hausse du BFR de 2,5 M€ la première année, récupérée en fin de projet. IS à 40 %, rentabilité exigée 10 %.",
+      "data": {
+        "capex": 20,
+        "lifeYears": 8,
+        "wcrIncrease": 2.5,
+        "ebitdaPerYear": 3,
+        "depreciationYears": 5,
+        "taxRate": 0.4,
+        "rate": 0.1,
+        "flows": [
+          -20,
+          0.9,
+          3.4,
+          3.4,
+          3.4,
+          3.4,
+          1.8,
+          1.8,
+          4.3
+        ]
+      },
+      "expected": {
+        "npv": -5.44,
+        "irr": 0.0245
+      },
+      "pages": [
+        395,
+        396
+      ]
+    },
+    "exclusiveProjects": {
+      "title": "Flagship à Shanghai ou ligne padel ?",
+      "pdfOrigin": "NPV – Exercise 1 (projets mutuellement exclusifs)",
+      "story": "Deux projets exclusifs (M€). Flagship à Shanghai, peu risqué, rentabilité exigée 5 % : −40, 10, 12, 14, 16. Ligne de vêtements de padel, modérément risquée, rentabilité exigée 7 % : −30 puis 10 par an pendant 5 ans.",
+      "data": {
+        "shanghaiFlows": [
+          -40,
+          10,
+          12,
+          14,
+          16
+        ],
+        "shanghaiRate": 0.05,
+        "padelFlows": [
+          -30,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        "padelRate": 0.07
+      },
+      "expected": {
+        "shanghaiNpv": 5.67,
+        "padelNpv": 11.0
+      },
+      "pages": [
+        374,
+        375
+      ]
+    }
+  },
+  "guessCompany": {
+    "title": "Reconnaître une entreprise à son bilan",
+    "pdfOrigin": "Exercise: Guess which company it is (p. 74-76)",
+    "companies": [
+      "Adidas",
+      "BNP Paribas",
+      "Carrefour",
+      "Pernod Ricard",
+      "RTE"
+    ],
+    "rows": {
+      "assets": [
+        {
+          "id": "intangible",
+          "label": "Immobilisations incorporelles"
+        },
+        {
+          "id": "tangible",
+          "label": "Immobilisations corporelles"
+        },
+        {
+          "id": "financial",
+          "label": "Immobilisations financières"
+        },
+        {
+          "id": "inventories",
+          "label": "Stocks"
+        },
+        {
+          "id": "receivables",
+          "label": "Créances clients et autres"
+        },
+        {
+          "id": "cash",
+          "label": "Trésorerie"
+        }
+      ],
+      "liabilities": [
+        {
+          "id": "equity",
+          "label": "Capitaux propres"
+        },
+        {
+          "id": "provisions",
+          "label": "Provisions"
+        },
+        {
+          "id": "financialDebts",
+          "label": "Dettes financières"
+        },
+        {
+          "id": "payables",
+          "label": "Dettes fournisseurs"
+        },
+        {
+          "id": "advances",
+          "label": "Avances clients et autres dettes"
+        }
+      ]
+    },
+    "columns": [
+      {
+        "id": "A",
+        "answer": "RTE",
+        "values": {
+          "intangible": 1,
+          "tangible": 86,
+          "financial": 1,
+          "inventories": 1,
+          "receivables": 8,
+          "cash": 3,
+          "equity": 35,
+          "provisions": 3,
+          "financialDebts": 50,
+          "payables": 12,
+          "advances": 0
+        },
+        "hint": "86 % d'immobilisations corporelles (lignes haute tension) financées à 50 % par dette : des flux régulés et prévisibles, des garanties solides."
+      },
+      {
+        "id": "B",
+        "answer": "Carrefour",
+        "values": {
+          "intangible": 27,
+          "tangible": 31,
+          "financial": 3,
+          "inventories": 14,
+          "receivables": 17,
+          "cash": 8,
+          "equity": 24,
+          "provisions": 5,
+          "financialDebts": 24,
+          "payables": 47,
+          "advances": 0
+        },
+        "hint": "47 % de dettes fournisseurs : la grande distribution encaisse ses clients au comptant et paie ses fournisseurs à terme (BFR négatif)."
+      },
+      {
+        "id": "C",
+        "answer": "Pernod Ricard",
+        "values": {
+          "intangible": 33,
+          "tangible": 13,
+          "financial": 1,
+          "inventories": 33,
+          "receivables": 18,
+          "cash": 2,
+          "equity": 39,
+          "provisions": 5,
+          "financialDebts": 43,
+          "payables": 14,
+          "advances": 0
+        },
+        "hint": "33 % de stocks (vins et spiritueux qui vieillissent des années) et 33 % d'incorporels (les marques)."
+      },
+      {
+        "id": "D",
+        "answer": "BNP Paribas",
+        "values": {
+          "intangible": 12,
+          "tangible": 1,
+          "financial": 1,
+          "inventories": 0,
+          "receivables": 58,
+          "cash": 28,
+          "equity": 8,
+          "provisions": 1,
+          "financialDebts": 26,
+          "payables": 0,
+          "advances": 65
+        },
+        "hint": "Aucun stock, 58 % de créances (les crédits accordés), 65 % de dépôts de la clientèle et 8 % de capitaux propres : une banque."
+      },
+      {
+        "id": "E",
+        "answer": "Adidas",
+        "values": {
+          "intangible": 8.1,
+          "tangible": 22.6,
+          "financial": 10.2,
+          "inventories": 28.8,
+          "receivables": 22.3,
+          "cash": 8.0,
+          "equity": 30.2,
+          "provisions": 9.6,
+          "financialDebts": 27.4,
+          "payables": 14.4,
+          "advances": 18.4
+        },
+        "hint": "29 % de stocks (sneakers en transit et en entrepôt) et des droits d'utilisation de magasins loués dans les corporels : un distributeur de marque, entre l'industriel et le commerçant."
+      }
+    ],
+    "pages": [
+      74,
+      75,
+      76
+    ]
+  }
+}

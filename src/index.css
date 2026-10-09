@@ -1,0 +1,71 @@
+@import 'tailwindcss';
+
+/* Jetons de design. Les couleurs de séries des graphiques vivent dans src/lib/chartTheme.ts
+   (palette catégorielle validée) ; ici, seulement les couleurs d'interface. */
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --color-ink: #0b0b0b;
+  --color-paper: #f9f9f7;
+  --color-surface: #fcfcfb;
+  --color-secondary: #52514e;
+  --color-muted: #898781;
+  --color-hairline: #e1e0d9;
+
+  /* Statuts : toujours accompagnés d'une icône et d'un libellé. */
+  --color-good: #0ca30c;
+  --color-good-ink: #006300;
+  --color-warning: #fab219;
+  --color-serious: #ec835a;
+  --color-critical: #d03b3b;
+
+  /* Encarts « Boîte à outils » */
+  --color-formula: #f59e0b;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+  body {
+    @apply bg-paper text-ink antialiased;
+  }
+}
+
+/* Curseur : piste fine, pouce rond, focus visible. */
+@layer components {
+  .range {
+    @apply h-6 w-full cursor-pointer appearance-none bg-transparent;
+  }
+  /* --fill (posé par InteractiveSlider) colore la portion parcourue. */
+  .range::-webkit-slider-runnable-track {
+    @apply h-1.5 rounded-full;
+    background: linear-gradient(
+      to right,
+      var(--color-ink) var(--fill, 0%),
+      var(--color-hairline) var(--fill, 0%)
+    );
+  }
+  .range::-moz-range-track {
+    @apply h-1.5 rounded-full bg-hairline;
+  }
+  .range::-moz-range-progress {
+    @apply h-1.5 rounded-full bg-ink;
+  }
+  .range::-webkit-slider-thumb {
+    @apply -mt-[5px] size-4 appearance-none rounded-full border-2 border-white bg-ink shadow;
+  }
+  .range::-moz-range-thumb {
+    @apply size-4 rounded-full border-2 border-white bg-ink shadow;
+  }
+  .range:focus-visible {
+    @apply outline-none;
+  }
+  .range:focus-visible::-webkit-slider-thumb {
+    @apply ring-4 ring-ink/20;
+  }
+  .range:focus-visible::-moz-range-thumb {
+    @apply ring-4 ring-ink/20;
+  }
+}

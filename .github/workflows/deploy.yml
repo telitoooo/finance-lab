@@ -1,0 +1,59 @@
+# Vérifie les données, construit le site et le publie sur GitHub Pages à chaque envoi sur main.
+name: Déploiement GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Vérifier les données et les traductions
+        run: npm run check:data
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Construire pour /<nom-du-dépôt>/
+        run: npm run build -- --base=/${{ github.event.repository.name }}/
+
+      # GitHub Pages ne connaît pas les routes de l'application : 404.html renvoie vers la même page,
+      # qui affiche la bonne route (liens directs vers /wcr, /profitability…).
+      - name: Fallback des routes
+        run: cp dist/index.html dist/404.html
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

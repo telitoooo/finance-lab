@@ -1,0 +1,350 @@
+{
+  "bs-01": {
+    "topic": "balance sheet structure",
+    "question": "In Adidas's balance sheet, where do the invoices delivered to JD Sports but not yet paid go?",
+    "choices": ["Fixed assets", "Operating current assets (trade receivables)", "Cash assets", "Operating current liabilities", "Equity"],
+    "explanation": "They are trade receivables: money third parties owe Adidas as part of its operating cycle, turned into cash within a year."
+  },
+  "bs-02": {
+    "topic": "balance sheet structure",
+    "question": "Adidas's trade payables to its Asian factories are…",
+    "choices": ["A financial debt, so it costs interest", "A \"free\" debt (no interest) if it is paid on time", "Cash liabilities", "Equity"],
+    "explanation": "Operating debts bear no interest as long as the company pays within the agreed terms, unlike financial debts."
+  },
+  "bs-03": {
+    "topic": "net debt",
+    "question": "A subsidiary shows equity of 10 and financial debts of 90 (total 100). On the assets side: fixed assets + WCR = 15 and cash = 85. Its debt level is…",
+    "choices": ["Too high", "High", "Medium", "Low", "Very low"],
+    "explanation": "Net debt = 90 − 85 = only 5. It is the net debt, not the financial debts alone, that tells you the debt level."
+  },
+  "bs-04": {
+    "topic": "economic view",
+    "question": "Capital employed = ?",
+    "choices": ["Equity + financial debts", "Fixed assets + WCR", "Total assets", "Fixed assets + cash", "Inventories + trade receivables"],
+    "explanation": "In the economic view, assets boil down to fixed assets and WCR; they are financed by invested capital (equity + net debt)."
+  },
+  "bs-05": {
+    "topic": "economic view",
+    "question": "Net fixed assets €16,000, WCR €7,500, equity €15,500. What is the net debt?",
+    "choices": ["€6,500", "€7,500", "€8,000", "€15,500", "€23,500"],
+    "explanation": "Capital employed = 16,000 + 7,500 = 23,500 = invested capital. Net debt = 23,500 − 15,500 = €8,000 (MT debt 6,500 + overdraft 6,000 − cash 4,500)."
+  },
+  "bs-06": {
+    "topic": "economic view",
+    "question": "Gearing is computed as…",
+    "choices": ["Net debt / equity", "Financial debts / total liabilities", "Equity / capital employed", "Net debt / EBITDA"],
+    "explanation": "Gearing = net debt / equity: the measure of financial leverage."
+  },
+  "bs-07": {
+    "topic": "economic view",
+    "question": "You are a banker. What net debt / capital employed ratio do you accept for a real estate company?",
+    "choices": ["0%", "0 to 5%", "20 to 30%", "70 to 80%", "80 to 95%"],
+    "explanation": "Real estate: 80 to 95%, thanks to predictable cash flows and good-quality collateral. Car dealer 70–80%, pharmaceutical lab 20–30%, internet start-up 0–5%, oil exploration 0%."
+  },
+  "solv-01": {
+    "topic": "liquidity",
+    "question": "Assets: 7-year fixed assets 200, 3-year fixed assets 200, inventories (3 months) 300, receivables (2 months) 100, cash 200. Liabilities: equity 100, debt due in 5 years 200, debt due in 1 year 300, debt due in 1 month 400. Its liquidity at 1 month is…",
+    "choices": ["Secured, with 100 to spare", "Just secured", "Insufficient: 200 is missing", "Insufficient: 100 is missing", "Impossible to judge without the income statement"],
+    "explanation": "At 1 month, only the cash (200) covers a debt of 400: 200 is missing. At 1 year 100 is missing (600 vs 700), at 5 years 100 again (800 vs 900). The debt must be restructured urgently."
+  },
+  "solv-02": {
+    "topic": "liquidity",
+    "question": "Why does the course advise distrusting liquidity ratios (current ratio, quick ratio, cash ratio)?",
+    "choices": ["They are too complex to compute", "A worse WCR (mismanagement) can improve them", "They ignore cash", "They only apply to banks"],
+    "explanation": "Other flaws: a 3-month horizon while the balance sheet is published 3 to 6 months after closing, volatile items that depend on the closing date, many counter-examples."
+  },
+  "solv-03": {
+    "topic": "solvency",
+    "question": "Europcar, end of 2019: stable resources / capital employed = 59%. Diagnosis according to the course?",
+    "choices": ["Ideal", "Very good", "Medium but acceptable", "High risk of bankruptcy", "R.I.P."],
+    "explanation": "Between 50 and 70%: high risk of bankruptcy (critical point at 70%). With net debt / EBITDA of 13, solvency is very poor; a rescue plan followed in 2020."
+  },
+  "solv-04": {
+    "topic": "solvency",
+    "question": "Net debt / EBITDA = 6. According to the course…",
+    "choices": ["No problem", "It is OK", "High risk of bankruptcy", "This ratio is meaningless"],
+    "explanation": "Below 3: no problem; up to 4: OK; above 5: high risk of bankruptcy."
+  },
+  "solv-05": {
+    "topic": "solvency",
+    "question": "Net debt / CFO = 2.5 years, with an average debt maturity of about 3 years. Diagnosis?",
+    "choices": ["Excellent", "Good", "Medium but acceptable", "High risk of bankruptcy", "R.I.P."],
+    "explanation": "0–1 year: excellent; 1–2: good; 2–3: medium but acceptable; 3–5: high risk; above 5: R.I.P."
+  },
+  "solv-06": {
+    "topic": "solvency",
+    "question": "If Adidas had no debt at all and were financed only by equity, could it go bankrupt? Destroy value?",
+    "choices": ["Bankruptcy yes, value destruction no", "No bankruptcy, but value destruction is possible if ROCE < WACC", "Neither", "Both"],
+    "explanation": "No debt, no cessation of payments to creditors, so no bankruptcy. But if ROCE is below WACC, the company destroys value."
+  },
+  "solv-07": {
+    "topic": "solvency",
+    "question": "A company is liquidated by the court. On average, how much of their contribution do shareholders get back?",
+    "choices": ["Almost 100%", "About 50%", "About 25%", "Almost 0%"],
+    "explanation": "Shareholders come last, after the State, post-judgment creditors, secured and unsecured creditors. That is why they bear the most risk."
+  },
+  "is-01": {
+    "topic": "inventories",
+    "question": "An Adidas store has €200k of socks in stock at the start of the month, receives and is invoiced €300k during the month, and ends with €150k in stock. Consumption for the month?",
+    "choices": ["€150k", "€250k", "€300k", "€350k", "€450k"],
+    "explanation": "Consumption = purchases + (initial stock − final stock) = 300 + (200 − 150) = €350k."
+  },
+  "is-02": {
+    "topic": "calculated expenses",
+    "question": "Which of these expenses is a calculated expense, with no cash going out?",
+    "choices": ["Sales staff salaries", "Purchase of soles", "Depreciation allowance on the flagship store", "Interest on the bond", "Warehouse rent"],
+    "explanation": "Depreciation and provision allowances: they reduce the result (and the tax) without any cash going out."
+  },
+  "is-03": {
+    "topic": "intermediate margins",
+    "question": "EBITDA = €112,000 and depreciation allowances = €70,000. EBIT?",
+    "choices": ["€182,000", "€112,000", "€54,000", "€42,000"],
+    "explanation": "EBIT = EBITDA − calculated expenses (here depreciation) = 112,000 − 70,000 = €42,000."
+  },
+  "is-04": {
+    "topic": "result vs cash",
+    "question": "Adidas pop-up store, January: net result of €37,500, but cash up by €55,000. Where does the gap come from?",
+    "choices": ["An accounting error", "Depreciation (a calculated expense) and corporate tax not yet paid reduce the result without cash going out", "Sales not yet collected", "Higher inventories"],
+    "explanation": "Gap of €17,500 = €5,000 depreciation of the store fit-out + €12,500 corporate tax owed to the State but not yet paid."
+  },
+  "is-05": {
+    "topic": "break-even point",
+    "question": "A flagship store has €2m of fixed costs a year and a margin on variable cost of 40%. Break-even point?",
+    "choices": ["€0.8m", "€2m", "€3.3m", "€5m", "€8m"],
+    "explanation": "Break-even point = fixed costs / margin on variable cost = 2 / 0.4 = €5m of turnover."
+  },
+  "is-06": {
+    "topic": "break-even point",
+    "question": "Iberia, 2008: turnover −1%, net profit −82%. Most likely explanation?",
+    "choices": ["Accounting fraud", "High fixed costs: a turnover close to the break-even point makes the result very sensitive", "A corporate tax increase", "A negative WCR"],
+    "explanation": "Sectors with high fixed costs (airlines) have a result that is very sensitive to a drop in activity. Conversely, a jump in profit does not necessarily mean spectacular performance."
+  },
+  "is-07": {
+    "topic": "intermediate margins",
+    "question": "Gross result (before tax) = ?",
+    "choices": ["EBITDA − corporate tax", "EBIT + financial result + non-recurring result", "Turnover − purchases", "Net result + dividends"],
+    "explanation": "You add up the three levels of the income statement before deducting corporate tax."
+  },
+  "is-08": {
+    "topic": "result vs cash",
+    "question": "ENGIE, 2015: negative net result, yet more than €10bn of cash flows from operations (CFO). Main reason?",
+    "choices": ["A capital increase", "€13.9bn of depreciation: calculated expenses with no cash going out", "Asset disposals", "A new loan"],
+    "explanation": "Depreciation reduced the result without touching cash; to a lesser extent, the WCR decrease (€1.2bn) also generated cash."
+  },
+  "is-09": {
+    "topic": "by-function format",
+    "question": "Adidas workshop: 2,400 pairs produced, finished-goods stock up from 140 to 270 pairs, selling price €150. Turnover?",
+    "choices": ["€360,000", "€340,500", "€264,000", "€19,175"],
+    "explanation": "Pairs sold = 2,400 − (270 − 140) = 2,270, i.e. 2,270 × 150 = €340,500."
+  },
+  "wcr-01": {
+    "topic": "sign of the WCR",
+    "question": "Every company has a positive Working Capital Requirement.",
+    "choices": ["True", "False"],
+    "explanation": "False. Almost all industrial companies have a positive WCR (a need), but a negative WCR is a resource: American Airlines (−$13,457m in 2019), or an online shop paid upfront."
+  },
+  "wcr-02": {
+    "topic": "liquidity",
+    "question": "Retailers pay Adidas after nearly 75 days of sales, and Adidas pays its suppliers after 90 days of purchases. What do you think?",
+    "choices": ["It is necessarily a problem", "Not necessarily a problem: it is the overall WCR that matters, not each component", "I do not know"],
+    "explanation": "The absolute level of each item says nothing: it is the WCR (inventories + receivables − operating payables) that must be financed like an investment."
+  },
+  "wcr-03": {
+    "topic": "managing the WCR",
+    "question": "Which of these decisions reduces Adidas's WCR?",
+    "choices": ["Building up stock before the World Cup", "Giving retailers 30 more days", "Paying factories faster to keep them loyal", "Negotiating 15 more days of payment terms with factories"],
+    "explanation": "The other three reflexes, tempting to be \"liked\", worsen the WCR and therefore cash. Longer supplier credit reduces it."
+  },
+  "wcr-04": {
+    "topic": "formula",
+    "question": "What is the exact definition of the WCR?",
+    "choices": ["Inventories + trade receivables + cash", "Operating current assets − operating current liabilities", "Fixed assets − equity", "Trade receivables − financial debts"],
+    "explanation": "Inventories + trade receivables − trade payables is only the usual approximation."
+  },
+  "wcr-05": {
+    "topic": "growth",
+    "question": "The wholesale subsidiary doubles its sales: WCR goes from 160 to 320, and an overdraft of 160 appears. The lesson?",
+    "choices": ["Growth always improves cash", "With a positive WCR, strong growth must be financed, otherwise cash runs out", "Inventories must be increased", "The WCR falls when activity rises"],
+    "explanation": "This is the twin companies example: you can \"die in excellent health\" if the WCR increase is not financed by stable resources."
+  },
+  "wcr-06": {
+    "topic": "cash",
+    "question": "Cash flows from operations (CFO), indirect method = ?",
+    "choices": ["EBITDA − corporate tax − WCR increase", "Net result + WCR increase", "EBIT + CAPEX", "EBITDA + WCR increase"],
+    "explanation": "The WCR increase (higher receivables or inventories, lower trade payables) explains the gap between after-tax EBITDA and the cash actually collected."
+  },
+  "wcr-07": {
+    "topic": "sign of the WCR",
+    "question": "American Airlines' WCR was −$13,457m at the end of 2019. What is the risk?",
+    "choices": ["None: it is a free resource", "If activity stops suddenly, this resource disappears very quickly", "Inventories will explode", "Financial debt rises mechanically"],
+    "explanation": "A very negative WCR finances the business… as long as it keeps running. In 2020, when flights stopped, the resource vanished."
+  },
+  "wcr-08": {
+    "topic": "formula",
+    "question": "Adidas, end of 2025 (€m): inventories 5,832, trade receivables 2,634, trade payables 2,910. WCR with the approximate formula?",
+    "choices": ["€2,922m", "€5,556m", "€8,466m", "€11,376m"],
+    "explanation": "5,832 + 2,634 − 2,910 = €5,556m. With all operating items (accrued liabilities, current provisions…), the full WCR drops to €2,513m."
+  },
+  "wcr-09": {
+    "topic": "cash",
+    "question": "Net cash = ?",
+    "choices": ["Stable resources − capital employed", "Equity − net debt", "WCR − fixed assets", "CFO − CFI"],
+    "explanation": "Property proven in the course: cash assets − cash liabilities = (equity + MT/LT debts) − (fixed assets + WCR)."
+  },
+  "wcr-10": {
+    "topic": "cash",
+    "question": "A permanently very positive net cash mainly means…",
+    "choices": ["Over-indebtedness", "Cash that \"sleeps\", unless a project is in sight", "A negative WCR", "Imminent bankruptcy"],
+    "explanation": "Ideally, net cash is close to zero."
+  },
+  "prof-01": {
+    "topic": "ROCE",
+    "question": "ROCE = ?",
+    "choices": ["Net profit / equity", "NOPAT / capital employed", "EBITDA / turnover", "EBIT / total assets"],
+    "explanation": "Economic profitability: operating result after tax divided by capital employed, regardless of financing."
+  },
+  "prof-02": {
+    "topic": "ROCE",
+    "question": "Adidas 2025: EBIT of €2,056m, effective tax rate of 24.3%. NOPAT?",
+    "choices": ["€500m", "€1,556m", "€2,056m", "€2,556m"],
+    "explanation": "NOPAT = EBIT × (1 − T) = 2,056 × 0.757 ≈ €1,556m. Divided by €10,799m of capital employed, Adidas's ROCE is 14.4%."
+  },
+  "prof-03": {
+    "topic": "leverage effect",
+    "question": "ROCE 12%, kD 4%, D/E = 0.5. ROE?",
+    "choices": ["8%", "12%", "14%", "16%", "20%"],
+    "explanation": "ROE = ROCE + (ROCE − kD) × D/E = 12% + 8% × 0.5 = 16%."
+  },
+  "prof-04": {
+    "topic": "leverage effect",
+    "question": "In a crisis, Adidas's ROCE falls to 3% while kD = 4%. What does debt do?",
+    "choices": ["It increases the ROE", "It reduces the ROE: the leverage effect turns negative", "It has no effect", "It increases the ROCE"],
+    "explanation": "When ROCE < kD, the term (ROCE − kD) × D/E is negative: more debt amplifies the fall in profitability for shareholders."
+  },
+  "prof-05": {
+    "topic": "ROCE",
+    "question": "ROCE = margin × rotation. Which company relies on high rotation and a low margin?",
+    "choices": ["Apple", "LVMH", "Carrefour", "Adidas"],
+    "explanation": "Mass retail turns its capital quickly with a low margin; luxury and tech rely on a high margin."
+  },
+  "prof-06": {
+    "topic": "leverage effect",
+    "question": "Adidas sharply increases its gearing (D/E). What should you expect for kD?",
+    "choices": ["kD stays constant", "kD falls", "kD rises, because lenders' risk rises"],
+    "explanation": "The leverage effect is not an alchemist's formula: when D/E rises, lenders demand more."
+  },
+  "prof-07": {
+    "topic": "leverage effect",
+    "question": "Cost of net debt after tax (kD) = ?",
+    "choices": ["Net financial expenses × (1 − T) / net debt", "Interest / equity", "Risk-free rate + beta × risk premium", "Net profit / net debt"],
+    "explanation": "Net financial expenses = interest paid − financial income from the cash assets."
+  },
+  "wacc-01": {
+    "topic": "computation",
+    "question": "Equity 60, net debt 40, kE 14%, kD after tax 4%. WACC?",
+    "choices": ["9%", "10%", "12%", "14%", "18%"],
+    "explanation": "WACC = 14% × 60/100 + 4% × 40/100 = 8.4% + 1.6% = 10%."
+  },
+  "wacc-02": {
+    "topic": "computation",
+    "question": "What is the correct hierarchy of rates?",
+    "choices": ["kE < WACC < kD < RF", "RF < kD < WACC < kE", "RF < WACC < kD < kE", "kD < RF < kE < WACC"],
+    "explanation": "The lender takes less risk than the shareholder; the WACC is an average of both, and all exceed the risk-free rate."
+  },
+  "wacc-03": {
+    "topic": "value creation",
+    "question": "NOPAT of €0.6bn for €10bn of capital employed, WACC of 10%, positive net profit (€0.44bn). Adidas…",
+    "choices": ["creates value, since its net profit is positive", "destroys value: ROCE 6% < WACC 10% (badwill)", "is neutral", "will go bankrupt"],
+    "explanation": "ROE = 0.44 / 6 ≈ 7% < kE = 14%. The market value of equity (0.44 / 14% ≈ 3.1) falls below its book value (6): badwill of about €2.9bn."
+  },
+  "wacc-04": {
+    "topic": "restructuring",
+    "question": "To lower its WACC, Adidas replaces equity with cheaper debt. Does it work?",
+    "choices": ["Yes, mechanically", "No: risk rises, kD and kE go up; the WACC depends on the risk of the business", "Yes, if the tax rate is high"],
+    "explanation": "The WACC pre-exists the financial structure (Modigliani-Miller: the size of the pizza does not depend on how it is sliced). To restore ROCE ≥ WACC, the economic result must improve."
+  },
+  "wacc-05": {
+    "topic": "computation",
+    "question": "Why is kD = kD' × (1 − T)?",
+    "choices": ["Because interest is deductible from corporate tax", "Because dividends are deductible", "To account for inflation", "Because the debt is repaid"],
+    "explanation": "Each euro of interest reduces the taxable base: the real cost of debt is therefore reduced by the tax saving."
+  },
+  "wacc-06": {
+    "topic": "value creation",
+    "question": "Case B: net profit 15.4, kE 14%, book value of equity 60. Goodwill?",
+    "choices": ["17", "50", "60", "110"],
+    "explanation": "Market value of equity = 15.4 / 14% = 110; goodwill = 110 − 60 = 50. ROCE (17%) > WACC (10%): value creation."
+  },
+  "wacc-07": {
+    "topic": "CAPM (not for the exam)",
+    "question": "Risk-free rate 3%, beta 1.2, market risk premium 5%. kE according to the CAPM?",
+    "choices": ["6%", "8%", "9%", "9.6%"],
+    "explanation": "kE = 3% + 1.2 × 5% = 9%. Bonus part of the course, not for the final exam."
+  },
+  "npv-01": {
+    "topic": "NPV",
+    "question": "R&D on a sole: −€100m, then +€25m a year for 5 years. Discount rate of 10%. NPV?",
+    "choices": ["+€25m", "+€5m", "0", "−€5m", "−€25m"],
+    "explanation": "Present values of the flows: 23 + 21 + 19 + 17 + 16 ≈ €95m; NPV ≈ −€5m. The project destroys value."
+  },
+  "npv-02": {
+    "topic": "IRR",
+    "question": "The IRR of this same project is about 8%. If the required return is 5%…",
+    "choices": ["Invest: IRR > required rate", "Do not invest", "Impossible to conclude"],
+    "explanation": "IRR > required rate: the project creates value (NPV ≈ +€8m at 5%). At 10%, you would not invest."
+  },
+  "npv-03": {
+    "topic": "IRR",
+    "question": "Two mutually exclusive projects at 5%: A (NPV 1.17; IRR 28%) and B (NPV 2.40; IRR 13%). Which one?",
+    "choices": ["A, its IRR is higher", "B, its NPV is higher", "Neither", "Both"],
+    "explanation": "To rank mutually exclusive projects, the NPV directly measures value creation; the IRR can mislead."
+  },
+  "npv-04": {
+    "topic": "discount rate",
+    "question": "What order of magnitude of discount rate for a first-round investment in a start-up whose concept is still unproven?",
+    "choices": ["5%", "8%", "17%", "50%"],
+    "explanation": "Course benchmarks: RTE high-voltage line 5–6%, power plant in France 8%, industrial project in West Africa 17%, first-round start-up 50%."
+  },
+  "npv-05": {
+    "topic": "Excel",
+    "question": "What is the trap of Excel's =NPV(rate; value1:valuen) function?",
+    "choices": ["The first value is treated as year 1, not year 0", "The rate must be entered in basis points", "It returns the IRR", "It rejects negative flows"],
+    "explanation": "Add the year-0 flow outside the function. =IRR(value0:valuen) returns only one IRR, even when several exist."
+  },
+  "npv-06": {
+    "topic": "payback",
+    "question": "Flows: −100, 25, 25, 25, 25, 25. Payback period?",
+    "choices": ["2 years", "3 years", "4 years", "5 years"],
+    "explanation": "Cumulated flows: −100, −75, −50, −25, 0 → 4 years. But this criterion ignores the time value of money and the flows after the payback."
+  },
+  "npv-07": {
+    "topic": "flows to discount",
+    "question": "To compute the NPV of a new flagship store, you take…",
+    "choices": ["The interest on the loan that finances it", "Study costs already incurred (sunk costs)", "Incremental after-tax FCFF, without financing flows", "The store's accounting result"],
+    "explanation": "Financing is already in the discount rate; sunk costs are spent whether or not the project goes ahead."
+  },
+  "npv-08": {
+    "topic": "NPV",
+    "question": "Flagship store: €20m investment, NPV of −€5.4m, IRR of 2.4%, required return of 10%. Decision?",
+    "choices": ["Launch the project", "Do not launch the project", "Launch it if the IRR is positive"],
+    "explanation": "NPV < 0 and IRR < required return: the project destroys value."
+  },
+  "npv-09": {
+    "topic": "markets",
+    "question": "The ECB unexpectedly raises its rates. The price of a fixed-rate Adidas bond…",
+    "choices": ["Rises", "Falls", "Does not move"],
+    "explanation": "The bond's flows are fixed but the discount rate rises: its present value falls. With a floating rate, flows and rate would move together."
+  },
+  "npv-10": {
+    "topic": "discounting",
+    "question": "Adidas borrows €100,000 over 5 years at 5%, repaid with constant annuities. Annuity amount?",
+    "choices": ["€20,000", "€21,000", "€23,097", "€25,000"],
+    "explanation": "100,000 = Σ annuity / (1.05)^k for k = 1 to 5, hence an annuity of €23,097."
+  },
+  "npv-11": {
+    "topic": "IRR",
+    "question": "A project generates the flows 4, −7, 4 (€m). What about its IRR?",
+    "choices": ["There are two", "There is none, while the NPV is positive", "It is 0%"],
+    "explanation": "One of the IRR's drawbacks: the equation NPV = 0 can have no solution (or several, as for −1; 7.2; −7.2)."
+  }
+}
