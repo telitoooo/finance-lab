@@ -3,7 +3,11 @@
     "financial-statements": { "title": "Financial statements" },
     "wcr": { "title": "WCR & cash" },
     "profitability": { "title": "Profitability" },
-    "wacc-npv": { "title": "WACC & investment decisions" }
+    "wacc-npv": { "title": "WACC & investment decisions" },
+    "cash-solvency": { "title": "Cash & solvency" },
+    "valuation": { "title": "Valuation" },
+    "market-finance": { "title": "Market finance" },
+    "startup": { "title": "Start-up & restructuring" }
   },
   "modules": {
     "balance-sheet": {
@@ -88,6 +92,76 @@
       "pdfExample": {
         "original": "A €100k machine earning €25k a year for 5 years; exercise 3 (€20m plant extension); mutually exclusive projects of exercise 1.",
         "adidas": "€100m R&D on a sole; €20m new flagship store; choosing between a Shanghai flagship and a padel apparel line."
+      }
+    },
+    "cash-flow": {
+      "title": "Cash flow statement",
+      "altTitle": "Tableau des flux de trésorerie",
+      "concept": "\"Cash is king.\" The result is partly virtual; cash is real, and when it runs out, it's death. The cash flow statement explains how Adidas's cash changed through three flows. Cash flows from operations (CFO): EBITDA, minus tax, minus the WCR increase. Cash flows from investments (CFI): factories, warehouses and software bought, minus disposals. Their sum is the free cash flow (FCFF), the cash Adidas can freely use. Then come cash flows from financing (CFF): loans, repayments, interest, dividends. In 2025, Adidas posted €3.1bn of EBITDA but only €0.75bn of CFO: inventories and receivables swallowed more than €2bn. After €0.4bn of investments and €1.1bn paid to lenders and shareholders, its cash shrank by €838m.",
+      "toolbox": ["The three flows", "The free cash flow", "Starting from net profit"],
+      "lab": {
+        "title": "From EBITDA to free cash flow",
+        "goal": "Start from Adidas's 2025 EBITDA, play with customer terms, storage time, supplier terms and CAPEX (a new factory?): the waterfall down to FCFF recalculates live. Complete the missions, then dissect the real 2025 cash flow statement with the questions of the ENGIE exercise."
+      },
+      "pdfExample": {
+        "original": "ENGIE 2015 exercise: negative net result but more than €10bn of operating cash flows; uses of cash and split of the FCFF among capital providers.",
+        "adidas": "Adidas's 2025 consolidated cash flow statement (annual report), regrouped into the course template: the opposite of ENGIE, a good result but a CFO crushed by the WCR."
+      }
+    },
+    "solvency": {
+      "title": "Solvency",
+      "altTitle": "Solvabilité",
+      "concept": "Is Adidas at risk of bankruptcy? A company goes bankrupt when it can no longer pay its liabilities due with its available assets: the cessation of payments. Solvency is read from the balance sheet, assets by increasing liquidity, liabilities by increasing payability. Beware of liquidity ratios (current, quick, cash ratio): volatile, published too late, and improved by… a WCR increase. Remember the medium-term ratios, among the best predictors of bankruptcy. Stable resources / capital employed: critical point at 70%, Adidas stands at 103%. Net debt / EBITDA: below 3, no problem; above 5, danger; Adidas stands at 1.3. But if Adidas borrows €15bn to buy a competitor, the gauges go haywire. Mind the maturity too: financing a long-lived asset with a short-term loan means gambling with your cash.",
+      "toolbox": ["The risk: cessation of payments", "Net debt", "Medium-term ratios (to remember)", "Short-term ratios (know them to beware of them)"],
+      "lab": {
+        "title": "The takeover that rattles the gauges",
+        "goal": "Adidas wants to buy a competitor. Choose the price, the multiple paid, the share financed by debt and its maturity: the net debt / EBITDA, stable resources / capital employed and net debt / CFO gauges turn from green to red live. Find out how far Adidas can borrow, then compare with Europcar."
+      },
+      "pdfExample": {
+        "original": "\"It's up to you\" exercise (assets / liabilities maturity ladder) and the Europcar 2019 exercise: stable resources / capital employed of 59%, net debt / EBITDA of 13.",
+        "adidas": "Adidas's real ratios at 31/12/2025, then a fictitious takeover financed by debt or by a capital increase: how far can Adidas borrow?"
+      }
+    },
+    "valuation": {
+      "title": "Business valuation",
+      "altTitle": "Valorisation",
+      "concept": "How much is Adidas worth? The stock market gives a price: €169 per share at the end of 2025, i.e. €30bn. But \"Price is what you pay; value is what you get.\" To estimate value, three steps: the market value of the assets (the enterprise value), minus the value of net debt, gives the value of equity. Intrinsic method, the DCF: discount future FCFF at the WACC, then add a Gordon-Shapiro terminal value, FCFF / (WACC − g), which often weighs more than 70% of the total. Two parameters drive everything: the WACC and the perpetual growth g. One point more or less, and the value soars or collapses. Analogical method, multiples: Adidas's EBIT × the EV / EBIT multiple of peers. Quick and \"objective\", but choosing peers remains… a choice. In practice, combine methods, and stay humble.",
+      "toolbox": ["Price, value and the 3 steps", "The DCF method", "Multiples and other methods"],
+      "lab": {
+        "title": "Adidas mini-DCF: buy, hold or sell?",
+        "goal": "Set the WACC, the perpetual growth g and growth over the next 5 years: the value per share recalculates against the share price, the curve shows the explosion as g approaches the WACC, the sensitivity matrix gives your analyst verdict. Compare with multiples, then replay the course's Crit exercise."
+      },
+      "pdfExample": {
+        "original": "Crit 2021 exercise: FCFF 2022-2026, g = 2%, WACC = 9%, peers at 12 times EBIT; BUY, HOLD or SELL recommendation.",
+        "adidas": "Adidas at 31/12/2025: normative FCFF derived from the 2025 accounts, net debt from the balance sheet, 178.7 million shares and a €169.05 share price. The Crit case can be replayed as is."
+      }
+    },
+    "derivatives": {
+      "title": "Market finance & derivatives",
+      "altTitle": "Finance de marché et produits dérivés",
+      "concept": "Adidas buys natural rubber in Asia for its soles. If its price soars within six months, the margin melts. On financial markets, a company finds two things: financing (stocks, bonds) and hedges against its risks, derivatives, whose value depends on an underlying asset. With a futures contract, Adidas commits today to buy at a set price: if the price rises, the contract gains what the purchase loses; if it falls, the opposite. The cost is locked in. A firm commitment on both sides, on an organised market with a clearing house and margin calls. With a call option, Adidas pays a premium for the right, not the obligation, to buy at the strike price: protected against a rise, it benefits from a fall. But beware of the Bermuda triangle: reducing market risk exposes you to counterparty and liquidity risks.",
+      "toolbox": ["Securities: stocks and bonds", "Derivatives"],
+      "lab": {
+        "title": "Hedging simulator: Adidas's rubber",
+        "goal": "Choose your strategy (no hedge, futures contract or call), then move the rubber price in 6 months: gain or loss on the derivative, net procurement cost and margin calls recalculate, and the payoff profile appears as in the course."
+      },
+      "pdfExample": {
+        "original": "A metallurgical company buying a futures contract on 1,000 t of copper at €6,200/t (spot €6,000/t); a Heineken call with a €90 strike for a €5 premium.",
+        "adidas": "Adidas buys a futures contract on 10,000 t of rubber at €1,550/t (spot €1,500/t): volumes ×10, prices ÷4. The call has the same strike for a premium of €80/t (about 5% of the strike, like the Heineken call)."
+      }
+    },
+    "startup": {
+      "title": "Start-up & restructuring",
+      "altTitle": "Levée de fonds, faillite et restructuration",
+      "concept": "Adidas launches Stride Lab, a (fictitious) in-house start-up that 3D-prints soles from recycled plastic. A start-up means extreme risk and negative, random cash flows: no way to pay regular interest. So it is financed with equity, round after round: founders, love money, business angels, then venture capital funds (VC). Classic trap: raising €90m does not give 90% of the power. Investors get INV / POST of the share capital; the rest of their contribution goes to the share premium. Share capital is what splits power. If Stride Lab succeeds: new rounds, an IPO or a sale. If not, and ROCE stays below WACC, it must restructure by raising the economic result. And if cash runs out, it is the cessation of payments, then receivership or liquidation, where shareholders come last.",
+      "toolbox": ["Raising funds", "Restructure or liquidate"],
+      "lab": {
+        "title": "Stride Lab: fundraising… and plan B",
+        "goal": "Set the pre-money valuation and the amount raised from VCs: the pie chart shows Adidas's dilution, the new balance sheet separates share capital and share premium. Then imagine the worst: if Stride Lab is liquidated, who gets paid back, and in what order?"
+      },
+      "pdfExample": {
+        "original": "A start-up created with €10k of capital (10 shares of €1,000) raising €90k for a €202.5k post-money value: +€8k of share capital, €82k of share premium, 56% / 44% of the power; order of priority in a judicial liquidation.",
+        "adidas": "Stride Lab, a fictitious Adidas in-house start-up: €10m of capital (10,000 shares of €1,000), raising €90m for €202.5m post-money. Amounts ×1,000, same percentages."
       }
     }
   }

@@ -31,7 +31,7 @@ export interface ModulesText {
 }
 export type QuizText = Record<string, { topic: string; question: string; choices: string[]; explanation: string }>
 export interface AdidasText {
-  meta: { source: string; disclaimer: string }
+  meta: { source: string; disclaimer: string; cashFlowNote: string }
   taxRateNote: string
   balanceSheet: Record<string, { label: string; lines: Record<string, { label: string; detail?: string }> }>
   wcrDaysNote: string

@@ -23,6 +23,30 @@
       "path": "/wacc-npv",
       "title": "WACC & décision d'investissement",
       "modules": ["wacc", "npv-irr"]
+    },
+    {
+      "id": "cash-solvency",
+      "path": "/cash-solvency",
+      "title": "Cash & solvabilité",
+      "modules": ["cash-flow", "solvency"]
+    },
+    {
+      "id": "valuation",
+      "path": "/valuation",
+      "title": "Valorisation",
+      "modules": ["valuation"]
+    },
+    {
+      "id": "market-finance",
+      "path": "/market-finance",
+      "title": "Finance de marché",
+      "modules": ["derivatives"]
+    },
+    {
+      "id": "startup",
+      "path": "/startup",
+      "title": "Start-up & restructuring",
+      "modules": ["startup"]
     }
   ],
   "modules": [
@@ -177,6 +201,128 @@
         "adidas": "R&D d'une semelle à 100 M€ ; nouveau flagship store à 20 M€ ; choix entre un flagship à Shanghai et une ligne padel."
       },
       "pages": [358, 400, 412, 416]
+    },
+    {
+      "id": "cash-flow",
+      "view": "cash-solvency",
+      "path": "/cash-solvency/cash-flow",
+      "title": "Tableau des flux de trésorerie",
+      "altTitle": "Cash flow statement",
+      "icon": "Banknote",
+      "concept": "« Cash is king. » Le résultat est en partie virtuel ; la trésorerie, elle, est réelle, et quand elle manque, c'est la mort. Le tableau des flux explique la variation de trésorerie d'Adidas en trois flux. Le flux d'exploitation (CFO) : l'EBITDA, moins l'impôt, moins la hausse du BFR. Le flux d'investissement (CFI) : usines, entrepôts et logiciels achetés, moins les cessions. Leur somme, c'est le free cash flow (FCFF), le cash dont Adidas dispose librement. Reste le flux de financement (CFF) : emprunts, remboursements, intérêts, dividendes. En 2025, Adidas affiche 3,1 Md€ d'EBITDA mais seulement 0,75 Md€ de CFO : stocks et créances ont avalé plus de 2 Md€. Après 0,4 Md€ d'investissements et 1,1 Md€ versés aux prêteurs et aux actionnaires, sa trésorerie a fondu de 838 M€.",
+      "toolbox": [
+        { "title": "Les trois flux", "formulaIds": ["cf-variation", "cf-cfo-direct", "cf-cfo-indirect", "cf-cfi", "cf-cff"] },
+        { "title": "Le free cash flow", "formulaIds": ["cf-fcff", "npv-fcff"] },
+        { "title": "Partir du résultat net", "formulaIds": ["cf-cfo-net-profit"] }
+      ],
+      "lab": {
+        "kind": "cash-flow-waterfall",
+        "title": "De l'EBITDA au free cash flow",
+        "goal": "Pars de l'EBITDA 2025 d'Adidas, joue sur les délais clients, la durée de stockage, les délais fournisseurs et les CAPEX (une nouvelle usine ?) : la cascade jusqu'au FCFF se recalcule en direct. Relève les missions, puis décortique le vrai tableau des flux 2025 avec les questions de l'exercice ENGIE."
+      },
+      "pdfExample": {
+        "original": "Exercice ENGIE 2015 : résultat net négatif mais plus de 10 Md€ de flux d'exploitation ; utilisation du cash et partage des FCFF entre apporteurs de capitaux.",
+        "adidas": "Tableau des flux consolidé Adidas 2025 (rapport annuel), regroupé dans la grille du cours : l'inverse d'ENGIE, un bon résultat mais un CFO écrasé par le BFR."
+      },
+      "pages": [201, 210, 215, 223, 229]
+    },
+    {
+      "id": "solvency",
+      "view": "cash-solvency",
+      "path": "/cash-solvency/solvency",
+      "title": "Solvabilité",
+      "altTitle": "Solvency",
+      "icon": "ShieldCheck",
+      "concept": "Adidas risque-t-elle la faillite ? Une entreprise fait faillite quand elle ne peut plus payer ses dettes exigibles avec ses actifs disponibles : c'est la cessation des paiements. La solvabilité se lit au bilan, actif par liquidité croissante, passif par exigibilité croissante. Méfie-toi des ratios de liquidité (current, quick, cash ratio) : volatils, publiés trop tard, et améliorés par… une hausse du BFR. Retiens les ratios de moyen terme, parmi les meilleurs prédicteurs de faillite. Ressources stables / capitaux employés : point critique à 70 %, Adidas est à 103 %. Dette nette / EBITDA : sous 3, aucun problème ; au-delà de 5, danger ; Adidas est à 1,3. Mais qu'Adidas emprunte 15 Md€ pour racheter un concurrent, et les jauges s'affolent. Attention aussi à la maturité : financer un actif durable avec un crédit court, c'est jouer sa trésorerie.",
+      "toolbox": [
+        { "title": "Le risque : la cessation des paiements", "formulaIds": ["solv-cessation", "wcr-net-cash", "wcr-net-cash-property"] },
+        { "title": "La dette nette", "formulaIds": ["bs-net-debt", "bs-net-debt-detail"] },
+        { "title": "Ratios de moyen terme (à retenir)", "formulaIds": ["solv-stable-ratio", "solv-netdebt-cfo", "solv-netdebt-ebitda"] },
+        {
+          "title": "Ratios de court terme (à connaître pour s'en méfier)",
+          "formulaIds": ["solv-current-ratio", "solv-quick-ratio", "solv-cash-ratio"]
+        }
+      ],
+      "lab": {
+        "kind": "solvency-gauges",
+        "title": "Le rachat qui fait trembler les jauges",
+        "goal": "Adidas veut racheter un concurrent. Choisis le prix, le multiple payé, la part financée par dette et sa maturité : les jauges dette nette / EBITDA, ressources stables / capitaux employés et dette nette / CFO passent du vert au rouge en direct. Trouve jusqu'où Adidas peut s'endetter, puis compare avec Europcar."
+      },
+      "pdfExample": {
+        "original": "Exercice « It's up to you » (échéancier actif / passif) et exercice Europcar 2019 : ressources stables / capitaux employés de 59 %, dette nette / EBITDA de 13.",
+        "adidas": "Ratios réels d'Adidas au 31/12/2025, puis un rachat fictif financé par dette ou par augmentation de capital : jusqu'où Adidas peut-elle s'endetter ?"
+      },
+      "pages": [253, 257, 260, 264, 268, 270, 272]
+    },
+    {
+      "id": "valuation",
+      "view": "valuation",
+      "path": "/valuation",
+      "title": "Valorisation",
+      "altTitle": "Business valuation",
+      "icon": "Calculator",
+      "concept": "Combien vaut Adidas ? La Bourse donne un prix : 169 € par action fin 2025, soit 30 Md€. Mais « Price is what you pay; value is what you get. » Pour estimer la valeur, trois étapes : la valeur de l'actif économique (la valeur d'entreprise), moins la valeur de la dette nette, donne la valeur des capitaux propres. Méthode intrinsèque, le DCF : on actualise au WACC les FCFF futurs, puis on ajoute une valeur terminale de Gordon-Shapiro, FCFF / (WACC − g), qui pèse souvent plus de 70 % du total. Deux paramètres font tout : le WACC et la croissance perpétuelle g. Un point de plus ou de moins, et la valeur s'envole ou s'effondre. Méthode analogique, les multiples : l'EBIT d'Adidas × le multiple VE / EBIT de comparables. Rapide et « objectif », mais le choix des comparables reste… un choix. En pratique, on croise les méthodes, et on reste humble.",
+      "toolbox": [
+        { "title": "Prix, valeur et les 3 étapes", "formulaIds": ["val-three-steps", "val-ev-def"] },
+        { "title": "La méthode DCF", "formulaIds": ["npv-fcff", "val-ev-dcf", "val-terminal"] },
+        { "title": "Multiples et autres méthodes", "formulaIds": ["val-multiples", "val-ddm"] }
+      ],
+      "lab": {
+        "kind": "dcf-simulator",
+        "title": "Mini-DCF Adidas : acheter, conserver ou vendre ?",
+        "goal": "Règle le WACC, la croissance perpétuelle g et la croissance des 5 prochaines années : la valeur par action se recalcule face au cours de bourse, la courbe montre l'explosion quand g approche du WACC, la matrice de sensibilité donne ton verdict d'analyste. Compare avec les multiples, puis rejoue l'exercice Crit du cours."
+      },
+      "pdfExample": {
+        "original": "Exercice Crit 2021 : FCFF 2022-2026, g = 2 %, WACC = 9 %, comparables à 12 fois l'EBIT ; recommandation BUY, HOLD ou SELL.",
+        "adidas": "Adidas au 31/12/2025 : FCFF normatif tiré des comptes 2025, dette nette du bilan, 178,7 millions d'actions et cours de 169,05 €. Le cas Crit est rejouable tel quel."
+      },
+      "pages": [401, 404, 407, 412, 416, 419, 427, 431, 434]
+    },
+    {
+      "id": "derivatives",
+      "view": "market-finance",
+      "path": "/market-finance",
+      "title": "Finance de marché & dérivés",
+      "altTitle": "Market finance & derivatives",
+      "icon": "ChartCandlestick",
+      "concept": "Adidas achète du caoutchouc en Asie pour ses semelles : si son prix flambe d'ici six mois, sa marge fond. Sur les marchés financiers, l'entreprise trouve deux choses : des financements (actions, obligations) et des couvertures contre ses risques, les produits dérivés, dont la valeur dépend d'un sous-jacent. Avec un contrat future, Adidas s'engage aujourd'hui à acheter à un prix fixé : si le cours monte, le contrat gagne ce que l'achat perd ; s'il baisse, l'inverse. Le coût est figé. Engagement ferme des deux côtés, sur un marché organisé avec appels de marge. Avec une option d'achat (call), Adidas paie une prime pour le droit, pas l'obligation, d'acheter au prix d'exercice : protégée contre la hausse, elle profite de la baisse. Gare au triangle des Bermudes : réduire le risque de marché expose aux risques de contrepartie et de liquidité.",
+      "toolbox": [
+        { "title": "Les titres : actions et obligations", "formulaIds": ["mkt-stock-value", "mkt-bond-value"] },
+        { "title": "Les produits dérivés", "formulaIds": ["mkt-future", "mkt-call", "mkt-put"] }
+      ],
+      "lab": {
+        "kind": "hedging-simulator",
+        "title": "Simulateur de couverture : le caoutchouc d'Adidas",
+        "goal": "Choisis ta stratégie (aucune couverture, contrat future ou call), puis fais varier le prix du caoutchouc dans 6 mois : gain ou perte sur le dérivé, coût net d'approvisionnement et appels de marge se recalculent, et le profil de gain s'affiche comme dans le cours."
+      },
+      "pdfExample": {
+        "original": "Entreprise métallurgique qui achète un future sur 1 000 t de cuivre à 6 200 €/t (spot 6 000 €/t) ; call Heineken de prix d'exercice 90 € pour une prime de 5 €.",
+        "adidas": "Adidas achète un future sur 10 000 t de caoutchouc à 1 550 €/t (spot 1 500 €/t) : volumes ×10, prix ÷4. Le call a le même prix d'exercice pour une prime de 80 €/t (environ 5 % du prix d'exercice, comme le call Heineken)."
+      },
+      "pages": [478, 484, 487, 492, 496, 499, 504, 506, 508]
+    },
+    {
+      "id": "startup",
+      "view": "startup",
+      "path": "/startup",
+      "title": "Start-up & restructuring",
+      "altTitle": "Start-up financial management, bankruptcy & restructuring",
+      "icon": "Sprout",
+      "concept": "Adidas lance Stride Lab, une start-up interne (fictive) qui imprime des semelles en 3D à partir de plastique recyclé. Une start-up, c'est un risque extrême et des flux de trésorerie négatifs et aléatoires : impossible de payer des intérêts réguliers. On la finance donc en capitaux propres, tour après tour : fondateurs, love money, business angels, puis fonds de capital-risque (VC). Piège classique : lever 90 M€ ne donne pas 90 % du pouvoir. Les investisseurs obtiennent INV / POST du capital social ; le reste de leur apport file en prime d'émission. C'est le capital social qui partage le pouvoir. Si Stride Lab réussit : nouveaux tours, Bourse ou cession. Sinon, si le ROCE reste sous le WACC, il faut restructurer en relevant le résultat économique. Et si le cash manque, c'est la cessation des paiements, puis le redressement ou la liquidation, où les actionnaires passent en dernier.",
+      "toolbox": [
+        { "title": "Lever des fonds", "formulaIds": ["su-investor-share", "su-capital-increase", "su-share-premium", "su-power"] },
+        { "title": "Restructurer ou liquider", "formulaIds": ["rs-restructuring", "solv-cessation", "bk-priority"] }
+      ],
+      "lab": {
+        "kind": "fundraising-simulator",
+        "title": "Stride Lab : levée de fonds… et plan B",
+        "goal": "Règle la valorisation pre-money et le montant levé auprès des VC : le camembert montre la dilution d'Adidas, le nouveau bilan sépare capital social et prime d'émission. Puis imagine le pire : si Stride Lab est liquidée, qui est remboursé, et dans quel ordre ?"
+      },
+      "pdfExample": {
+        "original": "Start-up créée avec 10 k€ de capital (10 actions de 1 000 €) qui lève 90 k€ pour une valeur post-money de 202,5 k€ : +8 k€ de capital social, 82 k€ de prime d'émission, 56 % / 44 % du pouvoir ; ordre de priorité de la liquidation judiciaire.",
+        "adidas": "Stride Lab, start-up interne fictive d'Adidas : 10 M€ de capital (10 000 actions de 1 000 €), levée de 90 M€ pour 202,5 M€ post-money. Montants ×1 000, mêmes pourcentages."
+      },
+      "pages": [327, 452, 456, 458, 462, 464, 469, 476]
     }
   ]
 }

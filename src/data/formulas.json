@@ -408,5 +408,200 @@
     "latex": "\\text{VE} = \\sum_{k=1}^{\\infty} \\frac{\\text{FCFF}_k}{(1 + \\text{WACC})^k} \\qquad \\text{Valeur terminale} = \\frac{\\text{FCFF}_{n+1}}{\\text{WACC} - g}",
     "note": "Gordon-Shapiro, valable si WACC > g. Valeur des capitaux propres = VE − dette nette.",
     "pages": [407, 412, 416]
+  },
+  {
+    "id": "cf-cfo-direct",
+    "name": "Flux d'exploitation, méthode directe",
+    "latex": "\\text{CFO} = \\text{Encaissements d'exploitation} - \\text{Décaissements d'exploitation}",
+    "note": "Encaissements : paiements des clients. Décaissements : fournisseurs, salaires, etc.",
+    "pages": [211]
+  },
+  {
+    "id": "cf-cfi",
+    "name": "Flux d'investissement (CFI)",
+    "latex": "\\text{CFI} = -\\,\\text{Acquisitions d'immobilisations} + \\text{Cessions d'immobilisations}",
+    "note": "Les investissements dans de nouvelles immobilisations, moins les ventes d'immobilisations de la période.",
+    "pages": [214]
+  },
+  {
+    "id": "cf-cff",
+    "name": "Flux de financement (CFF)",
+    "latex": "\\begin{aligned}\\text{CFF} = &+ \\text{Nouveaux emprunts} - \\text{Remboursements d'emprunts} - \\text{Intérêts versés} \\\\ &+ \\text{Augmentation de capital} - \\text{Réduction de capital} - \\text{Dividendes}\\end{aligned}",
+    "note": "Les flux avec les apporteurs de capitaux : prêteurs (emprunts, remboursements, intérêts) et actionnaires (capital, dividendes).",
+    "pages": [216]
+  },
+  {
+    "id": "cf-fcff",
+    "name": "Free cash flow (FCFF)",
+    "latex": "\\text{FCFF} = \\text{CFO} + \\text{CFI}",
+    "note": "Le cash dont l'entreprise dispose une fois ses investissements payés : rembourser, verser un dividende, garder du cash. Pour valoriser, prendre le FCFF avant intérêts financiers.",
+    "pages": [215]
+  },
+  {
+    "id": "cf-cfo-net-profit",
+    "name": "Flux d'exploitation à partir du résultat net",
+    "latex": "\\text{CFO après intérêts} = \\text{Résultat net} + \\text{Dotations aux amortissements et provisions} - \\Delta\\,\\text{BFR}",
+    "note": "Présentation la plus courante, mais les intérêts restent dans le flux d'exploitation ; les puristes les rangent dans le flux de financement, avec l'impôt calculé sur l'EBIT.",
+    "pages": [218, 222, 223]
+  },
+  {
+    "id": "solv-cessation",
+    "name": "Cessation des paiements",
+    "latex": "\\text{Cessation des paiements} \\iff \\text{Actif disponible} < \\text{Passif exigible}",
+    "note": "L'entreprise ne peut plus faire face immédiatement à ses dettes exigibles avec ses actifs disponibles : c'est l'entrée en procédure collective (redressement ou liquidation judiciaire), le « dépôt de bilan ». En France, à déclarer au tribunal dans les 45 jours.",
+    "pages": [205, 464, 467]
+  },
+  {
+    "id": "val-three-steps",
+    "name": "Valeur des capitaux propres, en 3 étapes",
+    "latex": "V_E = V_A - V_D",
+    "symbols": [
+      { "symbol": "V_A", "meaning": "Valeur de marché de l'actif économique (étape 1)" },
+      { "symbol": "V_D", "meaning": "Valeur de marché de la dette financière nette (étape 2)" },
+      { "symbol": "V_E", "meaning": "Valeur de marché des capitaux propres, par différence (étape 3)" }
+    ],
+    "note": "On ne valorise pas les capitaux propres directement (sauf dans quelques secteurs comme la banque). La structure financière n'a pas d'impact sur la valeur de l'actif : la taille de la pizza ne dépend pas de la façon dont on la découpe.",
+    "pages": [405, 407, 408]
+  },
+  {
+    "id": "val-ev-def",
+    "name": "Valeur d'entreprise (Enterprise value)",
+    "latex": "\\text{VE} = \\text{VM des capitaux employés} = \\text{VM des capitaux propres} + \\text{VM de la dette financière nette}",
+    "note": "VM : valeur de marché. Une valeur comptable n'est pas une valeur de marché. « Price is what you pay; value is what you get » : le prix dépend de la valeur intrinsèque et des synergies que l'acheteur est prêt à payer.",
+    "pages": [404, 408, 411]
+  },
+  {
+    "id": "val-terminal",
+    "name": "Valeur terminale (Gordon-Shapiro)",
+    "latex": "\\text{Valeur terminale}_k = \\frac{\\text{FCFF}_k \\times (1 + g)}{\\text{WACC} - g} = \\frac{\\text{FCFF}_{k+1}}{\\text{WACC} - g}",
+    "symbols": [
+      { "symbol": "g", "meaning": "Taux de croissance perpétuelle des flux au-delà de l'horizon explicite" },
+      { "symbol": "k", "meaning": "Dernière année de l'horizon explicite" }
+    ],
+    "note": "Valable seulement si WACC > g. Quand g se rapproche du WACC, la valeur tend vers l'infini : g doit rester raisonnable (l'inflation de long terme, par exemple). Démonstration p. 450.",
+    "pages": [415, 416, 450]
+  },
+  {
+    "id": "val-multiples",
+    "name": "Méthode des multiples",
+    "latex": "\\text{VE} = \\text{Agrégat de l'entreprise} \\times \\text{Multiple des comparables}, \\quad \\text{ex. } \\text{VE} = \\text{EBIT} \\times \\frac{\\text{VE}}{\\text{EBIT}}",
+    "note": "Trois étapes : échantillon de comparables (même risque, même croissance), choix du multiple, année de référence. Privilégier les multiples de VE, et parmi eux VE / EBIT : le PER est faussé par la structure financière, VE / CA ignore la rentabilité, VE / EBITDA « normalise » l'intensité capitalistique. Puis V_E = VE − dette nette.",
+    "pages": [419, 420, 421, 427, 428]
+  },
+  {
+    "id": "val-ddm",
+    "name": "Modèle d'actualisation des dividendes (DDM)",
+    "latex": "V^{Eq} = \\frac{\\text{Div}_0 \\times (1 + g)}{k_e - g} = \\frac{\\text{Div}_1}{k_e - g}",
+    "symbols": [
+      { "symbol": "Div₀", "meaning": "Dividende qui vient d'être versé" },
+      { "symbol": "Div₁", "meaning": "Dividende attendu dans un an" },
+      { "symbol": "k_e", "meaning": "Coût des capitaux propres" }
+    ],
+    "note": "Les dividendes reviennent aux actionnaires : on les actualise au coût des capitaux propres, pas au WACC. Résultats absurdes quand g s'approche de kE, et négatifs si g > kE.",
+    "pages": [433, 434]
+  },
+  {
+    "id": "mkt-stock-value",
+    "name": "Valeur d'une action",
+    "latex": "V_0 = \\sum_{t=0}^{\\infty} \\frac{F_t}{(1 + i)^t}",
+    "symbols": [
+      { "symbol": "F_t", "meaning": "Flux revenant à l'actionnaire (FCFF moins les flux des prêteurs), incertains" },
+      { "symbol": "i", "meaning": "Taux d'actualisation : taux sans risque + prime de risque de l'action" },
+      { "symbol": "t", "meaning": "Délai entre la date du calcul et celle du flux" }
+    ],
+    "note": "Flux retardés ou taux qui montent : le cours baisse. Concurrent qui se retire ou OPA avec synergies : il monte.",
+    "pages": [486, 487, 489]
+  },
+  {
+    "id": "mkt-bond-value",
+    "name": "Valeur d'une obligation",
+    "latex": "V_0 = \\sum_{t=0}^{N} \\frac{F_t}{(1 + i)^t}",
+    "symbols": [
+      { "symbol": "F_t", "meaning": "Intérêts et remboursement du capital, connus dès l'émission" },
+      { "symbol": "i", "meaning": "Taux sans risque + prime de risque de l'émetteur" }
+    ],
+    "note": "À taux fixe, si les taux montent ou si la note de l'émetteur baisse, i augmente et le prix baisse. À taux variable, les flux et i évoluent ensemble : pas d'impact. Un dividende plus faible ne change rien pour le prêteur.",
+    "pages": [491, 492, 494]
+  },
+  {
+    "id": "mkt-future",
+    "name": "Contrat future ou forward (acheteur)",
+    "latex": "\\text{Gain de l'acheteur} = Q \\times (p - F) \\qquad \\begin{cases} p > F : \\text{gain} \\\\ p < F : \\text{perte} \\end{cases}",
+    "symbols": [
+      { "symbol": "Q", "meaning": "Quantité du contrat" },
+      { "symbol": "p", "meaning": "Prix au comptant (spot) à l'échéance" },
+      { "symbol": "F", "meaning": "Prix convenu aujourd'hui" }
+    ],
+    "note": "Engagement ferme et réciproque : le vendeur réalise exactement l'inverse. Pour l'acheteur couvert, achat au comptant − gain du contrat = Q × F, quel que soit p. Future : marché organisé, chambre de compensation, dépôt de garantie et appels de marge. Forward : gré à gré, risque de contrepartie.",
+    "pages": [502, 504, 505, 506]
+  },
+  {
+    "id": "mkt-call",
+    "name": "Option d'achat (call), à l'échéance",
+    "latex": "\\text{Gain de l'acheteur} = \\max(S - K\\,;\\,0) - \\text{prime}",
+    "symbols": [
+      { "symbol": "S", "meaning": "Valeur du sous-jacent à l'échéance" },
+      { "symbol": "K", "meaning": "Prix d'exercice (strike)" }
+    ],
+    "note": "Un droit, pas une obligation : exercé seulement si S > K (« dans la monnaie »). La prime est payée d'avance quoi qu'il arrive : la perte de l'acheteur est limitée à la prime, celle du vendeur est potentiellement illimitée. Avant l'échéance, s'ajoute une valeur temps.",
+    "pages": [498, 499, 500, 501]
+  },
+  {
+    "id": "mkt-put",
+    "name": "Option de vente (put), à l'échéance",
+    "latex": "\\text{Gain de l'acheteur} = \\max(K - S\\,;\\,0) - \\text{prime}",
+    "note": "Le droit, mais pas l'obligation, de vendre au prix d'exercice : une protection contre la baisse. Le cours définit le put (p. 498) ; même logique que le call, en miroir.",
+    "pages": [498]
+  },
+  {
+    "id": "su-investor-share",
+    "name": "Part des nouveaux investisseurs",
+    "latex": "\\text{Part des investisseurs} = \\frac{\\text{INV}}{\\text{POST}} \\qquad \\text{POST} = \\text{PRE} + \\text{INV}",
+    "symbols": [
+      { "symbol": "INV", "meaning": "Besoin de cash levé auprès des investisseurs" },
+      { "symbol": "POST", "meaning": "Valeur des capitaux propres après l'augmentation de capital (post-money), négociée" },
+      { "symbol": "PRE", "meaning": "Valeur avant l'opération (pre-money)" }
+    ],
+    "note": "Dans l'ordre : 1. l'entrepreneur estime son besoin INV ; 2. entrepreneur et investisseurs négocient la valeur POST (DCF, multiples…) ; 3. les investisseurs reçoivent INV / POST du nouveau capital social ; 4. le reste va en prime d'émission.",
+    "pages": [462]
+  },
+  {
+    "id": "su-capital-increase",
+    "name": "Augmentation du capital social",
+    "latex": "\\Delta K = \\frac{\\text{INV}}{\\text{POST}} \\times (K + \\Delta K) \\iff \\Delta K = K \\times \\frac{\\text{INV}}{\\text{PRE}}",
+    "symbols": [
+      { "symbol": "K", "meaning": "Capital social avant l'opération" },
+      { "symbol": "ΔK", "meaning": "Augmentation de capital social (actions nouvelles × nominal)" }
+    ],
+    "note": "Exemple du cours : 10 k€ × 90 / 112,5 = 8 k€, soit 8 actions nouvelles de 1 000 € de nominal, émises à 11 250 € pièce.",
+    "pages": [460, 461, 462]
+  },
+  {
+    "id": "su-share-premium",
+    "name": "Prime d'émission (Share premium)",
+    "latex": "\\text{Prime d'émission} = \\text{INV} - \\Delta K",
+    "note": "Les 90 k€ levés ne donnent pas 90 % du pouvoir : 8 k€ vont au capital social, 82 k€ en prime d'émission, au passif du bilan.",
+    "pages": [460, 462]
+  },
+  {
+    "id": "su-power",
+    "name": "Partage du pouvoir",
+    "latex": "\\text{Pouvoir des fondateurs} = \\frac{K}{K + \\Delta K}",
+    "note": "C'est le partage du capital social qui détermine le partage du pouvoir. Exemple du cours : 10 / 18 = 56 % pour l'entrepreneur, 44 % pour les nouveaux actionnaires.",
+    "pages": [460, 461]
+  },
+  {
+    "id": "rs-restructuring",
+    "name": "Restructurer quand ROCE < WACC",
+    "latex": "\\text{ROCE} < \\text{WACC} \\Rightarrow \\begin{cases} \\nearrow \\text{résultat économique : hausse du CA, baisse des coûts} \\\\ \\searrow \\text{WACC : très difficile} \\end{cases}",
+    "note": "Sinon les investisseurs se détournent, ou un concurrent lance une OPA. Le WACC préexiste à la structure financière : il ne dépend que du risque du métier. Seule piste de ce côté : améliorer la transparence de la communication financière.",
+    "pages": [327, 328, 331, 332]
+  },
+  {
+    "id": "bk-priority",
+    "name": "Ordre de remboursement en liquidation",
+    "latex": "\\text{État} \\succ \\text{Créanciers post-jugement} \\succ \\text{Créanciers garantis} \\succ \\text{Créanciers chirographaires} \\succ \\text{Actionnaires}",
+    "note": "Ordre général, variable selon les pays. Les actionnaires passent en dernier : ils récupèrent en moyenne près de 0 %. Sans dette, pas de faillite… mais on peut détruire de la valeur si ROCE < WACC.",
+    "pages": [469, 476]
   }
 ]

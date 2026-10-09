@@ -296,5 +296,156 @@
     "name": "Enterprise value by DCF",
     "latex": "\\text{EV} = \\sum_{k=1}^{\\infty} \\frac{\\text{FCFF}_k}{(1 + \\text{WACC})^k} \\qquad \\text{Terminal value} = \\frac{\\text{FCFF}_{n+1}}{\\text{WACC} - g}",
     "note": "Gordon-Shapiro, valid if WACC > g. Equity value = EV − net debt."
+  },
+  "cf-cfo-direct": {
+    "name": "Cash flows from operations, direct method",
+    "latex": "\\text{CFO} = \\text{Operating cash-in} - \\text{Operating cash-out}",
+    "note": "Cash-in: payments from clients. Cash-out: payments to suppliers, salaries, etc."
+  },
+  "cf-cfi": {
+    "name": "Cash flows from investments (CFI)",
+    "latex": "\\text{CFI} = -\\,\\text{Acquisitions of fixed assets} + \\text{Disposals of fixed assets}",
+    "note": "Investments in new fixed assets, minus the fixed assets sold during the period."
+  },
+  "cf-cff": {
+    "name": "Cash flows from financing (CFF)",
+    "latex": "\\begin{aligned}\\text{CFF} = &+ \\text{New loan emission} - \\text{Loan capital reimbursement} - \\text{Interest payment} \\\\ &+ \\text{Social capital increase} - \\text{Social capital decrease} - \\text{Dividends}\\end{aligned}",
+    "note": "Flows from or to capital providers: lenders (new loans, repayments, interest) and shareholders (capital, dividends)."
+  },
+  "cf-fcff": {
+    "name": "Free Cash Flow to the Firm (FCFF)",
+    "latex": "\\text{FCFF} = \\text{CFO} + \\text{CFI}",
+    "note": "The cash the company has at its disposal once the necessary investments are paid: repay debts, pay a dividend, keep cash. For a valuation, take the FCFF before financial interests."
+  },
+  "cf-cfo-net-profit": {
+    "name": "Cash flows from operations, starting from net profit",
+    "latex": "\\text{CFO after interest paid} = \\text{Net profit} + \\text{Depreciation and provision allowances} - \\Delta\\,\\text{WCR}",
+    "note": "The most common presentation, but interest stays in the operating flows; purists move it to the financing flows, with tax computed on EBIT."
+  },
+  "solv-cessation": {
+    "name": "Cessation of payments",
+    "latex": "\\text{Cessation of payments} \\iff \\text{Available assets} < \\text{Liabilities due}",
+    "note": "The company can no longer immediately meet its liabilities due with its available assets: it enters collective proceedings (receivership or judicial liquidation), the French \"dépôt de bilan\". In France, it must be declared to the court within 45 days."
+  },
+  "val-three-steps": {
+    "name": "Equity value, in 3 steps",
+    "latex": "V_E = V_A - V_D",
+    "symbols": [
+      { "symbol": "V_A", "meaning": "Market value of the assets (step 1)" },
+      { "symbol": "V_D", "meaning": "Market value of the net financial debt (step 2)" },
+      { "symbol": "V_E", "meaning": "Market value of equity, by difference (step 3)" }
+    ],
+    "note": "We do not value equity directly (apart from a few sectors like banking). The financial structure has no impact on the value of the assets: the size of the pizza does not depend on how it is sliced."
+  },
+  "val-ev-def": {
+    "name": "Enterprise value",
+    "latex": "\\text{EV} = \\text{MV of capital employed} = \\text{MV of equity} + \\text{MV of net financial debt}",
+    "note": "MV: market value. A book value is not a market value. \"Price is what you pay; value is what you get\": the price depends on the intrinsic value and on the synergies the buyer is ready to pay for."
+  },
+  "val-terminal": {
+    "name": "Terminal value (Gordon-Shapiro)",
+    "latex": "\\text{Terminal value}_k = \\frac{\\text{FCFF}_k \\times (1 + g)}{\\text{WACC} - g} = \\frac{\\text{FCFF}_{k+1}}{\\text{WACC} - g}",
+    "symbols": [
+      { "symbol": "g", "meaning": "Perpetual growth rate of the flows beyond the explicit horizon" },
+      { "symbol": "k", "meaning": "Last year of the explicit horizon" }
+    ],
+    "note": "Only valid if WACC > g. As g gets close to the WACC, the value goes to infinity: g must stay reasonable (long-term inflation, for instance). Demonstration p. 450."
+  },
+  "val-multiples": {
+    "name": "Multiples method",
+    "latex": "\\text{EV} = \\text{Operating aggregate} \\times \\text{Multiple of comparables}, \\quad \\text{e.g. } \\text{EV} = \\text{EBIT} \\times \\frac{\\text{EV}}{\\text{EBIT}}",
+    "note": "Three steps: sample of peers (same risk, same growth), choice of multiple, reference year. Favour EV multiples, and among them EV / EBIT: the P/E is distorted by the financial structure, EV / Sales ignores profitability, EV / EBITDA \"normalises\" capital intensity. Then V_E = EV − net debt."
+  },
+  "val-ddm": {
+    "name": "Dividend Discount Model (DDM)",
+    "latex": "V^{Eq} = \\frac{\\text{Div}_0 \\times (1 + g)}{k_e - g} = \\frac{\\text{Div}_1}{k_e - g}",
+    "symbols": [
+      { "symbol": "Div₀", "meaning": "Dividend just paid" },
+      { "symbol": "Div₁", "meaning": "Dividend expected one year from now" },
+      { "symbol": "k_e", "meaning": "Cost of equity" }
+    ],
+    "note": "Dividends go to shareholders: discount them at the cost of equity, not at the WACC. Absurd results as g gets close to kE, and negative ones if g > kE."
+  },
+  "mkt-stock-value": {
+    "name": "Value of a stock",
+    "latex": "V_0 = \\sum_{t=0}^{\\infty} \\frac{F_t}{(1 + i)^t}",
+    "symbols": [
+      { "symbol": "F_t", "meaning": "Cash flows attached to the stock (FCFF minus cash flows for lenders), uncertain" },
+      { "symbol": "i", "meaning": "Discount rate: risk-free rate + risk premium of the stock" },
+      { "symbol": "t", "meaning": "Delay between the calculation date and the cash flow" }
+    ],
+    "note": "Delayed flows or rising rates: the price falls. A competitor withdrawing or a takeover bid with synergies: it rises."
+  },
+  "mkt-bond-value": {
+    "name": "Value of a bond",
+    "latex": "V_0 = \\sum_{t=0}^{N} \\frac{F_t}{(1 + i)^t}",
+    "symbols": [
+      { "symbol": "F_t", "meaning": "Interest and capital redemption, known at issuance" },
+      { "symbol": "i", "meaning": "Risk-free rate + risk premium of the issuer" }
+    ],
+    "note": "At a fixed rate, if rates rise or the issuer is downgraded, i increases and the price falls. At a variable rate, flows and i move together: no impact. A lower dividend changes nothing for the lender."
+  },
+  "mkt-future": {
+    "name": "Futures or forward contract (buyer)",
+    "latex": "\\text{Buyer's gain} = Q \\times (p - F) \\qquad \\begin{cases} p > F : \\text{gain} \\\\ p < F : \\text{loss} \\end{cases}",
+    "symbols": [
+      { "symbol": "Q", "meaning": "Quantity of the contract" },
+      { "symbol": "p", "meaning": "Spot price at maturity" },
+      { "symbol": "F", "meaning": "Price agreed today" }
+    ],
+    "note": "A firm, reciprocal commitment: the seller makes exactly the opposite. For the hedged buyer, spot purchase − gain on the contract = Q × F, whatever p. Futures: organised market, clearing house, initial margin and margin calls. Forwards: over the counter, counterparty risk."
+  },
+  "mkt-call": {
+    "name": "Call option, at maturity",
+    "latex": "\\text{Buyer's gain} = \\max(S - K\\,;\\,0) - \\text{premium}",
+    "symbols": [
+      { "symbol": "S", "meaning": "Value of the underlying asset at maturity" },
+      { "symbol": "K", "meaning": "Strike price" }
+    ],
+    "note": "A right, not an obligation: exercised only if S > K (\"in the money\"). The premium is paid upfront whatever happens: the buyer's loss is limited to the premium, the seller's is potentially unlimited. Before maturity, a time value is added."
+  },
+  "mkt-put": {
+    "name": "Put option, at maturity",
+    "latex": "\\text{Buyer's gain} = \\max(K - S\\,;\\,0) - \\text{premium}",
+    "note": "The right, but not the obligation, to sell at the strike price: a protection against a fall. The course defines the put (p. 498); same logic as the call, mirrored."
+  },
+  "su-investor-share": {
+    "name": "Share of the new investors",
+    "latex": "\\text{Investors' share} = \\frac{\\text{INV}}{\\text{POST}} \\qquad \\text{POST} = \\text{PRE} + \\text{INV}",
+    "symbols": [
+      { "symbol": "INV", "meaning": "Cash need raised from investors" },
+      { "symbol": "POST", "meaning": "Market value of equity after the capital increase (post-money), negotiated" },
+      { "symbol": "PRE", "meaning": "Value before the operation (pre-money)" }
+    ],
+    "note": "In this order: 1. the entrepreneur estimates the cash need INV; 2. entrepreneur and investors negotiate the POST value (DCF, multiples…); 3. investors receive INV / POST of the new share capital; 4. the remainder goes to the share premium."
+  },
+  "su-capital-increase": {
+    "name": "Increase in share capital",
+    "latex": "\\Delta K = \\frac{\\text{INV}}{\\text{POST}} \\times (K + \\Delta K) \\iff \\Delta K = K \\times \\frac{\\text{INV}}{\\text{PRE}}",
+    "symbols": [
+      { "symbol": "K", "meaning": "Share capital before the operation" },
+      { "symbol": "ΔK", "meaning": "Increase in share capital (new shares × nominal value)" }
+    ],
+    "note": "Course example: €10k × 90 / 112.5 = €8k, i.e. 8 new shares with a €1,000 nominal value, issued at €11,250 each."
+  },
+  "su-share-premium": {
+    "name": "Share premium",
+    "latex": "\\text{Share premium} = \\text{INV} - \\Delta K",
+    "note": "The €90k raised do not give 90% of the power: €8k go to share capital, €82k to the share premium, on the liabilities side."
+  },
+  "su-power": {
+    "name": "Sharing of power",
+    "latex": "\\text{Founders' power} = \\frac{K}{K + \\Delta K}",
+    "note": "The split of share capital determines the split of power. Course example: 10 / 18 = 56% for the entrepreneur, 44% for the new shareholders."
+  },
+  "rs-restructuring": {
+    "name": "Restructuring when ROCE < WACC",
+    "latex": "\\text{ROCE} < \\text{WACC} \\Rightarrow \\begin{cases} \\nearrow \\text{economic result: higher sales, lower costs} \\\\ \\searrow \\text{WACC: very difficult} \\end{cases}",
+    "note": "Otherwise investors turn away, or a competitor launches a takeover bid. The WACC pre-exists the financial structure: it only depends on the business risk. The only lever on that side: more transparent financial communication."
+  },
+  "bk-priority": {
+    "name": "Order of repayment in liquidation",
+    "latex": "\\text{State} \\succ \\text{Post-filing creditors} \\succ \\text{Secured creditors} \\succ \\text{Unsecured creditors} \\succ \\text{Shareholders}",
+    "note": "General order, which varies across countries. Shareholders come last: on average they recover close to 0%. No debt, no bankruptcy… but value can still be destroyed if ROCE < WACC."
   }
 }

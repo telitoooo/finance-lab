@@ -8,9 +8,22 @@ export type ModuleId =
   | 'profitability'
   | 'wacc'
   | 'npv-irr'
+  | 'cash-flow'
+  | 'solvency'
+  | 'valuation'
+  | 'derivatives'
+  | 'startup'
 
-/** Les 4 vues demandées ; une vue regroupe un ou deux modules. */
-export type ViewId = 'financial-statements' | 'wcr' | 'profitability' | 'wacc-npv'
+/** Les vues de la barre latérale ; une vue regroupe un ou deux modules. */
+export type ViewId =
+  | 'financial-statements'
+  | 'wcr'
+  | 'profitability'
+  | 'wacc-npv'
+  | 'cash-solvency'
+  | 'valuation'
+  | 'market-finance'
+  | 'startup'
 
 /** Composant interactif branché dans la partie « Labo » d'un module (étape 3). */
 export type LabKind =
@@ -20,6 +33,11 @@ export type LabKind =
   | 'leverage-simulator'
   | 'wacc-simulator'
   | 'npv-simulator'
+  | 'cash-flow-waterfall'
+  | 'solvency-gauges'
+  | 'dcf-simulator'
+  | 'hedging-simulator'
+  | 'fundraising-simulator'
 
 /** Pages du PDF source (numérotation du fichier, 1 à 513). */
 export type PdfPages = number[]
@@ -118,6 +136,8 @@ export interface AdidasDataset {
     source: string
     sourceUrl: string
     disclaimer: string
+    /** Regroupement du tableau des flux publié dans la grille du cours. */
+    cashFlowNote: string
   }
   incomeStatement: {
     revenue: number
@@ -157,6 +177,16 @@ export interface AdidasDataset {
      */
     debtWithProvisions: number
   }
+  /** Tableau des flux de trésorerie 2025 publié, regroupé dans la grille du cours (p. 217, 223). */
+  cashFlowStatement: CashFlowStatement
+  /** Données boursières au 31/12 (valorisation). */
+  share: {
+    sharesOutstanding: number
+    yearEndPrice: number
+    marketCap: number
+    /** Dividende proposé au titre de l'exercice, versé l'année suivante (€ par action). */
+    dividendPerShare: number
+  }
   /** Valeurs par défaut des curseurs du simulateur BFR. */
   wcrDays: {
     dso: number
@@ -168,6 +198,32 @@ export interface AdidasDataset {
   scenarios: Record<string, AdidasScenario>
   /** Exercice « Guess which company it is », enrichi du bilan d'Adidas. */
   guessCompany: GuessCompanyExercise
+}
+
+export interface CashFlowStatement {
+  /** Impôt sur les sociétés effectivement payé. */
+  taxPaid: number
+  /** Hausse du BFR : créances + stocks + baisse des dettes d'exploitation. */
+  wcrIncrease: number
+  wcrDetail: { receivables: number; inventories: number; payables: number }
+  /** Autres éléments sans décaissement et effets de change du flux d'exploitation. */
+  otherOperating: number
+  cfo: number
+  capex: number
+  disposals: number
+  /** Investissements financiers et intérêts reçus (classés en investissement par Adidas). */
+  otherInvesting: number
+  cfi: number
+  newBorrowings: number
+  repayments: number
+  leaseRepayments: number
+  interestPaid: number
+  dividends: number
+  otherFinancing: number
+  cff: number
+  fxEffect: number
+  cashOpening: number
+  cashClosing: number
 }
 
 export interface GuessCompanyExercise {

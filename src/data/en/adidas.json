@@ -1,7 +1,8 @@
 {
   "meta": {
     "source": "adidas, Annual Report 2025: consolidated income statement and balance sheet (31/12/2025)",
-    "disclaimer": "Items grouped into the course's simplified template (the report's €1m rounding gap is allocated to other operating payables). Depreciation (D&A) = reported EBITDA − operating profit. The scenarios are educational and do not describe actual Adidas projects."
+    "disclaimer": "Items grouped into the course's simplified template (the report's €1m rounding gap is allocated to other operating payables). Depreciation (D&A) = reported EBITDA − operating profit. The scenarios are educational and do not describe actual Adidas projects.",
+    "cashFlowNote": "2025 published cash flow statement, regrouped into the course template: CAPEX = property, plant and equipment (363) and intangible assets (114); disposals = fixed assets (4) and disposal group (100); other investment flows = investments (−88) and interest received (58); new loans = bond (498) and short-term borrowings (166); dividends = adidas AG shareholders (357) and minorities (42). The report's rounding gaps (€1m) are allocated to the \"other\" lines."
   },
   "taxRateNote": "2025 effective rate: €443m of tax / €1,820m of income before tax.",
   "balanceSheet": {
@@ -102,6 +103,36 @@
       "title": "Shanghai flagship or padel line?",
       "pdfOrigin": "NPV – Exercise 1 (mutually exclusive projects)",
       "story": "Two mutually exclusive projects (€m). Shanghai flagship, low risk, required return 5%: −40, 10, 12, 14, 16. Padel apparel line, moderate risk, required return 7%: −30 then 10 a year for 5 years."
+    },
+    "cashFlow2025": {
+      "title": "Adidas 2025: where did the cash go?",
+      "pdfOrigin": "Exercise – ENGIE (2015 cash flow statement)",
+      "story": "Adidas's real 2025 cash flow statement, regrouped into the course template (€m). The four questions of the ENGIE exercise apply… with the opposite conclusion: ENGIE had a negative result but plenty of cash; Adidas has a good result but operating cash crushed by the WCR."
+    },
+    "acquisition": {
+      "title": "Buying a competitor",
+      "pdfOrigin": "Solvency: exercise (Europcar 2019)",
+      "story": "Adidas (fictitiously) wants to buy a competitor. The price is the enterprise value paid; the target brings an EBITDA equal to the price divided by the multiple paid. Financing: debt (long-term bonds or a short-term bridge loan) or a capital increase. Benchmark from the course: Europcar 2019, very poor solvency."
+    },
+    "dcfAdidas": {
+      "title": "Is Adidas worth its share price?",
+      "pdfOrigin": "Exercise 1 – Group Crit (DCF, multiples, BUY / HOLD / SELL)",
+      "story": "Normative 2025 FCFF = EBITDA − tax computed on EBIT − CAPEX (stable WCR). Over 5 years, the business grows at the chosen pace: EBITDA, tax, CAPEX and WCR follow, and the WCR increase consumes cash. Beyond that, perpetual growth g. Equity value = EV − net debt (€3,937m, leases included), compared with the market capitalisation at 31/12/2025."
+    },
+    "rubberHedge": {
+      "title": "Adidas's rubber in 6 months",
+      "pdfOrigin": "Derivatives: futures and forwards (copper example) and options (Heineken call)",
+      "story": "Adidas must buy 10,000 tonnes of natural rubber in 6 months for its soles. Spot price today: €1,500/t. It fears a rise. Two possible hedges: buy a futures contract at €1,550/t, or buy a call with a €1,550/t strike for an €80/t premium. Educational figures."
+    },
+    "strideLab": {
+      "title": "Stride Lab raises funds",
+      "pdfOrigin": "Control of the power when the startup raises equity",
+      "story": "Adidas created Stride Lab a year ago with €10m of share capital: 10,000 shares with a €1,000 nominal value, all held by Adidas. The prototype works: €90m are needed to industrialise, raised from venture capital funds. Fictitious start-up and figures, transposed from the course example (×1,000)."
+    },
+    "liquidation": {
+      "title": "What if Stride Lab went bankrupt?",
+      "pdfOrigin": "Bankruptcy: judicial liquidation (order of priority)",
+      "story": "Three years later, Stride Lab is in cessation of payments; the court orders its liquidation. The assets are auctioned. Claims (€m): State 3, post-filing creditors 5, bank secured on the plant 25, suppliers and other unsecured creditors 30; shareholders contributed €100m. Fictitious figures."
     }
   },
   "guessCompany": {

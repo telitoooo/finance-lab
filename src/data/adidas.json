@@ -4,7 +4,8 @@
     "fiscalYear": 2025,
     "source": "adidas, Annual Report 2025 : compte de résultat et bilan consolidés (31/12/2025)",
     "sourceUrl": "https://report.adidas-group.com/2025/en/consolidated-financial-statements/consolidated-statement-of-financial-position.html",
-    "disclaimer": "Postes regroupés dans la grille simplifiée du cours (1 M€ d'écart d'arrondi du rapport affecté aux autres dettes d'exploitation). Amortissements (D&A) = EBITDA publié − résultat d'exploitation. Les scénarios sont pédagogiques et ne décrivent pas des projets réels d'Adidas."
+    "disclaimer": "Postes regroupés dans la grille simplifiée du cours (1 M€ d'écart d'arrondi du rapport affecté aux autres dettes d'exploitation). Amortissements (D&A) = EBITDA publié − résultat d'exploitation. Les scénarios sont pédagogiques et ne décrivent pas des projets réels d'Adidas.",
+    "cashFlowNote": "Tableau des flux 2025 publié, regroupé dans la grille du cours : CAPEX = immobilisations corporelles (363) et incorporelles (114) ; cessions = immobilisations (4) et groupe cédé (100) ; autres flux d'investissement = placements (−88) et intérêts reçus (58) ; nouveaux emprunts = obligation (498) et dettes court terme (166) ; dividendes = actionnaires d'adidas AG (357) et minoritaires (42). Les écarts d'arrondi du rapport (1 M€) sont affectés aux lignes « autres »."
   },
   "incomeStatement": {
     "revenue": 24811,
@@ -173,6 +174,37 @@
     "stableResources": 11168,
     "netCash": 369,
     "debtWithProvisions": 4674
+  },
+  "cashFlowStatement": {
+    "taxPaid": 399,
+    "wcrIncrease": 2043,
+    "wcrDetail": {
+      "receivables": 562,
+      "inventories": 1104,
+      "payables": 377
+    },
+    "otherOperating": 69,
+    "cfo": 751,
+    "capex": 477,
+    "disposals": 104,
+    "otherInvesting": -31,
+    "cfi": -404,
+    "newBorrowings": 664,
+    "repayments": 500,
+    "leaseRepayments": 643,
+    "interestPaid": 220,
+    "dividends": 399,
+    "otherFinancing": -5,
+    "cff": -1103,
+    "fxEffect": -82,
+    "cashOpening": 2455,
+    "cashClosing": 1617
+  },
+  "share": {
+    "sharesOutstanding": 178.665,
+    "yearEndPrice": 169.05,
+    "marketCap": 30429,
+    "dividendPerShare": 2.8
   },
   "wcrDays": {
     "dso": 39,
@@ -459,6 +491,207 @@
       "pages": [
         374,
         375
+      ]
+    },
+    "cashFlow2025": {
+      "title": "Adidas 2025 : où est passé le cash ?",
+      "pdfOrigin": "Exercise – ENGIE (tableau des flux 2015)",
+      "story": "Le vrai tableau des flux 2025 d'Adidas, regroupé dans la grille du cours (M€). Les quatre questions de l'exercice ENGIE s'y appliquent… avec la conclusion inverse : ENGIE avait un résultat négatif mais du cash à revendre ; Adidas a un bon résultat mais un cash d'exploitation écrasé par le BFR.",
+      "data": {
+        "engieEbit": -2948,
+        "engieDa": 13890,
+        "engieTaxPaid": -1722,
+        "engieWcrDecrease": 1163,
+        "engieCfo": 10383,
+        "engieCfi": -6229,
+        "engieCff": -3517,
+        "engieToShareholders": 3086,
+        "engieToLenders": 431
+      },
+      "expected": {
+        "engieFcff": 4154,
+        "engieCashVariation": 637,
+        "engieInvestShare": 0.6,
+        "engieProvidersShare": 0.34,
+        "engieShareholdersShare": 0.74,
+        "adidasFcff": 347,
+        "adidasCashVariation": -838
+      },
+      "pages": [
+        225,
+        226,
+        227,
+        228,
+        229
+      ]
+    },
+    "acquisition": {
+      "title": "Le rachat d'un concurrent",
+      "pdfOrigin": "Solvency : exercise (Europcar 2019)",
+      "story": "Adidas veut (fictivement) racheter un concurrent. Le prix est la valeur d'entreprise payée ; la cible apporte un EBITDA égal au prix divisé par le multiple payé. Financement par dette (obligations à long terme ou crédit-relais à court terme) ou par augmentation de capital. Repère du cours : Europcar 2019, très mauvaise solvabilité.",
+      "data": {
+        "multiple": 12,
+        "presets": [
+          2000,
+          8000,
+          15000
+        ],
+        "europcarEquity": 837,
+        "europcarLtDebt": 2547,
+        "europcarNonCurrentAssets": 2897,
+        "europcarOperatingCurrentAssets": 4727,
+        "europcarOperatingCurrentLiabilities": 1904,
+        "europcarCash": 660,
+        "europcarStDebt": 2996,
+        "europcarEbitda": 389
+      },
+      "expected": {
+        "europcarStableRatio": 0.59,
+        "europcarNetDebtToEbitda": 12.55,
+        "adidasNetDebtToEbitda": 1.26,
+        "adidasStableRatio": 1.034
+      },
+      "pages": [
+        267,
+        268,
+        269,
+        270,
+        271,
+        272
+      ]
+    },
+    "dcfAdidas": {
+      "title": "Adidas vaut-elle son cours de bourse ?",
+      "pdfOrigin": "Exercise 1 – Group Crit (DCF, multiples, BUY / HOLD / SELL)",
+      "story": "FCFF normatif 2025 = EBITDA − IS calculé sur l'EBIT − CAPEX (BFR stable). Sur 5 ans, l'activité croît au rythme choisi : EBITDA, impôt, CAPEX et BFR suivent, et la hausse du BFR consomme du cash. Au-delà, croissance perpétuelle g. Valeur des capitaux propres = VE − dette nette (3 937 M€, loyers compris), à comparer à la capitalisation boursière au 31/12/2025.",
+      "data": {
+        "wacc": 0.08,
+        "growth": 0.02,
+        "explicitGrowth": 0.05,
+        "years": 5,
+        "evEbitMultiple": 15,
+        "critFlows": [
+          65,
+          42,
+          55,
+          75,
+          81
+        ],
+        "critWacc": 0.09,
+        "critGrowth": 0.02,
+        "critEbit": 75,
+        "critDebt": 127,
+        "critCash": 405,
+        "critMarketCap": 709,
+        "critMultiple": 12,
+        "ternaDividend": 0.29,
+        "ternaKe": 0.065,
+        "ternaGrowth": 0.02
+      },
+      "expected": {
+        "enterpriseValue": 40306,
+        "equityValue": 36369,
+        "valuePerShare": 203.56,
+        "terminalShare": 0.769,
+        "impliedEvEbit": 16.71,
+        "critEnterpriseValue": 1010.33,
+        "critEquityDcf": 1288.33,
+        "critEquityMultiple": 1178,
+        "ternaValue": 6.57
+      },
+      "pages": [
+        412,
+        414,
+        416,
+        417,
+        431,
+        434
+      ]
+    },
+    "rubberHedge": {
+      "title": "Le caoutchouc d'Adidas dans 6 mois",
+      "pdfOrigin": "Derivatives : futures and forwards (exemple du cuivre) et options (call Heineken)",
+      "story": "Adidas doit acheter 10 000 tonnes de caoutchouc naturel dans 6 mois pour ses semelles. Prix au comptant aujourd'hui : 1 500 €/t. Elle craint une hausse. Deux couvertures possibles : acheter un contrat future à 1 550 €/t, ou acheter un call de prix d'exercice 1 550 €/t pour une prime de 80 €/t. Chiffres pédagogiques.",
+      "data": {
+        "quantity": 10000,
+        "spotToday": 1500,
+        "futurePrice": 1550,
+        "strike": 1550,
+        "premium": 80,
+        "months": 6,
+        "copperQuantity": 1000,
+        "copperSpot": 6000,
+        "copperFuture": 6200,
+        "heinekenStrike": 90,
+        "heinekenPremium": 5
+      },
+      "expected": {
+        "futureGainAt1800": 2500000,
+        "netCostAt1400": 15500000,
+        "callBreakEvenSpot": 1470,
+        "maxCallLoss": 800000,
+        "copperGainAt6500": 300000,
+        "copperLossAt6000": -200000,
+        "heinekenAt100": 5,
+        "heinekenAt80": -5
+      },
+      "pages": [
+        499,
+        500,
+        504,
+        505
+      ]
+    },
+    "strideLab": {
+      "title": "Stride Lab lève des fonds",
+      "pdfOrigin": "Control of the power when the startup raises equity",
+      "story": "Adidas a créé Stride Lab il y a un an avec 10 M€ de capital social : 10 000 actions de 1 000 € de nominal, toutes détenues par Adidas. Le prototype fonctionne : il faut 90 M€ pour industrialiser, levés auprès de fonds de capital-risque. Start-up et chiffres fictifs, transposés de l'exemple du cours (×1 000).",
+      "data": {
+        "nominal": 1000,
+        "founderShares": 10000,
+        "inv": 90,
+        "post": 202.5,
+        "fixedAssets": 6,
+        "cash": 4
+      },
+      "expected": {
+        "pre": 112.5,
+        "newShares": 8000,
+        "capitalIncrease": 8,
+        "sharePremium": 82,
+        "investorShare": 0.4444,
+        "founderShare": 0.5556,
+        "pricePerShare": 11250
+      },
+      "pages": [
+        460,
+        461,
+        462
+      ]
+    },
+    "liquidation": {
+      "title": "Et si Stride Lab faisait faillite ?",
+      "pdfOrigin": "Bankruptcy : judicial liquidation (ordre de priorité)",
+      "story": "Trois ans plus tard, Stride Lab est en cessation des paiements ; le tribunal prononce la liquidation. Les actifs sont vendus aux enchères. Créances (M€) : État 3, créanciers post-jugement 5, banque garantie sur l'usine 25, fournisseurs et autres créanciers chirographaires 30 ; les actionnaires ont apporté 100 M€. Chiffres fictifs.",
+      "data": {
+        "claims": [
+          3,
+          5,
+          25,
+          30,
+          100
+        ],
+        "proceeds": 35
+      },
+      "expected": {
+        "securedAt35": 25,
+        "unsecuredAt35": 2,
+        "shareholdersAt35": 0,
+        "shareholdersFirstEuro": 63
+      },
+      "pages": [
+        469,
+        476
       ]
     }
   },

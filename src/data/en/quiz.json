@@ -346,5 +346,287 @@
     "question": "A project generates the flows 4, −7, 4 (€m). What about its IRR?",
     "choices": ["There are two", "There is none, while the NPV is positive", "It is 0%"],
     "explanation": "One of the IRR's drawbacks: the equation NPV = 0 can have no solution (or several, as for −1; 7.2; −7.2)."
+  },
+  "cf-01": {
+    "topic": "operating flows",
+    "question": "In 2025, Adidas generated €3,124m of EBITDA but only €751m of cash flows from operations (CFO). What is the main explanation?",
+    "choices": ["Depreciation (€1,068m)", "The WCR increase (about €2bn: inventories, receivables, operating payables)", "Dividends paid to shareholders", "Interest on debt", "CAPEX"],
+    "explanation": "CFO = EBITDA − tax − WCR increase. Depreciation is already below EBITDA, dividends and interest are financing flows, CAPEX investment flows. In 2025, inventories rose by €1,104m, receivables by €562m, and operating payables fell by €377m."
+  },
+  "cf-02": {
+    "topic": "free cash flow",
+    "question": "The free cash flow to the firm (FCFF) equals…",
+    "choices": ["CFO + CFI", "CFO + CFF", "CFO + CFI + CFF", "Net profit + depreciation", "EBITDA − dividends"],
+    "explanation": "FCFF = cash flows from operations + cash flows from investments: the cash available once investments are paid. CFO + CFI + CFF is the variation of cash."
+  },
+  "cf-03": {
+    "topic": "financing flows",
+    "question": "In which flow does the dividend Adidas pays its shareholders go?",
+    "choices": ["Cash flows from operations (CFO)", "Cash flows from investments (CFI)", "Cash flows from financing (CFF)", "It does not appear in the cash flow statement"],
+    "explanation": "Financing flows gather every flow with capital providers: lenders (loans, repayments, interest) and shareholders (capital increase or decrease, dividends)."
+  },
+  "cf-04": {
+    "topic": "investment flows",
+    "question": "Adidas sells a warehouse it no longer needs for €100m. Where does the cash-in appear?",
+    "choices": ["In the CFO, +€100m", "In the CFI, +€100m (disposal of a fixed asset)", "In the CFF, +€100m", "Nowhere: it is just a balance sheet operation"],
+    "explanation": "CFI = − acquisitions of fixed assets + disposals of fixed assets. A disposal increases the investment flows."
+  },
+  "cf-05": {
+    "topic": "result and cash",
+    "question": "The €1,068m of depreciation in Adidas's 2025 income statement…",
+    "choices": ["Took €1,068m out of the bank", "Reduce the result with no cash going out: they are added back to go from net profit to CFO", "Are an investment flow", "Increase the WCR"],
+    "explanation": "Depreciation is a calculated expense: the cash left the year the asset was bought (in the CFI). Starting from net profit, depreciation and provision allowances are therefore added back."
+  },
+  "cf-06": {
+    "topic": "statement structure",
+    "question": "The variation of cash over a period equals…",
+    "choices": ["CFO + CFI + CFF", "Net profit − dividends", "EBITDA − CAPEX", "Cash-in + cash-out", "FCFF − CFI"],
+    "explanation": "Variation of cash assets = cash at closing − cash at opening = CFO + CFI + CFF (= cash-in − cash-out)."
+  },
+  "cf-07": {
+    "topic": "ENGIE exercise",
+    "question": "In 2015, ENGIE posted a negative net result but more than €10bn of operating cash flows. Mainly thanks to…",
+    "choices": ["New loans", "€13.9bn of depreciation, calculated expenses with no cash going out", "A capital increase", "Asset sales"],
+    "explanation": "Depreciation reduces the result without touching cash. To a lesser extent (€1.2bn), ENGIE also reduced its WCR. Loans and capital belong to the CFF, asset sales to the CFI."
+  },
+  "cf-08": {
+    "topic": "free cash flow",
+    "question": "To value Adidas by discounting its free cash flows, which ones do you take?",
+    "choices": ["FCFF after financial interest", "FCFF before financial interest: the cost of financing is already in the discount rate", "Flows after dividends", "Flows after loan repayments"],
+    "explanation": "The WACC already rewards lenders and shareholders: deducting interest as well would count the cost of financing twice."
+  },
+  "cf-09": {
+    "topic": "operating flows",
+    "question": "Adidas pays its factories faster (supplier terms from 88 to 60 days), all else equal. Consequence?",
+    "choices": ["WCR falls and CFO rises", "WCR rises and CFO falls", "Net profit falls", "CFI falls"],
+    "explanation": "Fewer trade payables = a higher WCR. A WCR increase consumes cash: CFO = EBITDA − tax − WCR increase. It is one of the three \"nice\" reflexes that inflate the WCR."
+  },
+  "sv-01": {
+    "topic": "bankruptcy",
+    "question": "A company enters collective proceedings (\"dépôt de bilan\") when…",
+    "choices": ["Its net result turns negative", "Its equity turns negative", "It can no longer meet its liabilities due with its available assets", "Its ROCE falls below its WACC", "Its net debt exceeds 5 times its EBITDA"],
+    "explanation": "The cessation of payments marks the entry into receivership or judicial liquidation. A loss, negative equity or ROCE < WACC are warning signs, not the definition."
+  },
+  "sv-02": {
+    "topic": "short-term ratios",
+    "question": "Why does the course advise distrusting the current ratio?",
+    "choices": ["It is too complex to compute", "It measures solvency at 3 months on a balance sheet published 3 to 6 months after closing, with volatile items, and a WCR increase can improve it", "It ignores financial debt", "Bankers never use it"],
+    "explanation": "Liquidity ratios (current, quick, cash ratio) have major drawbacks; many companies went bankrupt while meeting them. Know they exist so you can beware of them."
+  },
+  "sv-03": {
+    "topic": "medium-term ratios",
+    "question": "Adidas, end of 2025: stable resources €11,168m, capital employed €10,799m. Verdict according to the course grid?",
+    "choices": ["R.I.P.", "High risk of bankruptcy", "Medium but acceptable", "Very good", "Ideal"],
+    "explanation": "11,168 / 10,799 = 103%: above 100%, it is ideal. Stable resources cover all the capital employed, net cash is positive (+€369m)."
+  },
+  "sv-04": {
+    "topic": "medium-term ratios",
+    "question": "Adidas's net debt: €3,937m (leases included). EBITDA: €3,124m. What do you conclude?",
+    "choices": ["Ratio of 1.3: no problem (< 3)", "Ratio of 1.3: high risk of bankruptcy", "Ratio of 0.8: impossible to interpret", "Ratio of 4: it is OK"],
+    "explanation": "Net debt / EBITDA = 3,937 / 3,124 = 1.3. Below 3: no problem; up to 4: it is OK; above 5: high risk of bankruptcy."
+  },
+  "sv-05": {
+    "topic": "debt maturity",
+    "question": "Adidas finances a €10bn takeover with a bridge loan of less than a year. Effect on the stable resources / capital employed ratio?",
+    "choices": ["None: net debt rises as much as capital employed", "It falls: capital employed swells, stable resources do not, and net cash plunges", "It rises", "It only depends on the target's EBITDA"],
+    "explanation": "Short-term debt is a cash liability, not a stable resource. Net cash = stable resources − capital employed: it becomes very negative. Financed with a long-term bond, the deal would have left net cash unchanged."
+  },
+  "sv-06": {
+    "topic": "medium-term ratios",
+    "question": "A net debt / CFO ratio of 4 years means…",
+    "choices": ["It would take 4 years of operating cash flows to repay net debt: high risk of bankruptcy (3 to 5 years)", "The debt will be repaid in 4 years", "Net debt is worth 4% of CFO", "An excellent situation"],
+    "explanation": "The ratio must stay below the average maturity of the debt (about 3 years). 0-1 year: excellent; 1-2: good; 2-3: acceptable; 3-5: high risk; above: R.I.P."
+  },
+  "sv-07": {
+    "topic": "maturity ladder",
+    "question": "Assets: fixed assets 400, inventories (3 months) 300, receivables (2 months) 100, cash 200. Liabilities: equity 100, debt due in 5 years 200, in 1 year 300, in 1 month 400. At 1 month, the shortfall is…",
+    "choices": ["Nothing", "100", "200: 400 of debt to pay for 200 of cash", "400"],
+    "explanation": "Liquidity at 1 month is not assured (400 − 200 = 200), nor at 1 year (700 − 600 = 100), nor at 5 years (900 − 800 = 100): the company must quickly restructure its debt."
+  },
+  "sv-08": {
+    "topic": "Europcar exercise",
+    "question": "Europcar, end of 2019: stable resources / capital employed = 59%, net debt / EBITDA = 13. The course's conclusion?",
+    "choices": ["Very good solvency", "Fair solvency", "Very poor solvency", "Impossible to conclude without the current ratio"],
+    "explanation": "59% lies in the \"high risk of bankruptcy\" zone (50-70%) and net debt of 13 years of EBITDA is far above the threshold of 5."
+  },
+  "sv-09": {
+    "topic": "medium-term ratios",
+    "question": "Why is the 70% critical point less strict for a company with negative net debt?",
+    "choices": ["By definition, it has no risk of not paying back its financial debts", "Its equity is necessarily negative", "Its WCR is necessarily negative", "It is not: 70% applies to everyone"],
+    "explanation": "With more cash than financial debt, the company can repay everything: its solvency is very good even below 70%."
+  },
+  "va-01": {
+    "topic": "price and value",
+    "question": "\"Price is what you pay; value is what you get.\" The price paid for a company depends…",
+    "choices": ["Only on its book value", "On its intrinsic value and on synergies that may lead the buyer to pay a premium", "Only on its net result", "On the number of shares issued"],
+    "explanation": "Value is estimated with a model and only depends on the asset. Price results from supply and demand (or negotiation): industrial synergies, a leader position, prestige… may justify a premium."
+  },
+  "va-02": {
+    "topic": "the 3 steps",
+    "question": "In the 3-step approach, how do you get the value of Adidas's equity?",
+    "choices": ["You compute it directly", "Market value of the assets − value of net debt", "Book equity × P/E", "Capital employed + net debt"],
+    "explanation": "Step 1: market value of the assets (VA). Step 2: market value of the debt (VD). Step 3, by difference: VE = VA − VD. We do not value equity directly."
+  },
+  "va-03": {
+    "topic": "terminal value",
+    "question": "Expected 2031 FCFF: €2,700m. WACC: 9%. Perpetual growth: 2%. Terminal value at the end of 2030?",
+    "choices": ["€30,000m", "€38,571m", "€135,000m", "Impossible to compute"],
+    "explanation": "Gordon-Shapiro: FCFF₂₀₃₁ / (WACC − g) = 2,700 / 7% = €38,571m. It still has to be discounted over 5 years to be added to the enterprise value."
+  },
+  "va-04": {
+    "topic": "terminal value",
+    "question": "What happens when g gets close to the WACC in the Gordon-Shapiro formula?",
+    "choices": ["The terminal value goes to zero", "The terminal value goes to infinity: the formula is only valid if WACC > g", "Nothing: g only has a marginal effect", "The value converges to book value"],
+    "explanation": "The denominator WACC − g goes to zero. It is the limit of the model (same for the DDM): g must stay reasonable, typically long-term inflation."
+  },
+  "va-05": {
+    "topic": "multiples",
+    "question": "To value Adidas with multiples, which multiple does the course favour?",
+    "choices": ["The P/E (price / earnings)", "EV / Sales", "EV / EBIT", "Price / book value"],
+    "explanation": "Favour enterprise value multiples, and among them EV / EBIT, which neutralises differences in depreciation policy linked to owning or renting assets."
+  },
+  "va-06": {
+    "topic": "multiples",
+    "question": "Why is the P/E generally set aside?",
+    "choices": ["It is distorted by differences in financial structure between peers", "It ignores growth", "It is not published", "It only applies to banks"],
+    "explanation": "Equity multiples (P/E, price / book) depend on each peer's leverage. Exception: the banking sector."
+  },
+  "va-07": {
+    "topic": "Crit exercise",
+    "question": "Crit: EV by DCF = €1,010m, financial debt €127m, cash €405m, market capitalisation €709m. Equity value and recommendation?",
+    "choices": ["€732m: HOLD", "€1,288m: BUY", "€883m: SELL", "€1,010m: HOLD"],
+    "explanation": "Net debt = 127 − 405 = −€278m (net cash). Equity = 1,010 − (−278) = €1,288m, well above the €709m market value: BUY. Multiples confirm it (12 × 75 + 278 = €1,178m)."
+  },
+  "va-08": {
+    "topic": "DDM",
+    "question": "Terna has just paid a €0.29 dividend per share; kE = 6.5%, WACC = 3.5%, dividend growth 2%. Value of the share with the DDM?",
+    "choices": ["€6.57", "€19.72", "€4.46", "€14.50"],
+    "explanation": "A dividend is an equity cash flow: discount it at kE, not at the WACC. 0.29 × 1.02 / (6.5% − 2%) = €6.57. The €19.72 trap uses the WACC."
+  },
+  "va-09": {
+    "topic": "the 3 steps",
+    "question": "Adidas replaces part of its equity with debt. According to the course (Modigliani-Miller), the value of its assets…",
+    "choices": ["Rises thanks to the tax saving, without limit", "Does not change: the size of the pizza does not depend on how it is sliced", "Is halved", "Becomes equal to book value"],
+    "explanation": "The financial structure has no impact on the value of the assets: it only splits that value between lenders and shareholders."
+  },
+  "mk-01": {
+    "topic": "options",
+    "question": "A call option gives its buyer…",
+    "choices": ["The obligation to buy the underlying at the strike price", "The right, but not the obligation, to buy the underlying at the strike price, in return for a premium paid immediately", "The right to sell the underlying at the strike price", "A debt to the seller, repayable at maturity"],
+    "explanation": "That is the definition of a call. The right to sell is a put. The premium is paid to the seller upfront, whether or not the option is exercised."
+  },
+  "mk-02": {
+    "topic": "futures",
+    "question": "Adidas buys a futures contract on 10,000 t of rubber at €1,550/t. At maturity, the spot price is €1,800/t. Result of the contract for Adidas?",
+    "choices": ["A loss of €2.5m", "A gain of €2.5m", "A gain of €18m", "None: it is a hedge"],
+    "explanation": "Buyer's gain = Q × (p − F) = 10,000 × (1,800 − 1,550) = €2.5m. It offsets the extra cost of the spot purchase: rubber still costs €1,550/t in total."
+  },
+  "mk-03": {
+    "topic": "futures",
+    "question": "Same contract, but the price falls to €1,400/t. How much does Adidas pay in total (spot purchase + result of the contract)?",
+    "choices": ["€14m", "€15.5m", "€17m", "€1.5m"],
+    "explanation": "Spot purchase: 10,000 × 1,400 = €14m. Loss on the futures: 10,000 × (1,550 − 1,400) = €1.5m. Total: €15.5m = Q × F. The hedge locks the price, whether it goes up or down."
+  },
+  "mk-04": {
+    "topic": "options",
+    "question": "John buys a Heineken call with a €90 strike for a €5 premium. At maturity, the share is worth €80. John's result?",
+    "choices": ["−€5: he does not exercise, the premium is lost", "−€10", "+€5", "€0: he does not exercise"],
+    "explanation": "The option is out of the money (80 < 90): John does not exercise it. But the €5 premium is owed to Alexander whatever happens."
+  },
+  "mk-05": {
+    "topic": "options",
+    "question": "On a call, who bears a potentially unlimited risk of loss?",
+    "choices": ["The buyer", "The seller", "The clearing house", "Nobody"],
+    "explanation": "The buyer's loss is limited to the premium. The seller must deliver at the strike price whatever the market price: its loss has no ceiling."
+  },
+  "mk-06": {
+    "topic": "futures",
+    "question": "What is the difference between a futures and a forward contract?",
+    "choices": ["Futures trade on an organised market with a clearing house (initial margin, margin calls); a forward is an over-the-counter contract exposed to counterparty risk", "A forward is an option", "A futures contract can never be cash-settled", "None"],
+    "explanation": "Both are firm commitments. A forward is not standardised and hard to sell on; the clearing house of a futures market removes counterparty risk."
+  },
+  "mk-07": {
+    "topic": "bonds",
+    "question": "The ECB unexpectedly raises its rates. The price of a fixed-rate Adidas bond…",
+    "choices": ["Rises", "Falls: i increases while the flows stay fixed", "Does not move", "Depends on the dividend paid"],
+    "explanation": "V₀ = Σ Fₜ / (1 + i)ᵗ: with fixed flows, a higher i lowers the value. With a variable rate, flows and rate would move together."
+  },
+  "mk-08": {
+    "topic": "bonds",
+    "question": "Rating agencies downgrade Adidas from A− to BBB. Effect on its fixed-rate bond?",
+    "choices": ["The price rises", "The price falls: risk, hence i, increases", "No effect", "The bond is redeemed early"],
+    "explanation": "The risk premium required on the issuer rises, hence the discount rate i, hence the bond's value falls."
+  },
+  "mk-09": {
+    "topic": "risks",
+    "question": "The \"Bermuda triangle\" of financial risk brings together…",
+    "choices": ["Market risk, counterparty risk, liquidity risk", "Country risk, currency risk, interest rate risk", "Operational, legal and tax risk", "Inflation, growth, unemployment"],
+    "explanation": "It is hard to move away from one without being exposed to the other two: a forward hedge reduces market risk but creates counterparty risk; a futures contract creates margin calls, hence liquidity risk."
+  },
+  "mk-10": {
+    "topic": "stocks",
+    "question": "A struggling Adidas competitor refocuses outside its market: Adidas becomes almost a monopoly. Expected effect on Adidas's share price?",
+    "choices": ["It falls", "It rises: future cash flows will probably be larger", "No effect", "It falls because the risk-free rate rises"],
+    "explanation": "V₀ = Σ Fₜ / (1 + i)ᵗ: larger future flows increase the value of the stock."
+  },
+  "su-01": {
+    "topic": "financing",
+    "question": "Why is a start-up financed (almost) only with equity?",
+    "choices": ["Banks are not allowed to lend to it", "Its negative and random cash flows are incompatible with the regular interest and repayments of debt", "Equity is free", "To avoid diluting the founders"],
+    "explanation": "The extreme risk of an unproven model can only be financed with equity. Exceptions: grants, or debt if flows become regular, if an asset can secure the loan, or if a public body (Bpifrance, EIB) guarantees it."
+  },
+  "su-02": {
+    "topic": "financing",
+    "question": "In what order do a start-up's investors usually come in?",
+    "choices": ["VC, business angels, founders, love money", "Founders, love money (the \"3F\"), business angels, venture capital funds", "IPO, VC, business angels", "Banks, VC, founders"],
+    "explanation": "Founders (a few €k), then Friends, Family… and Fools, then business angels (tens or hundreds of €k and their address books), then VCs (from €0.5m to a few tens of €m). Beyond that, it is no longer a start-up."
+  },
+  "su-03": {
+    "topic": "fundraising",
+    "question": "Share capital of €10k (10 shares of €1,000). The start-up raises €90k for a €202.5k post-money value. Share of the new investors?",
+    "choices": ["90%", "44%", "56%", "10%"],
+    "explanation": "INV / POST = 90 / 202.5 = 44%. The founder keeps 56% of the power, although they brought only 10% of the funds."
+  },
+  "su-04": {
+    "topic": "fundraising",
+    "question": "Same operation: how are the €90k split on the liabilities side?",
+    "choices": ["€90k of share capital", "€8k of share capital and €82k of share premium", "€82k of share capital and €8k of share premium", "€90k of financial debt"],
+    "explanation": "Capital goes from €10k to €18k (44% of 18 = €8k, i.e. 8 new shares); the rest of the contribution, €82k, is booked as share premium."
+  },
+  "su-05": {
+    "topic": "fundraising",
+    "question": "What determines how power is shared between Adidas and the VCs in Stride Lab?",
+    "choices": ["The amount each one brings", "The split of share capital (the number of shares)", "The amount of the share premium", "Revenue"],
+    "explanation": "Share capital carries the voting rights. The share premium pays for the value created before the investors arrived, without giving extra power."
+  },
+  "su-06": {
+    "topic": "bankruptcy",
+    "question": "Most common order of repayment in a judicial liquidation?",
+    "choices": ["Shareholders, unsecured creditors, State", "State, post-filing creditors, secured creditors, unsecured creditors, shareholders", "Secured creditors, shareholders, State", "Everyone pro rata to their claims"],
+    "explanation": "The order varies across countries but generally follows this priority. Shareholders, served last, recover close to 0% on average: they bear the most risk."
+  },
+  "su-07": {
+    "topic": "bankruptcy",
+    "question": "Can a company financed only with equity, with no debt, go bankrupt? Destroy value?",
+    "choices": ["Bankruptcy: no (no debt, no cessation of payments); value destruction: yes, if ROCE < WACC", "Yes and yes", "No and no", "Bankruptcy: yes; value destruction: no"],
+    "explanation": "No debt, no bankruptcy. But if its ROCE is below its WACC, it destroys value; its shareholders may then decide to sell or stop the business."
+  },
+  "su-08": {
+    "topic": "restructuring",
+    "question": "A subsidiary's ROCE stays below its WACC. Which restructuring path does the course consider realistic?",
+    "choices": ["Lower the WACC by replacing equity with debt", "Increase the economic result (higher sales, lower costs)", "Ask shareholders to require a lower return", "None: it must be liquidated"],
+    "explanation": "The WACC only depends on the business risk: at equal risk, neither lenders nor shareholders accept less, and more debt makes everyone more demanding. What remains is to raise the economic result."
+  },
+  "su-09": {
+    "topic": "bankruptcy",
+    "question": "Why do creditors agree to lend to a company during its observation period?",
+    "choices": ["The law forces them to", "In a liquidation, they are repaid before the creditors prior to the judgement", "Interest rates are capped", "The State guarantees all loans"],
+    "explanation": "The opening judgement gives post-judgement creditors precedence: that is what makes it possible to finance the continuation of the business during observation."
+  },
+  "su-10": {
+    "topic": "bankruptcy",
+    "question": "Under French law, within what time must managers declare the cessation of payments to the court?",
+    "choices": ["15 days", "45 days", "3 months", "1 year"],
+    "explanation": "No later than 45 days after the cessation of payments. Failing to meet this deadline is one of the faults that characterise a fraudulent bankruptcy."
   }
 }

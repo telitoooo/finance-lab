@@ -580,6 +580,476 @@
       "answer": 1,
       "explanation": "C'est une des limites de l'IRR : l'équation NPV = 0 peut n'avoir aucune solution (ou plusieurs, comme pour −1 ; 7,2 ; −7,2).",
       "pages": [385]
+    },
+    {
+      "id": "cf-01",
+      "module": "cash-flow",
+      "topic": "flux d'exploitation",
+      "question": "En 2025, Adidas dégage 3 124 M€ d'EBITDA mais seulement 751 M€ de flux d'exploitation (CFO). Quelle est la principale explication ?",
+      "choices": ["Les amortissements (1 068 M€)", "La hausse du BFR (environ 2 Md€ : stocks, créances, dettes d'exploitation)", "Les dividendes versés aux actionnaires", "Les intérêts de la dette", "Les CAPEX"],
+      "answer": 1,
+      "explanation": "CFO = EBITDA − impôt − hausse du BFR. Les amortissements sont déjà sous l'EBITDA, dividendes et intérêts sont des flux de financement, les CAPEX des flux d'investissement. En 2025, les stocks ont grimpé de 1 104 M€, les créances de 562 M€, et les dettes d'exploitation ont baissé de 377 M€.",
+      "pages": [212, 213]
+    },
+    {
+      "id": "cf-02",
+      "module": "cash-flow",
+      "topic": "free cash flow",
+      "question": "Le free cash flow to the firm (FCFF) est égal à…",
+      "choices": ["CFO + CFI", "CFO + CFF", "CFO + CFI + CFF", "Résultat net + amortissements", "EBITDA − dividendes"],
+      "answer": 0,
+      "explanation": "FCFF = flux d'exploitation + flux d'investissement : le cash disponible une fois les investissements payés. CFO + CFI + CFF, c'est la variation de trésorerie.",
+      "pages": [215]
+    },
+    {
+      "id": "cf-03",
+      "module": "cash-flow",
+      "topic": "flux de financement",
+      "question": "Dans quel flux classe-t-on le dividende versé par Adidas à ses actionnaires ?",
+      "choices": ["Flux d'exploitation (CFO)", "Flux d'investissement (CFI)", "Flux de financement (CFF)", "Il n'apparaît pas dans le tableau des flux"],
+      "answer": 2,
+      "explanation": "Les flux de financement regroupent tous les flux avec les apporteurs de capitaux : prêteurs (emprunts, remboursements, intérêts) et actionnaires (augmentation ou réduction de capital, dividendes).",
+      "pages": [216]
+    },
+    {
+      "id": "cf-04",
+      "module": "cash-flow",
+      "topic": "flux d'investissement",
+      "question": "Adidas vend 100 M€ un entrepôt devenu inutile. Où apparaît l'encaissement ?",
+      "choices": ["Dans le CFO, +100 M€", "Dans le CFI, +100 M€ (cession d'immobilisation)", "Dans le CFF, +100 M€", "Nulle part : c'est une simple opération de bilan"],
+      "answer": 1,
+      "explanation": "CFI = − acquisitions d'immobilisations + cessions d'immobilisations. Une cession augmente le flux d'investissement.",
+      "pages": [214]
+    },
+    {
+      "id": "cf-05",
+      "module": "cash-flow",
+      "topic": "résultat et trésorerie",
+      "question": "Les 1 068 M€ d'amortissements du compte de résultat 2025 d'Adidas…",
+      "choices": ["Ont fait sortir 1 068 M€ de la banque", "Réduisent le résultat sans sortie de cash : on les réintègre pour passer du résultat net au CFO", "Sont un flux d'investissement", "Augmentent le BFR"],
+      "answer": 1,
+      "explanation": "Un amortissement est une charge calculée : le cash est sorti l'année de l'achat (dans le CFI). En partant du résultat net, on ajoute donc les dotations aux amortissements et provisions.",
+      "pages": [206, 218]
+    },
+    {
+      "id": "cf-06",
+      "module": "cash-flow",
+      "topic": "structure du tableau",
+      "question": "La variation de trésorerie d'une période est égale à…",
+      "choices": ["CFO + CFI + CFF", "Résultat net − dividendes", "EBITDA − CAPEX", "Encaissements + décaissements", "FCFF − CFI"],
+      "answer": 0,
+      "explanation": "Variation de la trésorerie active = trésorerie à la clôture − trésorerie à l'ouverture = CFO + CFI + CFF (= encaissements − décaissements).",
+      "pages": [209, 210]
+    },
+    {
+      "id": "cf-07",
+      "module": "cash-flow",
+      "topic": "exercice ENGIE",
+      "question": "En 2015, ENGIE affiche un résultat net négatif mais plus de 10 Md€ de flux d'exploitation. Principalement grâce à…",
+      "choices": ["De nouveaux emprunts", "13,9 Md€ d'amortissements, des charges calculées sans sortie de cash", "Une augmentation de capital", "La vente d'actifs"],
+      "answer": 1,
+      "explanation": "Les amortissements réduisent le résultat sans toucher à la trésorerie. Dans une moindre mesure (1,2 Md€), ENGIE a aussi réduit son BFR. Emprunts et capital relèvent du CFF, les ventes d'actifs du CFI.",
+      "pages": [226, 227]
+    },
+    {
+      "id": "cf-08",
+      "module": "cash-flow",
+      "topic": "free cash flow",
+      "question": "Pour valoriser Adidas en actualisant ses free cash flows, lesquels prend-on ?",
+      "choices": ["Les FCFF après intérêts financiers", "Les FCFF avant intérêts financiers : le coût du financement est déjà dans le taux d'actualisation", "Les flux après dividendes", "Les flux après remboursement des emprunts"],
+      "answer": 1,
+      "explanation": "Le WACC rémunère déjà prêteurs et actionnaires : déduire aussi les intérêts compterait deux fois le coût du financement.",
+      "pages": [215, 394]
+    },
+    {
+      "id": "cf-09",
+      "module": "cash-flow",
+      "topic": "flux d'exploitation",
+      "question": "Adidas paie ses usines plus vite (délai fournisseurs de 88 à 60 jours), toutes choses égales par ailleurs. Conséquence ?",
+      "choices": ["Le BFR baisse et le CFO augmente", "Le BFR augmente et le CFO baisse", "Le résultat net baisse", "Le CFI baisse"],
+      "answer": 1,
+      "explanation": "Moins de dettes fournisseurs = BFR plus élevé. Une hausse du BFR consomme du cash : CFO = EBITDA − IS − hausse du BFR. C'est un des trois « réflexes sympas » qui font grossir le BFR.",
+      "pages": [96, 213]
+    },
+    {
+      "id": "sv-01",
+      "module": "solvency",
+      "topic": "faillite",
+      "question": "Une entreprise entre en procédure collective (« dépôt de bilan ») quand…",
+      "choices": ["Son résultat net devient négatif", "Ses capitaux propres deviennent négatifs", "Elle ne peut plus faire face à son passif exigible avec son actif disponible", "Son ROCE passe sous son WACC", "Sa dette nette dépasse 5 fois son EBITDA"],
+      "answer": 2,
+      "explanation": "C'est la cessation des paiements qui marque l'entrée en redressement ou en liquidation judiciaire. Une perte, des capitaux propres négatifs ou un ROCE < WACC sont des signaux, pas la définition.",
+      "pages": [205, 464]
+    },
+    {
+      "id": "sv-02",
+      "module": "solvency",
+      "topic": "ratios de court terme",
+      "question": "Pourquoi le cours conseille-t-il de se méfier du current ratio ?",
+      "choices": ["Il est trop complexe à calculer", "Il mesure la solvabilité à 3 mois sur un bilan publié 3 à 6 mois après la clôture, avec des postes volatils, et une hausse du BFR peut l'améliorer", "Il ignore la dette financière", "Les banquiers ne l'utilisent jamais"],
+      "answer": 1,
+      "explanation": "Les ratios de liquidité (current, quick, cash ratio) ont de gros défauts ; de nombreuses entreprises ont fait faillite en les respectant. Il faut connaître leur existence pour s'en méfier.",
+      "pages": [260]
+    },
+    {
+      "id": "sv-03",
+      "module": "solvency",
+      "topic": "ratios de moyen terme",
+      "question": "Adidas, fin 2025 : ressources stables 11 168 M€, capitaux employés 10 799 M€. Verdict selon la grille du cours ?",
+      "choices": ["R.I.P.", "Risque élevé de faillite", "Moyen mais acceptable", "Très bon", "Idéal"],
+      "answer": 4,
+      "explanation": "11 168 / 10 799 = 103 % : au-delà de 100 %, c'est idéal. Les ressources stables couvrent tous les capitaux employés, la trésorerie nette est positive (+369 M€).",
+      "pages": [267, 268]
+    },
+    {
+      "id": "sv-04",
+      "module": "solvency",
+      "topic": "ratios de moyen terme",
+      "question": "Dette nette d'Adidas : 3 937 M€ (loyers compris). EBITDA : 3 124 M€. Que conclure ?",
+      "choices": ["Ratio de 1,3 : aucun problème (< 3)", "Ratio de 1,3 : risque élevé de faillite", "Ratio de 0,8 : impossible à interpréter", "Ratio de 4 : c'est OK"],
+      "answer": 0,
+      "explanation": "Dette nette / EBITDA = 3 937 / 3 124 = 1,3. Sous 3 : aucun problème ; jusqu'à 4 : c'est OK ; au-delà de 5 : risque élevé de faillite.",
+      "pages": [270]
+    },
+    {
+      "id": "sv-05",
+      "module": "solvency",
+      "topic": "maturité de la dette",
+      "question": "Adidas finance un rachat de 10 Md€ par un crédit-relais à moins d'un an. Effet sur le ratio ressources stables / capitaux employés ?",
+      "choices": ["Aucun : la dette nette augmente autant que les capitaux employés", "Il baisse : les capitaux employés gonflent, pas les ressources stables, et la trésorerie nette plonge", "Il augmente", "Il dépend seulement de l'EBITDA de la cible"],
+      "answer": 1,
+      "explanation": "Une dette à court terme est de la trésorerie passive, pas une ressource stable. Trésorerie nette = ressources stables − capitaux employés : elle devient très négative. Financée par une obligation à long terme, l'opération aurait laissé la trésorerie nette inchangée.",
+      "pages": [264, 267]
+    },
+    {
+      "id": "sv-06",
+      "module": "solvency",
+      "topic": "ratios de moyen terme",
+      "question": "Un ratio dette nette / CFO de 4 ans signifie…",
+      "choices": ["Qu'il faudrait 4 ans de flux d'exploitation pour rembourser la dette nette : risque élevé de faillite (3 à 5 ans)", "Que la dette sera remboursée dans 4 ans", "Que la dette nette vaut 4 % du CFO", "Une situation excellente"],
+      "answer": 0,
+      "explanation": "Le ratio doit rester sous la maturité moyenne de la dette (environ 3 ans). 0-1 an : excellent ; 1-2 : bon ; 2-3 : acceptable ; 3-5 : risque élevé ; au-delà : R.I.P.",
+      "pages": [269]
+    },
+    {
+      "id": "sv-07",
+      "module": "solvency",
+      "topic": "échéancier",
+      "question": "Actif : immobilisations 400, stocks (3 mois) 300, créances (2 mois) 100, trésorerie 200. Passif : capitaux propres 100, dettes à 5 ans 200, à 1 an 300, à 1 mois 400. À 1 mois, il manque…",
+      "choices": ["Rien", "100", "200 : 400 de dettes à payer pour 200 de trésorerie", "400"],
+      "answer": 2,
+      "explanation": "La liquidité à 1 mois n'est pas assurée (400 − 200 = 200), ni à 1 an (700 − 600 = 100), ni à 5 ans (900 − 800 = 100) : l'entreprise doit vite restructurer sa dette.",
+      "pages": [256, 257]
+    },
+    {
+      "id": "sv-08",
+      "module": "solvency",
+      "topic": "exercice Europcar",
+      "question": "Europcar, fin 2019 : ressources stables / capitaux employés = 59 %, dette nette / EBITDA = 13. Conclusion du cours ?",
+      "choices": ["Très bonne solvabilité", "Solvabilité correcte", "Très mauvaise solvabilité", "Impossible de conclure sans le current ratio"],
+      "answer": 2,
+      "explanation": "59 % est dans la zone « risque élevé de faillite » (50-70 %) et une dette nette de 13 ans d'EBITDA dépasse de loin le seuil de 5.",
+      "pages": [271, 272]
+    },
+    {
+      "id": "sv-09",
+      "module": "solvency",
+      "topic": "ratios de moyen terme",
+      "question": "Pourquoi le seuil critique de 70 % est-il moins strict pour une entreprise à dette nette négative ?",
+      "choices": ["Elle n'a, par définition, aucun risque de ne pas rembourser ses dettes financières", "Ses capitaux propres sont forcément négatifs", "Son BFR est forcément négatif", "Il ne l'est pas : 70 % s'applique à tous"],
+      "answer": 0,
+      "explanation": "Avec plus de trésorerie que de dettes financières, l'entreprise peut tout rembourser : sa solvabilité est très bonne même sous 70 %.",
+      "pages": [268]
+    },
+    {
+      "id": "va-01",
+      "module": "valuation",
+      "topic": "prix et valeur",
+      "question": "« Price is what you pay; value is what you get. » Le prix payé pour une entreprise dépend…",
+      "choices": ["Uniquement de sa valeur comptable", "De sa valeur intrinsèque et des synergies qui peuvent pousser l'acheteur à payer une prime", "Uniquement de son résultat net", "Du nombre d'actions émises"],
+      "answer": 1,
+      "explanation": "La valeur s'estime avec un modèle et ne dépend que de l'actif. Le prix résulte de l'offre et de la demande (ou d'une négociation) : synergies industrielles, position de leader, prestige… peuvent justifier une prime.",
+      "pages": [404]
+    },
+    {
+      "id": "va-02",
+      "module": "valuation",
+      "topic": "les 3 étapes",
+      "question": "Dans l'approche en 3 étapes, comment obtient-on la valeur des capitaux propres d'Adidas ?",
+      "choices": ["On la calcule directement", "Valeur de l'actif économique − valeur de la dette nette", "Capitaux propres comptables × PER", "Capitaux employés + dette nette"],
+      "answer": 1,
+      "explanation": "Étape 1 : valeur de marché de l'actif (VA). Étape 2 : valeur de marché de la dette (VD). Étape 3, par différence : VE = VA − VD. On ne valorise pas les capitaux propres directement.",
+      "pages": [405, 407]
+    },
+    {
+      "id": "va-03",
+      "module": "valuation",
+      "topic": "valeur terminale",
+      "question": "FCFF attendu en 2031 : 2 700 M€. WACC : 9 %. Croissance perpétuelle : 2 %. Valeur terminale fin 2030 ?",
+      "choices": ["30 000 M€", "38 571 M€", "135 000 M€", "Impossible à calculer"],
+      "answer": 1,
+      "explanation": "Gordon-Shapiro : FCFF₂₀₃₁ / (WACC − g) = 2 700 / 7 % = 38 571 M€. Il faut encore l'actualiser sur 5 ans pour l'ajouter à la valeur d'entreprise.",
+      "pages": [415, 416]
+    },
+    {
+      "id": "va-04",
+      "module": "valuation",
+      "topic": "valeur terminale",
+      "question": "Que se passe-t-il quand g se rapproche du WACC dans la formule de Gordon-Shapiro ?",
+      "choices": ["La valeur terminale tend vers zéro", "La valeur terminale tend vers l'infini : la formule n'est valable que si WACC > g", "Rien : g n'a qu'un effet marginal", "La valeur rejoint la valeur comptable"],
+      "answer": 1,
+      "explanation": "Le dénominateur WACC − g tend vers zéro. C'est la limite du modèle (même constat pour le DDM) : g doit rester raisonnable, typiquement l'inflation de long terme.",
+      "pages": [416, 433]
+    },
+    {
+      "id": "va-05",
+      "module": "valuation",
+      "topic": "multiples",
+      "question": "Pour valoriser Adidas par les multiples, quel multiple le cours recommande-t-il en priorité ?",
+      "choices": ["Le PER (cours / bénéfice)", "VE / chiffre d'affaires", "VE / EBIT", "Cours / valeur comptable"],
+      "answer": 2,
+      "explanation": "Privilégier les multiples de valeur d'entreprise, et parmi eux VE / EBIT, qui neutralise les différences de politique d'amortissement liées à la propriété ou à la location des actifs.",
+      "pages": [427, 428]
+    },
+    {
+      "id": "va-06",
+      "module": "valuation",
+      "topic": "multiples",
+      "question": "Pourquoi écarte-t-on en général le PER ?",
+      "choices": ["Il est faussé par les différences de structure financière entre comparables", "Il ignore la croissance", "Il n'est pas publié", "Il ne s'applique qu'aux banques"],
+      "answer": 0,
+      "explanation": "Les multiples de capitaux propres (PER, cours / valeur comptable) dépendent de l'endettement de chaque comparable. Exception : le secteur bancaire.",
+      "pages": [428]
+    },
+    {
+      "id": "va-07",
+      "module": "valuation",
+      "topic": "exercice Crit",
+      "question": "Crit : VE par DCF = 1 010 M€, dette financière 127 M€, trésorerie 405 M€, capitalisation boursière 709 M€. Valeur des capitaux propres et recommandation ?",
+      "choices": ["732 M€ : HOLD", "1 288 M€ : BUY", "883 M€ : SELL", "1 010 M€ : HOLD"],
+      "answer": 1,
+      "explanation": "Dette nette = 127 − 405 = −278 M€ (trésorerie nette). Capitaux propres = 1 010 − (−278) = 1 288 M€, bien au-dessus des 709 M€ de la Bourse : BUY. Les multiples confirment (12 × 75 + 278 = 1 178 M€).",
+      "pages": [417, 431]
+    },
+    {
+      "id": "va-08",
+      "module": "valuation",
+      "topic": "DDM",
+      "question": "Terna vient de verser 0,29 € de dividende par action ; kE = 6,5 %, WACC = 3,5 %, croissance du dividende 2 %. Valeur de l'action par le DDM ?",
+      "choices": ["6,57 €", "19,72 €", "4,46 €", "14,50 €"],
+      "answer": 0,
+      "explanation": "Un dividende est un flux pour l'actionnaire : on actualise à kE, pas au WACC. 0,29 × 1,02 / (6,5 % − 2 %) = 6,57 €. Le piège 19,72 € utilise le WACC.",
+      "pages": [433, 434]
+    },
+    {
+      "id": "va-09",
+      "module": "valuation",
+      "topic": "les 3 étapes",
+      "question": "Adidas remplace une partie de ses capitaux propres par de la dette. Selon le cours (Modigliani-Miller), la valeur de son actif économique…",
+      "choices": ["Augmente grâce à l'économie d'impôt, sans limite", "Ne change pas : la taille de la pizza ne dépend pas de la façon dont on la découpe", "Est divisée par deux", "Devient égale à la valeur comptable"],
+      "answer": 1,
+      "explanation": "La structure financière n'a pas d'impact sur la valeur de l'actif : elle ne fait que répartir cette valeur entre prêteurs et actionnaires.",
+      "pages": [408]
+    },
+    {
+      "id": "mk-01",
+      "module": "derivatives",
+      "topic": "options",
+      "question": "Une option d'achat (call) donne à son acheteur…",
+      "choices": ["L'obligation d'acheter le sous-jacent au prix d'exercice", "Le droit, mais pas l'obligation, d'acheter le sous-jacent au prix d'exercice, contre une prime payée immédiatement", "Le droit de vendre le sous-jacent au prix d'exercice", "Une dette envers le vendeur, remboursable à l'échéance"],
+      "answer": 1,
+      "explanation": "C'est la définition du call. Le droit de vendre, c'est le put. La prime est payée au vendeur dès le départ, que l'option soit exercée ou non.",
+      "pages": [498]
+    },
+    {
+      "id": "mk-02",
+      "module": "derivatives",
+      "topic": "futures",
+      "question": "Adidas achète un future sur 10 000 t de caoutchouc à 1 550 €/t. À l'échéance, le prix au comptant est de 1 800 €/t. Résultat du contrat pour Adidas ?",
+      "choices": ["Perte de 2,5 M€", "Gain de 2,5 M€", "Gain de 18 M€", "Aucun : c'est une couverture"],
+      "answer": 1,
+      "explanation": "Gain de l'acheteur = Q × (p − F) = 10 000 × (1 800 − 1 550) = 2,5 M€. Il compense le surcoût de l'achat au comptant : le caoutchouc coûte toujours 1 550 €/t au total.",
+      "pages": [504]
+    },
+    {
+      "id": "mk-03",
+      "module": "derivatives",
+      "topic": "futures",
+      "question": "Même contrat, mais le prix tombe à 1 400 €/t. Combien Adidas paie-t-elle au total (achat au comptant + résultat du contrat) ?",
+      "choices": ["14 M€", "15,5 M€", "17 M€", "1,5 M€"],
+      "answer": 1,
+      "explanation": "Achat au comptant : 10 000 × 1 400 = 14 M€. Perte sur le future : 10 000 × (1 550 − 1 400) = 1,5 M€. Total : 15,5 M€ = Q × F. La couverture fige le prix, à la hausse comme à la baisse.",
+      "pages": [504]
+    },
+    {
+      "id": "mk-04",
+      "module": "derivatives",
+      "topic": "options",
+      "question": "John achète un call Heineken de prix d'exercice 90 € pour une prime de 5 €. À l'échéance, l'action vaut 80 €. Résultat de John ?",
+      "choices": ["−5 € : il n'exerce pas, la prime est perdue", "−10 €", "+5 €", "0 € : il n'exerce pas"],
+      "answer": 0,
+      "explanation": "L'option est hors de la monnaie (80 < 90) : John ne l'exerce pas. Mais la prime de 5 € reste due à Alexander quoi qu'il arrive.",
+      "pages": [499]
+    },
+    {
+      "id": "mk-05",
+      "module": "derivatives",
+      "topic": "options",
+      "question": "Sur un call, qui porte un risque de perte potentiellement illimité ?",
+      "choices": ["L'acheteur", "Le vendeur", "La chambre de compensation", "Personne"],
+      "answer": 1,
+      "explanation": "La perte de l'acheteur est limitée à la prime. Le vendeur doit livrer au prix d'exercice quel que soit le cours : sa perte n'a pas de plafond.",
+      "pages": [499, 500]
+    },
+    {
+      "id": "mk-06",
+      "module": "derivatives",
+      "topic": "futures",
+      "question": "Quelle est la différence entre un future et un forward ?",
+      "choices": ["Le future se négocie sur un marché organisé avec une chambre de compensation (dépôt de garantie, appels de marge) ; le forward est un contrat de gré à gré exposé au risque de contrepartie", "Le forward est une option", "Un future ne peut jamais se dénouer en cash", "Aucune"],
+      "answer": 0,
+      "explanation": "Les deux sont des engagements fermes. Le forward n'est pas standardisé et difficile à revendre ; la chambre de compensation du future élimine le risque de contrepartie.",
+      "pages": [505, 506, 507]
+    },
+    {
+      "id": "mk-07",
+      "module": "derivatives",
+      "topic": "obligations",
+      "question": "La BCE relève ses taux de façon inattendue. Le prix d'une obligation Adidas à taux fixe…",
+      "choices": ["Monte", "Baisse : i augmente alors que les flux restent fixes", "Ne bouge pas", "Dépend du dividende versé"],
+      "answer": 1,
+      "explanation": "V₀ = Σ Fₜ / (1 + i)ᵗ : à flux fixes, une hausse de i fait baisser la valeur. À taux variable, flux et taux évolueraient ensemble.",
+      "pages": [492, 494]
+    },
+    {
+      "id": "mk-08",
+      "module": "derivatives",
+      "topic": "obligations",
+      "question": "Les agences de notation dégradent Adidas de A− à BBB. Effet sur son obligation à taux fixe ?",
+      "choices": ["Le prix monte", "Le prix baisse : le risque, donc i, augmente", "Aucun effet", "L'obligation est remboursée par anticipation"],
+      "answer": 1,
+      "explanation": "La prime de risque exigée sur l'émetteur augmente, donc le taux d'actualisation i, donc la valeur de l'obligation baisse.",
+      "pages": [494]
+    },
+    {
+      "id": "mk-09",
+      "module": "derivatives",
+      "topic": "risques",
+      "question": "Le « triangle des Bermudes » du risque financier réunit…",
+      "choices": ["Risque de marché, risque de contrepartie, risque de liquidité", "Risque pays, risque de change, risque de taux", "Risque opérationnel, juridique, fiscal", "Inflation, croissance, chômage"],
+      "answer": 0,
+      "explanation": "Difficile de s'éloigner de l'un sans s'exposer aux deux autres : une couverture par un forward réduit le risque de marché mais crée un risque de contrepartie ; un future crée des appels de marge, donc un risque de liquidité.",
+      "pages": [508, 509]
+    },
+    {
+      "id": "mk-10",
+      "module": "derivatives",
+      "topic": "actions",
+      "question": "Un concurrent d'Adidas en difficulté se recentre hors de son marché : Adidas devient quasi monopolistique. Effet attendu sur le cours de l'action Adidas ?",
+      "choices": ["Il baisse", "Il monte : les flux futurs seront probablement plus importants", "Aucun effet", "Il baisse parce que le taux sans risque monte"],
+      "answer": 1,
+      "explanation": "V₀ = Σ Fₜ / (1 + i)ᵗ : des flux futurs plus importants augmentent la valeur de l'action.",
+      "pages": [488, 489]
+    },
+    {
+      "id": "su-01",
+      "module": "startup",
+      "topic": "financement",
+      "question": "Pourquoi une start-up se finance-t-elle (presque) uniquement en capitaux propres ?",
+      "choices": ["Les banques n'ont pas le droit de lui prêter", "Ses flux de trésorerie, négatifs et aléatoires, sont incompatibles avec les intérêts et remboursements réguliers d'une dette", "Les capitaux propres sont gratuits", "Pour éviter de diluer les fondateurs"],
+      "answer": 1,
+      "explanation": "Le risque extrême d'un modèle non prouvé ne se finance qu'en capitaux propres. Exceptions : subventions, ou dette si les flux deviennent réguliers, si un actif peut servir de garantie, ou si un organisme public (Bpifrance, BEI) se porte garant.",
+      "pages": [456]
+    },
+    {
+      "id": "su-02",
+      "module": "startup",
+      "topic": "financement",
+      "question": "Dans quel ordre interviennent en général les investisseurs d'une start-up ?",
+      "choices": ["VC, business angels, fondateurs, love money", "Fondateurs, love money (les « 3F »), business angels, fonds de capital-risque", "Introduction en Bourse, VC, business angels", "Banques, VC, fondateurs"],
+      "answer": 1,
+      "explanation": "Fondateurs (quelques k€), puis Friends, Family… and Fools, puis business angels (dizaines ou centaines de k€ et leur carnet d'adresses), puis VC (de 0,5 M€ à quelques dizaines de M€). Au-delà, ce n'est plus une start-up.",
+      "pages": [458, 459]
+    },
+    {
+      "id": "su-03",
+      "module": "startup",
+      "topic": "levée de fonds",
+      "question": "Capital social de 10 k€ (10 actions de 1 000 €). La start-up lève 90 k€ pour une valeur post-money de 202,5 k€. Part des nouveaux investisseurs ?",
+      "choices": ["90 %", "44 %", "56 %", "10 %"],
+      "answer": 1,
+      "explanation": "INV / POST = 90 / 202,5 = 44 %. Le fondateur garde 56 % du pouvoir, bien qu'il n'ait apporté que 10 % des fonds.",
+      "pages": [461, 462]
+    },
+    {
+      "id": "su-04",
+      "module": "startup",
+      "topic": "levée de fonds",
+      "question": "Même opération : comment les 90 k€ se répartissent-ils au passif ?",
+      "choices": ["90 k€ de capital social", "8 k€ de capital social et 82 k€ de prime d'émission", "82 k€ de capital social et 8 k€ de prime d'émission", "90 k€ de dettes financières"],
+      "answer": 1,
+      "explanation": "Le capital passe de 10 à 18 k€ (44 % de 18 = 8 k€, soit 8 actions nouvelles) ; le reste de l'apport, 82 k€, est inscrit en prime d'émission.",
+      "pages": [460, 462]
+    },
+    {
+      "id": "su-05",
+      "module": "startup",
+      "topic": "levée de fonds",
+      "question": "Qu'est-ce qui détermine le partage du pouvoir entre Adidas et les VC dans Stride Lab ?",
+      "choices": ["Le montant apporté par chacun", "Le partage du capital social (le nombre d'actions)", "Le montant de la prime d'émission", "Le chiffre d'affaires"],
+      "answer": 1,
+      "explanation": "Le capital social porte les droits de vote. La prime d'émission rémunère la valeur créée avant l'arrivée des investisseurs, sans donner de pouvoir supplémentaire.",
+      "pages": [460, 461]
+    },
+    {
+      "id": "su-06",
+      "module": "startup",
+      "topic": "faillite",
+      "question": "Ordre de remboursement le plus courant en cas de liquidation judiciaire ?",
+      "choices": ["Actionnaires, créanciers chirographaires, État", "État, créanciers post-jugement, créanciers garantis, créanciers chirographaires, actionnaires", "Créanciers garantis, actionnaires, État", "Tous au prorata de leurs créances"],
+      "answer": 1,
+      "explanation": "L'ordre varie selon les pays mais suit en général cette priorité. Les actionnaires, servis en dernier, récupèrent en moyenne près de 0 % : ce sont eux qui portent le plus de risque.",
+      "pages": [469, 476]
+    },
+    {
+      "id": "su-07",
+      "module": "startup",
+      "topic": "faillite",
+      "question": "Une entreprise financée uniquement par capitaux propres, sans dette, peut-elle faire faillite ? Détruire de la valeur ?",
+      "choices": ["Faillite : non (pas de dettes, pas de cessation des paiements) ; destruction de valeur : oui, si ROCE < WACC", "Oui et oui", "Non et non", "Faillite : oui ; destruction de valeur : non"],
+      "answer": 0,
+      "explanation": "Pas de dettes, pas de faillite. Mais si son ROCE est inférieur à son WACC, elle détruit de la valeur ; ses actionnaires peuvent alors décider de vendre ou d'arrêter l'activité.",
+      "pages": [476]
+    },
+    {
+      "id": "su-08",
+      "module": "startup",
+      "topic": "restructuring",
+      "question": "Le ROCE d'une filiale reste durablement sous son WACC. Quelle voie de restructuration le cours juge-t-il réaliste ?",
+      "choices": ["Baisser le WACC en remplaçant des capitaux propres par de la dette", "Augmenter le résultat économique (hausse du chiffre d'affaires, baisse des coûts)", "Demander aux actionnaires d'exiger une rentabilité plus faible", "Aucune : il faut liquider"],
+      "answer": 1,
+      "explanation": "Le WACC ne dépend que du risque du métier : à risque égal, ni les prêteurs ni les actionnaires n'acceptent moins, et plus de dette rend tout le monde plus exigeant. Il reste à augmenter le résultat économique.",
+      "pages": [328, 329, 331, 332]
+    },
+    {
+      "id": "su-09",
+      "module": "startup",
+      "topic": "faillite",
+      "question": "Pourquoi des créanciers acceptent-ils de prêter à une entreprise pendant sa période d'observation ?",
+      "choices": ["La loi les y oblige", "En cas de liquidation, ils sont remboursés avant les créanciers antérieurs au jugement", "Les taux d'intérêt sont plafonnés", "L'État garantit tous les prêts"],
+      "answer": 1,
+      "explanation": "Le jugement d'ouverture donne la priorité aux créanciers postérieurs : c'est ce qui permet de financer la poursuite de l'activité pendant l'observation.",
+      "pages": [466, 476]
+    },
+    {
+      "id": "su-10",
+      "module": "startup",
+      "topic": "faillite",
+      "question": "En droit français, dans quel délai les dirigeants doivent-ils déclarer la cessation des paiements au tribunal ?",
+      "choices": ["15 jours", "45 jours", "3 mois", "1 an"],
+      "answer": 1,
+      "explanation": "45 jours au plus tard après la cessation des paiements. Ne pas respecter ce délai fait partie des fautes qui caractérisent une banqueroute frauduleuse.",
+      "pages": [467, 472]
     }
   ]
 }

@@ -1,4 +1,4 @@
-// Préférences locales (meilleurs scores de quiz). Le stockage peut être indisponible
+// Préférences locales (meilleurs scores de quiz, missions des labos). Le stockage peut être indisponible
 // (navigation privée, données bloquées) : le site doit fonctionner sans.
 
 const PREFIX = 'finance-lab:'
@@ -26,3 +26,11 @@ export interface BestScore {
 }
 
 export const bestScoreKey = (quizId: string) => `quiz:${quizId}:best`
+
+/** Missions accomplies dans un labo (affichées sur la page d'accueil). */
+export interface MissionProgress {
+  achieved: string[]
+  total: number
+}
+
+export const missionsKey = (labId: string) => `missions:${labId}`

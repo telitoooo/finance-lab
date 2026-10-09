@@ -68,3 +68,12 @@ export const texPct = (rate: number, digits = 1) => `${texNum(rate * 100, digits
 /** Montant en millions pour KaTeX : 20\,827\text{ M€} (fr) ou \text{€}20{,}827\text{m} (en). */
 export const texMillions = (millions: number) =>
   locale === 'fr' ? `${texNum(millions)}\\text{ M€}` : `${millions < 0 ? '-' : ''}\\text{€}${texNum(Math.abs(millions))}\\text{m}`
+
+/** Prix en euros avec décimales : 169,05 € (fr) ou €169.05 (en). */
+export const formatEurosCents = (euros: number, digits = 2) =>
+  locale === 'fr'
+    ? `${formatNumber(euros, digits, digits)} €`
+    : `${sign(euros)}€${formatNumber(Math.abs(euros), digits, digits)}`
+
+/** Multiple ou ratio en nombre de fois : 1,3x (fr) ou 1.3x (en). */
+export const formatTimes = (value: number, digits = 1) => `${formatNumber(value, digits, digits)}x`

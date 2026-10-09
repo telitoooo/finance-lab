@@ -208,3 +208,126 @@ export const constantAnnuity = (principal: number, rate: number, years: number) 
 
 /** Valeur terminale de Gordon-Shapiro (p. 416), valable si WACC > g. */
 export const terminalValue = (nextFcff: number, waccRate: number, growth: number) => nextFcff / (waccRate - growth)
+
+// --- Tableau des flux de trésorerie ----------------------------------------------------
+
+/** CFI (p. 214) : − acquisitions d'immobilisations + cessions. */
+export const cfi = (acquisitions: number, disposals: number) => -acquisitions + disposals
+
+/** CFF (p. 216) : nouveaux emprunts − remboursements − intérêts + augmentation de capital − réduction − dividendes. */
+export const cff = (x: {
+  newLoans: number
+  repayments: number
+  interest: number
+  capitalIncrease?: number
+  capitalDecrease?: number
+  dividends: number
+}) => x.newLoans - x.repayments - x.interest + (x.capitalIncrease ?? 0) - (x.capitalDecrease ?? 0) - x.dividends
+
+/** CFO après intérêts, à partir du résultat net (p. 218) : résultat net + dotations − hausse du BFR. */
+export const cfoFromNetProfit = (netProfit: number, depreciationAndProvisions: number, wcrIncrease: number) =>
+  netProfit + depreciationAndProvisions - wcrIncrease
+
+/** Variation de trésorerie (p. 210) : CFO + CFI + CFF. */
+export const cashVariation = (cfo: number, cfiValue: number, cffValue: number) => cfo + cfiValue + cffValue
+
+// --- Solvabilité -------------------------------------------------------------------------
+
+/** Dette nette / EBITDA (p. 270), en nombre de fois. */
+export const netDebtToEbitda = (netDebtValue: number, ebitdaValue: number) => netDebtValue / ebitdaValue
+
+/** Dette nette / CFO (p. 269), en années de flux d'exploitation. */
+export const netDebtToCfo = (netDebtValue: number, cfo: number) => netDebtValue / cfo
+
+// --- Valorisation ------------------------------------------------------------------------
+
+/**
+ * DCF (p. 412-416) : flows[0] est le FCFF de l'année 1, le dernier celui de l'horizon explicite n.
+ * Valeur terminale de Gordon-Shapiro en n, FCFF(n+1) / (WACC − g), actualisée comme le flux de
+ * l'année n. Par défaut FCFF(n+1) = FCFF(n) × (1 + g). null si WACC ≤ g.
+ */
+export function dcf(flows: number[], waccRate: number, growth: number, nextFlow = flows[flows.length - 1] * (1 + growth)) {
+  const n = flows.length
+  const pvFlows = flows.map((flow, i) => discount(flow, waccRate, i + 1))
+  const pvExplicit = pvFlows.reduce((sum, v) => sum + v, 0)
+  if (waccRate <= growth) return null
+  const tv = terminalValue(nextFlow, waccRate, growth)
+  const pvTerminal = discount(tv, waccRate, n)
+  return { pvFlows, pvExplicit, terminalValue: tv, pvTerminal, enterpriseValue: pvExplicit + pvTerminal }
+}
+
+/**
+ * FCFF projetés à partir d'une année de base (p. 414) : EBITDA, impôt calculé sur l'EBIT et CAPEX
+ * croissent au rythme de l'activité, et le BFR aussi, si bien que sa hausse consomme du cash chaque
+ * année. Renvoie les FCFF des années 1 à n, puis celui de l'année n + 1 (croissance perpétuelle g).
+ */
+export function projectFcff(
+  x: { ebitda: number; ebit: number; taxRate: number; capex: number; wcr: number },
+  growth: number,
+  years: number,
+  perpetualGrowth: number,
+) {
+  const unlevered = x.ebitda - x.taxRate * x.ebit - x.capex
+  const flowAt = (scale: number, rate: number) => unlevered * scale - x.wcr * (scale / (1 + rate)) * rate
+  const flows = Array.from({ length: years }, (_, i) => flowAt((1 + growth) ** (i + 1), growth))
+  const last = (1 + growth) ** years
+  return { flows, nextFlow: flowAt(last * (1 + perpetualGrowth), perpetualGrowth) }
+}
+
+/** Étape 3 (p. 407) : valeur des capitaux propres = valeur de l'actif économique − dette nette. */
+export const equityValue = (enterpriseValue: number, netDebtValue: number) => enterpriseValue - netDebtValue
+
+/** Multiples (p. 419) : VE = agrégat (ex. EBIT) × multiple des comparables. */
+export const multipleValue = (aggregate: number, multiple: number) => aggregate * multiple
+
+/** DDM, Gordon-Shapiro sur les dividendes (p. 433) : Div0 × (1 + g) / (kE − g). */
+export const dividendDiscount = (lastDividend: number, ke: number, growth: number) => (lastDividend * (1 + growth)) / (ke - growth)
+
+// --- Produits dérivés ------------------------------------------------------------------------
+
+/** Future / forward (p. 504) : gain de l'acheteur = Q × (p − F) ; le vendeur réalise l'inverse. */
+export const futurePayoff = (quantity: number, spotAtMaturity: number, agreedPrice: number) =>
+  quantity * (spotAtMaturity - agreedPrice)
+
+/** Call à l'échéance (p. 499-500), par unité : max(S − K ; 0) − prime. */
+export const callPayoff = (spot: number, strike: number, premium: number) => Math.max(spot - strike, 0) - premium
+
+/** Put à l'échéance (p. 498), par unité : max(K − S ; 0) − prime. */
+export const putPayoff = (spot: number, strike: number, premium: number) => Math.max(strike - spot, 0) - premium
+
+// --- Start-up et faillite ------------------------------------------------------------------
+
+/**
+ * Levée de fonds (p. 460-462). Les investisseurs reçoivent INV / POST du capital social après
+ * l'opération ; le reste de leur apport va en prime d'émission. Le nombre d'actions nouvelles
+ * n'est pas arrondi : le cours raisonne en montants.
+ */
+export function fundraising(x: { shares: number; nominal: number; pre: number; inv: number }) {
+  const post = x.pre + x.inv
+  const investorShare = x.inv / post
+  const pricePerShare = x.pre / x.shares
+  const newShares = x.inv / pricePerShare
+  const capitalIncrease = newShares * x.nominal
+  return {
+    post,
+    investorShare,
+    founderShare: 1 - investorShare,
+    pricePerShare,
+    newShares,
+    capitalIncrease,
+    sharePremium: x.inv - capitalIncrease,
+  }
+}
+
+/**
+ * Liquidation (p. 469) : le produit de cession rembourse chaque rang dans l'ordre de priorité,
+ * entièrement avant de passer au suivant. Renvoie le montant récupéré par rang.
+ */
+export function liquidationWaterfall(proceeds: number, claims: number[]): number[] {
+  let left = Math.max(0, proceeds)
+  return claims.map((claim) => {
+    const paid = Math.min(claim, left)
+    left -= paid
+    return paid
+  })
+}

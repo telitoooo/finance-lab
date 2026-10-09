@@ -223,6 +223,124 @@ const arr = (x: number | number[]) => x as number[]
   assert('Chaque réponse fait partie des entreprises proposées', g.columns.every((c) => g.companies.includes(c.answer)))
 }
 
+// --- Tableau des flux Adidas 2025 : la grille du cours retombe sur les sous-totaux publiés ---
+{
+  const c = adidas.cashFlowStatement
+  const w = c.wcrDetail
+  check('Flux : hausse du BFR = créances + stocks + baisse des dettes', w.receivables + w.inventories + w.payables, c.wcrIncrease, 0)
+  check('Flux : CFO = EBITDA − IS payé − hausse du BFR + autres', f.cfoIndirect(pnl.ebitda, c.taxPaid, c.wcrIncrease) + c.otherOperating, c.cfo, 0)
+  check('Flux : CFI = − CAPEX + cessions + autres', f.cfi(c.capex, c.disposals) + c.otherInvesting, c.cfi, 0)
+  check(
+    'Flux : CFF',
+    f.cff({ newLoans: c.newBorrowings, repayments: c.repayments + c.leaseRepayments, interest: c.interestPaid, dividends: c.dividends }) + c.otherFinancing,
+    c.cff,
+    0,
+  )
+  check('Flux : CFO + CFI + CFF + change = variation de trésorerie', f.cashVariation(c.cfo, c.cfi, c.cff) + c.fxEffect, c.cashClosing - c.cashOpening, 0)
+  check('Flux : trésorerie de clôture = trésorerie active du bilan', c.cashClosing, cashAssets, 0)
+  const e = s.cashFlow2025.expected
+  check('Flux : FCFF Adidas 2025', c.cfo + c.cfi, e.adidasFcff, 0)
+  check('Flux : variation de trésorerie Adidas 2025', c.cashClosing - c.cashOpening, e.adidasCashVariation, 0)
+  const g = s.cashFlow2025.data
+  check('ENGIE : CFO = EBIT + D&A + IS + baisse du BFR', num(g.engieEbit) + num(g.engieDa) + num(g.engieTaxPaid) + num(g.engieWcrDecrease), num(g.engieCfo), 0)
+  check('ENGIE : FCFF', num(g.engieCfo) + num(g.engieCfi), e.engieFcff, 0)
+  check('ENGIE : variation de trésorerie', f.cashVariation(num(g.engieCfo), num(g.engieCfi), num(g.engieCff)), e.engieCashVariation, 0)
+  check('ENGIE : part du CFO investie', -num(g.engieCfi) / num(g.engieCfo), e.engieInvestShare, 0.005)
+  check('ENGIE : part du CFO rendue aux apporteurs', -num(g.engieCff) / num(g.engieCfo), e.engieProvidersShare, 0.005)
+  check('ENGIE : part du FCFF aux actionnaires', num(g.engieToShareholders) / e.engieFcff, e.engieShareholdersShare, 0.005)
+  check('ENGIE : CFF = actionnaires + prêteurs', -(num(g.engieToShareholders) + num(g.engieToLenders)), num(g.engieCff), 0)
+}
+
+// --- Solvabilité : ratios réels d'Adidas et corrigé Europcar --------------------------------
+{
+  const p = s.acquisition.data
+  const e = s.acquisition.expected
+  check('Adidas : dette nette / EBITDA', f.netDebtToEbitda(d.netDebt, pnl.ebitda), e.adidasNetDebtToEbitda, 0.005)
+  check('Adidas : ressources stables / capitaux employés', f.stableResourcesRatio(d.stableResources, d.capitalEmployed), e.adidasStableRatio, 0.0005)
+  check(
+    'Europcar : ressources stables / capitaux employés (59 %)',
+    f.stableResourcesRatio(num(p.europcarEquity) + num(p.europcarLtDebt), num(p.europcarNonCurrentAssets) + num(p.europcarOperatingCurrentAssets) - num(p.europcarOperatingCurrentLiabilities)),
+    e.europcarStableRatio,
+    0.005,
+  )
+  check(
+    'Europcar : dette nette / EBITDA (13 dans le corrigé)',
+    f.netDebtToEbitda(f.netDebt(num(p.europcarLtDebt), num(p.europcarStDebt), num(p.europcarCash)), num(p.europcarEbitda)),
+    e.europcarNetDebtToEbitda,
+    0.005,
+  )
+}
+
+// --- Valorisation : DCF Adidas, corrigés Crit et Terna --------------------------------------
+{
+  const p = s.dcfAdidas.data
+  const e = s.dcfAdidas.expected
+  const proj = f.projectFcff(
+    { ebitda: pnl.ebitda, ebit: pnl.ebit, taxRate: pnl.taxRate, capex: adidas.cashFlowStatement.capex, wcr: d.wcr },
+    num(p.explicitGrowth),
+    num(p.years),
+    num(p.growth),
+  )
+  const r = f.dcf(proj.flows, num(p.wacc), num(p.growth), proj.nextFlow)!
+  const equity = f.equityValue(r.enterpriseValue, d.netDebt)
+  check('DCF Adidas : valeur d\'entreprise', r.enterpriseValue, e.enterpriseValue, 1)
+  check('DCF Adidas : valeur des capitaux propres', equity, e.equityValue, 1)
+  check('DCF Adidas : valeur par action', equity / adidas.share.sharesOutstanding, e.valuePerShare, 0.01)
+  check('DCF Adidas : poids de la valeur terminale', r.pvTerminal / r.enterpriseValue, e.terminalShare, 0.001)
+  check('Adidas : VE / EBIT implicite au cours de bourse', (adidas.share.marketCap + d.netDebt) / pnl.ebit, e.impliedEvEbit, 0.005)
+  check('Adidas : capitalisation ≈ actions × cours (actions émises, autocontrôle compris)', adidas.share.marketCap / adidas.share.yearEndPrice, 180, 0.5)
+  const crit = f.dcf(arr(p.critFlows), num(p.critWacc), num(p.critGrowth))!
+  const critNetDebt = num(p.critDebt) - num(p.critCash)
+  check('Crit : valeur d\'entreprise par DCF', crit.enterpriseValue, e.critEnterpriseValue, 0.01)
+  check('Crit : capitaux propres par DCF', f.equityValue(crit.enterpriseValue, critNetDebt), e.critEquityDcf, 0.01)
+  check('Crit : capitaux propres par les multiples', f.equityValue(f.multipleValue(num(p.critEbit), num(p.critMultiple)), critNetDebt), e.critEquityMultiple, 0)
+  assert('Crit : BUY (DCF et multiples au-dessus de la capitalisation)', e.critEquityDcf > num(p.critMarketCap) && e.critEquityMultiple > num(p.critMarketCap))
+  check('Terna : DDM', f.dividendDiscount(num(p.ternaDividend), num(p.ternaKe), num(p.ternaGrowth)), e.ternaValue, 0.005)
+  check('QCM va-03 : valeur terminale', f.terminalValue(2700, 0.09, 0.02), 38571, 0.5)
+}
+
+// --- Produits dérivés : exemples du cours (cuivre, Heineken) et transposition caoutchouc -------
+{
+  const p = s.rubberHedge.data
+  const e = s.rubberHedge.expected
+  const q = num(p.quantity)
+  const futures = num(p.futurePrice)
+  check('Cuivre : gain du future à 6 500 €/t', f.futurePayoff(num(p.copperQuantity), 6500, num(p.copperFuture)), e.copperGainAt6500, 0)
+  check('Cuivre : perte du future à 6 000 €/t', f.futurePayoff(num(p.copperQuantity), 6000, num(p.copperFuture)), e.copperLossAt6000, 0)
+  check('Heineken : call à 100 €', f.callPayoff(100, num(p.heinekenStrike), num(p.heinekenPremium)), e.heinekenAt100, 0)
+  check('Heineken : call à 80 € (prime perdue)', f.callPayoff(80, num(p.heinekenStrike), num(p.heinekenPremium)), e.heinekenAt80, 0)
+  check('Transposition : prix ÷4 (spot)', num(p.copperSpot) / num(p.spotToday), 4, 0)
+  check('Transposition : prix ÷4 (future)', num(p.copperFuture) / futures, 4, 0)
+  check('Transposition : volumes ×10', q / num(p.copperQuantity), 10, 0)
+  check('Caoutchouc : gain du future à 1 800 €/t (QCM mk-02)', f.futurePayoff(q, 1800, futures), e.futureGainAt1800, 0)
+  check('Caoutchouc : coût net à 1 400 €/t = Q × F (QCM mk-03)', q * 1400 - f.futurePayoff(q, 1400, futures), e.netCostAt1400, 0)
+  const callCost = (spot: number) => q * spot - q * f.callPayoff(spot, num(p.strike), num(p.premium))
+  check('Caoutchouc : call et future coûtent pareil à F − prime', callCost(e.callBreakEvenSpot), q * futures, 0.001)
+  check('Caoutchouc : perte maximale du call = la prime', -q * f.callPayoff(900, num(p.strike), num(p.premium)), e.maxCallLoss, 0)
+}
+
+// --- Start-up : levée de fonds du cours (×1 000) et liquidation ----------------------------------
+{
+  const p = s.strideLab.data
+  const e = s.strideLab.expected
+  const pre = num(p.post) - num(p.inv)
+  const r = f.fundraising({ shares: num(p.founderShares), nominal: num(p.nominal), pre: pre * 1e6, inv: num(p.inv) * 1e6 })
+  check('Levée : pre-money', pre, e.pre, 0)
+  check('Levée : prix par action (11 250 €)', r.pricePerShare, e.pricePerShare, 0.001)
+  check('Levée : actions nouvelles', r.newShares, e.newShares, 0.001)
+  check('Levée : augmentation de capital (8 k€ × 1 000)', r.capitalIncrease / 1e6, e.capitalIncrease, 0.0001)
+  check("Levée : prime d'émission (82 k€ × 1 000)", r.sharePremium / 1e6, e.sharePremium, 0.0001)
+  check('Levée : part des investisseurs (44 %)', r.investorShare, e.investorShare, 0.0001)
+  check('Levée : pouvoir du fondateur (56 %)', r.founderShare, e.founderShare, 0.0001)
+  check('Levée : ΔK = K × INV / PRE', (num(p.founderShares) * num(p.nominal) * num(p.inv)) / pre / 1e6, e.capitalIncrease, 0.0001)
+  const l = s.liquidation
+  const paid = f.liquidationWaterfall(num(l.data.proceeds), arr(l.data.claims))
+  check('Liquidation : créancier garanti remboursé', paid[2], l.expected.securedAt35, 0)
+  check('Liquidation : chirographaires', paid[3], l.expected.unsecuredAt35, 0)
+  check('Liquidation : actionnaires', paid[4], l.expected.shareholdersAt35, 0)
+  check('Liquidation : seuil du premier euro aux actionnaires', sum(arr(l.data.claims).slice(0, 4)), l.expected.shareholdersFirstEuro, 0)
+}
+
 // --- Traductions anglaises : chaque texte français a son équivalent ---------------------
 {
   const en = <T>(name: string): T =>
@@ -232,6 +350,7 @@ const arr = (x: number | number[]) => x as number[]
   const mEn = en<{ views: Record<string, Text>; modules: Record<string, Text & { toolbox: string[]; concept: string }> }>('modules')
   const qEn = en<Record<string, Text & { choices: string[] }>>('quiz')
   const aEn = en<{
+    meta: Text
     balanceSheet: Record<string, { label: string; lines: Record<string, { label: string; detail?: string }> }>
     scenarios: Record<string, Text>
     guessCompany: { rows: Record<string, string>; hints: Record<string, string> }
@@ -269,6 +388,7 @@ const arr = (x: number | number[]) => x as number[]
     }
   }
   for (const key of Object.keys(adidas.scenarios)) if (!filled(aEn.scenarios[key]?.story)) missing.push(`scénario ${key}`)
+  if (!filled(aEn.meta?.cashFlowNote)) missing.push('note du tableau des flux')
   for (const r of [...adidas.guessCompany.rows.assets, ...adidas.guessCompany.rows.liabilities])
     if (!filled(aEn.guessCompany.rows[r.id])) missing.push(`ligne d'exercice ${r.id}`)
   for (const col of adidas.guessCompany.columns) if (!filled(aEn.guessCompany.hints[col.id])) missing.push(`indice ${col.id}`)
